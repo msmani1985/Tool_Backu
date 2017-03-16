@@ -1,0 +1,102 @@
+/*select journal_dp.journame, journal_dp.jourcode, aarticlecode, amanuscriptid, (a.displayname) as jprodeditor, 
+(b.displayname) as jprodmanager, acorrespondingauthor, ANOAUTHORS as TOTALAUTHORS, 
+(select CAST(F_MONTH(min(ledate))||'/'||F_DAYOFMONTH(min(ledate))||'/'||F_YEAR(min(ledate)) AS TIMESTAMP) 
+from loggedevents_dp where loggedevents_dp.ano=article_dp.ano) as acreationdate,
+
+ (select F_STRIPTIME(duedate) from sp_get_article_duedate
+	(article_dp.ano,journal_dp.custno,
+		(select arpno from loggedevents_dp where leno =(select min(leno) from loggedevents_dp where 
+														loggedevents_dp.ano=article_dp.ano)
+		) 
+		,journal_dp.jourschdays, journal_dp.jourschurgentdays
+	)
+ ) as aduedate, 
+ 
+ (select F_STRIPTIME(duedate) from sp_get_article_duedate
+	(article_dp.ano,journal_dp.custno,article_dp.arpno,journal_dp.jourschdays, journal_dp.jourschurgentdays
+	)
+ ) as aduedate_1, 
+ (select min(ledate) from loggedevents_dp where loggedevents_dp.ano=article_dp.ano and evno=10054) as adespatchdate,
+ (select DAYSTAKEN from SP_GET_DAYSTAKEN
+	((select min(ledate) from loggedevents_dp where loggedevents_dp.ano=article_dp.ano
+	),(select min(ledate) from loggedevents_dp where loggedevents_dp.ano=article_dp.ano and evno=10054
+	  )
+	)
+  ) as TOTALDAYS, 
+(select DAYSTAKEN from SP_GET_DAYSOVERDUE
+(	(select min(ledate) from loggedevents_dp where loggedevents_dp.ano=article_dp.ano),
+	(select min(ledate) from loggedevents_dp where loggedevents_dp.ano=article_dp.ano and evno=10054)
+)
+) as TOTALDAYS_1,  arealnoofpages, anooffolios,
+article_dp.catno, journal_dp.jourpdf, on_hold_flag, acomments,
+(select RESULT from SP_GET_PDFORPOST(journal_dp.finsiteno,article_dp.aemail)) as pdfpost, issue_dp.iissueno, 
+journal_dp.jourschdays, journal_dp.jourschurgentdays, journal_dp.jcno_2009, journalcomplexityprices_dp.jcpprice, 
+1 as TNT, pagetrim_dp.trimsize as LSFormat, journalcomplexityprices_dp.jcpprice as TecNonTec, 
+(acreationdate)  as REVISEDRECEIVED_DATE, (acreationdate) as REVISEDDESPATCH_DATE, article_dp.creationdate_s200, 
+article_dp.adespatchdates200, (select DAYSTAKEN from 
+SP_GET_DAYSTAKEN(	article_dp.creationdate_s200,article_dp.adespatchdates200)) as DaysTaken, 
+	(select DAYSTAKEN from SP_GET_DAYSOVERDUE_S200(article_dp.creationdate_s200,article_dp.adespatchdates200))
+	as DaysOverdue, 
+article_dp.revised_flag, ADUEDATE as as200due, article_dp.ano,journal_dp.custno,article_dp.arpno , 
+ (select F_LRTRIM(b.emp_fname) || ' ' || F_LRTRIM(b.emp_sname) from loggedevents_dp a 
+ inner join employee_dp b on a.empno=b.empno where ano=article_dp.ano and sno=12 and b.emp_id>0 
+	and leno=(select max(leno) from loggedevents_dp where ano=article_dp.ano and sno=12)) as emp1,
+	article_dp.ACREATIONDATE_EDITING from article_dp 
+ left join employee_dp on article_dp.current_employee=employee_dp.empno 
+ left join journal_dp on  article_dp.journo = journal_dp.journo 
+ left outer join issue_dp on article_dp.ino = issue_dp.ino 
+ left outer join journalcomplexityprices_dp on journal_dp.jcno_2009 = journalcomplexityprices_dp.jcpno 
+ left outer join contact_dp a on journal_dp.jprodedno=a.conno 
+ left outer join contact_dp b on journal_dp.jprodmanno=b.conno 
+ left outer join pagetrim_dp on journal_dp.pagetrimno=pagetrim_dp.pagetrimno 
+ where ( article_dp.acreationdate between :StartDate And :EndDate) and amanuscriptid not like 'P_%' 
+ and amanuscriptid not like '%CON%' and amanuscriptid not like '%COV%' and amanuscriptid not like '%CALL%' 
+ and amanuscriptid not like '%FOR%' and amanuscriptid not like '%BACK%' and amanuscriptid not like '%VOL%' 
+ and amanuscriptid not like '%SUB%' and amanuscriptid not like '%AUTHOR%' and amanuscriptid not like '%NOT%' 
+ and amanuscriptid not like '%IND%' and amanuscriptid not like '%V.IND%' and amanuscriptid not like '%BOOKS%' 
+ and amanuscriptid not like '%ABSTRACT%' and amanuscriptid not like '%ANNOUN%' And (Revised_Flag='N') 
+ order by article_dp.acreationdate desc*/
+ /*
+select custname,aarticlecode,jourcode as title,arealnoofpages,stypename,Receive_date,
+due_date,despatch_date,null as invoicedate,cats_due_date,adespatchdate,journo,custno,
+JH.stypeno as LogStypeno
+ from journal_dp J
+join article_dp A on A.journo=J.Journo
+join job_history JH on JH.ano=A.ano
+join stype_dp S on S.stypeno=JH.stypeno
+join financialsite_dp F on F.finsiteno=J.finsiteno
+join customer_dp X on X.custno=F.custno
+where  receive_date BETWEEN ':STARTDATE 00:00:00' AND ':ENDDATE 23:59:59'
+AND X.CUSTNO in (:CUSTNO)
+order by Receive_date
+*/
+
+/* commented on 16th Jan 2010
+select custname,aarticlecode,jourcode as title,arealnoofpages,stypename,Receive_date,
+due_date,despatch_date,null as invoicedate,cats_due_date,adespatchdate,journo,custno,
+JH.stypeno as LogStypeno
+ from journal_dp J
+join article_dp A on A.journo=J.Journo
+join job_history JH on JH.ano=A.ano
+join stype_dp S on S.stypeno=JH.stypeno
+join financialsite_dp F on F.finsiteno=J.finsiteno
+join customer_dp X on X.custno=F.custno
+where  receive_date BETWEEN ':STARTDATE 00:00:00' AND ':ENDDATE 23:59:59'
+AND X.CUSTNO in (:CUSTNO)
+order by Receive_date
+*/
+
+
+select custname,aarticlecode,jourcode as title,arealnoofpages,stypename,l.ledate,
+jh.due_date,jh.despatch_date,null as invoicedate,jh.cats_due_date,jh.despatch_date,journo,custno,
+JH.stypeno as LogStypeno,porticosubmission,pmcsubmission,doajsubmission,doisubmission,psycinfo_submission,crossref_submission,jgate_submission,
+isitr_submission
+ from journal_dp J
+join article_dp A on A.journo=J.Journo
+join loggedevents_dp l on l.ano = a.ano and (l.evno = 10028 or l.evno = 10013 )
+join job_history jh on jh.ano = l.ano and jh.stypeno = l.stypeno
+join stype_dp S on S.stypeno=l.stypeno
+join customer_dp X on X.custno=J.custno 
+where l.ledate BETWEEN ':STARTDATE 00:00:00' AND ':ENDDATE 23:59:59' 
+AND X.CUSTNO in (:CUSTNO)
+

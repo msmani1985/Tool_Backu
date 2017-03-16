@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="BJMBR" targetNamespace="http://tempuri.org/BJMBR.xsd" xmlns:mstns="http://tempuri.org/BJMBR.xsd" xmlns="http://tempuri.org/BJMBR.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="BJMBR" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="BJMBR" msprop:Generator_UserDSName="BJMBR">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BJMBR" msprop:Generator_TableClassName="BJMBRDataTable" msprop:Generator_TableVarName="tableBJMBR" msprop:Generator_TablePropName="_BJMBR" msprop:Generator_RowDeletingName="BJMBRRowDeleting" msprop:Generator_RowChangingName="BJMBRRowChanging" msprop:Generator_RowEvHandlerName="BJMBRRowChangeEventHandler" msprop:Generator_RowDeletedName="BJMBRRowDeleted" msprop:Generator_UserTableName="BJMBR" msprop:Generator_RowChangedName="BJMBRRowChanged" msprop:Generator_RowEvArgName="BJMBRRowChangeEvent" msprop:Generator_RowClassName="BJMBRRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ANO" msprop:Generator_ColumnVarNameInTable="columnANO" msprop:Generator_ColumnPropNameInRow="ANO" msprop:Generator_ColumnPropNameInTable="ANOColumn" msprop:Generator_UserColumnName="ANO" type="xs:string" minOccurs="0" />
+              <xs:element name="AARTICLECODE" msprop:Generator_ColumnVarNameInTable="columnAARTICLECODE" msprop:Generator_ColumnPropNameInRow="AARTICLECODE" msprop:Generator_ColumnPropNameInTable="AARTICLECODEColumn" msprop:Generator_UserColumnName="AARTICLECODE" type="xs:string" minOccurs="0" />
+              <xs:element name="PAGECOUNT" msprop:Generator_ColumnVarNameInTable="columnPAGECOUNT" msprop:Generator_ColumnPropNameInRow="PAGECOUNT" msprop:Generator_ColumnPropNameInTable="PAGECOUNTColumn" msprop:Generator_UserColumnName="PAGECOUNT" type="xs:string" minOccurs="0" />
+              <xs:element name="FIRST" msprop:Generator_ColumnVarNameInTable="columnFIRST" msprop:Generator_ColumnPropNameInRow="FIRST" msprop:Generator_ColumnPropNameInTable="FIRSTColumn" msprop:Generator_UserColumnName="FIRST" type="xs:string" minOccurs="0" />
+              <xs:element name="REVISES" msprop:Generator_ColumnVarNameInTable="columnREVISES" msprop:Generator_ColumnPropNameInRow="REVISES" msprop:Generator_ColumnPropNameInTable="REVISESColumn" msprop:Generator_UserColumnName="REVISES" type="xs:string" minOccurs="0" />
+              <xs:element name="PRESS" msprop:Generator_ColumnVarNameInTable="columnPRESS" msprop:Generator_ColumnPropNameInRow="PRESS" msprop:Generator_ColumnPropNameInTable="PRESSColumn" msprop:Generator_UserColumnName="PRESS" type="xs:string" minOccurs="0" />
+              <xs:element name="ONLINE" msprop:Generator_ColumnVarNameInTable="columnONLINE" msprop:Generator_ColumnPropNameInRow="ONLINE" msprop:Generator_ColumnPropNameInTable="ONLINEColumn" msprop:Generator_UserColumnName="ONLINE" type="xs:string" minOccurs="0" />
+              <xs:element name="PDFQA" msprop:Generator_ColumnVarNameInTable="columnPDFQA" msprop:Generator_ColumnPropNameInRow="PDFQA" msprop:Generator_ColumnPropNameInTable="PDFQAColumn" msprop:Generator_UserColumnName="PDFQA" type="xs:string" minOccurs="0" />
+              <xs:element name="PRICEQA" msprop:Generator_ColumnVarNameInTable="columnPRICEQA" msprop:Generator_ColumnPropNameInRow="PRICEQA" msprop:Generator_ColumnPropNameInTable="PRICEQAColumn" msprop:Generator_UserColumnName="PRICEQA" type="xs:string" minOccurs="0" />
+              <xs:element name="XMLQA" msprop:Generator_ColumnVarNameInTable="columnXMLQA" msprop:Generator_ColumnPropNameInRow="XMLQA" msprop:Generator_ColumnPropNameInTable="XMLQAColumn" msprop:Generator_UserColumnName="XMLQA" type="xs:string" minOccurs="0" />
+              <xs:element name="PRICEXMLQA" msprop:Generator_ColumnVarNameInTable="columnPRICEXMLQA" msprop:Generator_ColumnPropNameInRow="PRICEXMLQA" msprop:Generator_ColumnPropNameInTable="PRICEXMLQAColumn" msprop:Generator_UserColumnName="PRICEXMLQA" type="xs:string" minOccurs="0" />
+              <xs:element name="VENDOR" msprop:Generator_ColumnVarNameInTable="columnVENDOR" msprop:Generator_ColumnPropNameInRow="VENDOR" msprop:Generator_ColumnPropNameInTable="VENDORColumn" msprop:Generator_UserColumnName="VENDOR" type="xs:string" minOccurs="0" />
+              <xs:element name="PRICEVENDOR" msprop:Generator_ColumnVarNameInTable="columnPRICEVENDOR" msprop:Generator_ColumnPropNameInRow="PRICEVENDOR" msprop:Generator_ColumnPropNameInTable="PRICEVENDORColumn" msprop:Generator_UserColumnName="PRICEVENDOR" type="xs:string" minOccurs="0" />
+              <xs:element name="DOI" msprop:Generator_ColumnVarNameInTable="columnDOI" msprop:Generator_ColumnPropNameInRow="DOI" msprop:Generator_ColumnPropNameInTable="DOIColumn" msprop:Generator_UserColumnName="DOI" type="xs:string" minOccurs="0" />
+              <xs:element name="PRICEDOI" msprop:Generator_ColumnVarNameInTable="columnPRICEDOI" msprop:Generator_ColumnPropNameInRow="PRICEDOI" msprop:Generator_ColumnPropNameInTable="PRICEDOIColumn" msprop:Generator_UserColumnName="PRICEDOI" type="xs:string" minOccurs="0" />
+              <xs:element name="CUSTSERVICE" msprop:Generator_ColumnVarNameInTable="columnCUSTSERVICE" msprop:Generator_ColumnPropNameInRow="CUSTSERVICE" msprop:Generator_ColumnPropNameInTable="CUSTSERVICEColumn" msprop:Generator_UserColumnName="CUSTSERVICE" type="xs:string" minOccurs="0" />
+              <xs:element name="PRICECUSTSERVICE" msprop:Generator_ColumnVarNameInTable="columnPRICECUSTSERVICE" msprop:Generator_ColumnPropNameInRow="PRICECUSTSERVICE" msprop:Generator_ColumnPropNameInTable="PRICECUSTSERVICEColumn" msprop:Generator_UserColumnName="PRICECUSTSERVICE" type="xs:string" minOccurs="0" />
+              <xs:element name="PRICECODE" msprop:Generator_ColumnVarNameInTable="columnPRICECODE" msprop:Generator_ColumnPropNameInRow="PRICECODE" msprop:Generator_ColumnPropNameInTable="PRICECODEColumn" msprop:Generator_UserColumnName="PRICECODE" type="xs:string" minOccurs="0" />
+              <xs:element name="USD" msprop:Generator_ColumnVarNameInTable="columnUSD" msprop:Generator_ColumnPropNameInRow="USD" msprop:Generator_ColumnPropNameInTable="USDColumn" msprop:Generator_UserColumnName="USD" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

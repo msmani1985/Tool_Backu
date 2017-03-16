@@ -1,0 +1,10 @@
+select custname,jourcode || '' || iissueno ISSNO,jourcode,null as noofpages,stypename,receive_date,due_date,
+despatch_date,iinvoicedate,cats_due_date, null  as IssueNo  from job_history J
+join issue_dp I on I.ino=J.ino
+join journal_dp JL on JL.journo=I.journo
+join CUSTOMER_DP X ON JL.CUSTNO = X.CUSTNO
+join STYPE_DP ON I.stypeno = stype_dp.stypeno
+where ino is not null
+and despatch_date BETWEEN ':STARTDATE 00:00:00' AND ':ENDDATE 23:59:59'
+AND X.CUSTNO in (:CUSTNO)
+order by despatch_date

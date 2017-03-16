@@ -1,0 +1,44 @@
+.style6 {color: #990000; font-size: 12px; font-family: Verdana, Arial, Helvetica, sans-serif; }
+
+.style8 {color: #000000; font-size: 12px; font-weight: normal; font-family: Verdana, Arial, Helvetica, sans-serif; }
+
+.style36 {font-size: 11px; font-family: Verdana, Arial, Helvetica, sans-serif;}
+
+.style84 {color: #4B8FDF; font-size: 15px; font-family: Verdana, Arial, Helvetica, sans-serif; }
+
+.style85 {color: #4B8FDF; font-size: 12px; font-family: Verdana, Arial, Helvetica, sans-serif; }
+
+.style86 {color: #4B8FDF; font-size: 15px; font-family: Verdana, Arial, Helvetica, sans-serif; }
+
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	FONT-FAMILY: Verdana,Helvetica, Arial, sans-serif;
+	font-size: 12px; 
+	line-height:130%;
+}
+
+A:link {
+	FONT-SIZE: 12px; COLOR: #0099FF; FONT-FAMILY: Verdana,Helvetica, Arial, sans-serif; TEXT-DECORATION: none
+}
+A:visited {
+	FONT-SIZE: 12px; COLOR: #0099FF; FONT-FAMILY: Verdana,Helvetica, Arial, sans-serif; TEXT-DECORATION: none
+}
+A:active {
+	FONT-SIZE: 12px; COLOR: #0099FF; FONT-FAMILY: Verdana,Helvetica, Arial, sans-serif; TEXT-DECORATION: none
+}
+A:hover {
+	FONT-SIZE: 12px; COLOR: #005893; FONT-FAMILY: Verdana,Helvetica, Arial, sans-serif; TEXT-DECORATION: none
+}
+
+li{
+	FONT-SIZE: 12px; 
+	FONT-FAMILY: Verdana,Helvetica, Arial, sans-serif;
+	padding-bottom:1pt;
+}
+p{
+	text-indent:.25in;
+	padding-bottom:3pt;
+}

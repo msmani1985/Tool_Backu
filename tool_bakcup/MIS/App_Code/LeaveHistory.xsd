@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="LeaveHistory" targetNamespace="http://tempuri.org/LeaveHistory.xsd" elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/LeaveHistory.xsd" xmlns:mstns="http://tempuri.org/LeaveHistory.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="LeaveHistory" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="LeaveHisDataSet">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="comment" type="xs:string" />
+							<xs:element name="pl" type="xs:float" />
+							<xs:element name="sl" type="xs:float" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

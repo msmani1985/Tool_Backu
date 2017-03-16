@@ -1,0 +1,45 @@
+/*select 
+	journal_dp.journame, journal_dp.jourcode, issue_dp.iissueno, issue_dp.iissueno, 
+	(select cast(f_doubleabs(((max(APAGENOTO)-min(APAGENOFROM))+1)) as integer) + 
+	(select cast(f_doubleabs(sum(arealnoofpages)) as integer) 
+		from article_dp where ino=issue_dp.ino and adno in(2)
+	) 
+	+ ( Select count(*) from article_dp where ino= issue_dp.ino and adno in (1,5)) from article_dp 
+	where adno not in (12,13,1,5,2) and ino=issue_dp.ino
+	) as arealnoofpages, journal_dp.finsiteno, 
+	(select sum(arealnoofpages) +(select cast(f_doubleabs(sum(arealnoofpages)) as integer) 
+	from article_dp where ino=issue_dp.ino and adno in(2)
+	) +( Select count(*) from article_dp where ino=	issue_dp.ino and adno in (1,5)) from article_dp 
+			where adno not in (12,13,1,5,2) and ino=issue_dp.ino
+		) as arealnoofpages1, 
+	(select count(*) from article_dp	where ino=issue_dp.ino and (adno=3 or (adno=2 and ipctno=65))
+	) as noarticles, sum(article_dp.artnocolour) as countcolour, sum(article_dp.artnocolour) as countEcolour, 
+	issue_dp.makeup_recd_date, issue_dp.revise_sent_date, issue_dp.revise_back_date, issue_dp.sent_cats, 
+	issue_dp.sent_printer, printer_dp.printname, ISSUE_DP.ICREATIONDATE, ISSUE_DP.IDUEDATE, ISSUE_DP.IP100DUE, 
+	ISSUE_DP.IINVOICED, ISSUE_DP.COMPLETED_FLAG, Customer_dp.CustName, Stype_dp.stypename, 
+	(select max(b.ledate) from loggedevents_dp b   where b.ino=article_dp.ino and b.empno=10299) as sent_techset 
+	from issue_dp 
+	left join article_Dp on issue_dp.ino = article_dp.ino 
+	left join journal_dp on issue_dp.journo = journal_dp.journo 
+	left join printer_dp on journal_dp.printno = printer_dp.printno 
+	left join CUSTOMER_DP ON JOURNAL_DP.CUSTNO = CUSTOMER_DP.CUSTNO 
+	left join STYPE_DP ON Issue_dp.stypeno = stype_dp.stypeno  
+	where issue_dp.makeup_recd_date between :StartDate and :EndDate 
+	and (issue_dp.IINVOICED ='N'or issue_dp.IINVOICED ='Y') and 
+	(issue_dp.COMPLETED_FLAG ='N' or issue_dp.COMPLETED_FLAG ='Y') and journal_dp.FINSITENO in (10018)  
+	group by journal_dp.journame, journal_dp.jourcode, issue_dp.iissueno, issue_dp.iinvoiced, issue_dp.completed_flag, 
+	issue_dp.makeup_recd_date, issue_dp.revise_sent_date, issue_dp.revise_back_date, issue_dp.sent_cats, 
+	issue_dp.sent_printer, printer_dp.printname, issue_dp.ICREATIONDATE,issue_dp.IDUEDATE,ISSUE_DP.IP100DUE,
+	CUSTOMER_DP.CustName,STYPE_DP.stypename,journal_dp.finsiteno order by issue_dp.makeup_recd_date desc
+	*/
+	
+	select custname,jourcode,jourcode || '' || iissueno ISSNO,null as noofpages,
+	stypename,receive_date,due_date,despatch_date,iinvoicedate,cats_due_date from job_history J
+	join issue_dp I on I.ino=J.ino
+	join journal_dp JL on JL.journo=I.journo
+	join CUSTOMER_DP X ON JL.CUSTNO = X.CUSTNO
+	join STYPE_DP ON I.stypeno = stype_dp.stypeno
+	where J.ino is not null
+	and receive_date BETWEEN ':STARTDATE 00:00:00' AND ':ENDDATE 23:59:59'
+	AND X.CUSTNO in (:CUSTNO)
+	order by receive_date

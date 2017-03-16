@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="LPQuoteValue" targetNamespace="http://tempuri.org/LPQuoteValue.xsd" xmlns:mstns="http://tempuri.org/LPQuoteValue.xsd" xmlns="http://tempuri.org/LPQuoteValue.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="LPQuoteValue" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="LPQuoteValue" msprop:Generator_UserDSName="LPQuoteValue">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="QuoteValue" msprop:Generator_TableClassName="QuoteValueDataTable" msprop:Generator_TableVarName="tableQuoteValue" msprop:Generator_TablePropName="QuoteValue" msprop:Generator_RowDeletingName="QuoteValueRowDeleting" msprop:Generator_RowChangingName="QuoteValueRowChanging" msprop:Generator_RowEvHandlerName="QuoteValueRowChangeEventHandler" msprop:Generator_RowDeletedName="QuoteValueRowDeleted" msprop:Generator_UserTableName="QuoteValue" msprop:Generator_RowChangedName="QuoteValueRowChanged" msprop:Generator_RowEvArgName="QuoteValueRowChangeEvent" msprop:Generator_RowClassName="QuoteValueRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Lang_Count" msprop:Generator_ColumnVarNameInTable="columnLang_Count" msprop:Generator_ColumnPropNameInRow="Lang_Count" msprop:Generator_ColumnPropNameInTable="Lang_CountColumn" msprop:Generator_UserColumnName="Lang_Count" type="xs:string" minOccurs="0" />
+              <xs:element name="LP_ID" msprop:Generator_ColumnVarNameInTable="columnLP_ID" msprop:Generator_ColumnPropNameInRow="LP_ID" msprop:Generator_ColumnPropNameInTable="LP_IDColumn" msprop:Generator_UserColumnName="LP_ID" type="xs:string" />
+              <xs:element name="JOBID" msprop:Generator_ColumnVarNameInTable="columnJOBID" msprop:Generator_ColumnPropNameInRow="JOBID" msprop:Generator_ColumnPropNameInTable="JOBIDColumn" msprop:Generator_UserColumnName="JOBID" type="xs:string" minOccurs="0" />
+              <xs:element name="PROJECTNAME" msprop:Generator_ColumnVarNameInTable="columnPROJECTNAME" msprop:Generator_ColumnPropNameInRow="PROJECTNAME" msprop:Generator_ColumnPropNameInTable="PROJECTNAMEColumn" msprop:Generator_UserColumnName="PROJECTNAME" type="xs:string" minOccurs="0" />
+              <xs:element name="PROJECTEDITOR" msprop:Generator_ColumnVarNameInTable="columnPROJECTEDITOR" msprop:Generator_ColumnPropNameInRow="PROJECTEDITOR" msprop:Generator_ColumnPropNameInTable="PROJECTEDITORColumn" msprop:Generator_UserColumnName="PROJECTEDITOR" type="xs:string" minOccurs="0" />
+              <xs:element name="FILE_COUNT" msprop:Generator_ColumnVarNameInTable="columnFILE_COUNT" msprop:Generator_ColumnPropNameInRow="FILE_COUNT" msprop:Generator_ColumnPropNameInTable="FILE_COUNTColumn" msprop:Generator_UserColumnName="FILE_COUNT" type="xs:string" minOccurs="0" />
+              <xs:element name="PAGES_COUNT" msprop:Generator_ColumnVarNameInTable="columnPAGES_COUNT" msprop:Generator_ColumnPropNameInRow="PAGES_COUNT" msprop:Generator_ColumnPropNameInTable="PAGES_COUNTColumn" msprop:Generator_UserColumnName="PAGES_COUNT" type="xs:string" minOccurs="0" />
+              <xs:element name="CUSTNAME" msprop:Generator_ColumnVarNameInTable="columnCUSTNAME" msprop:Generator_ColumnPropNameInRow="CUSTNAME" msprop:Generator_ColumnPropNameInTable="CUSTNAMEColumn" msprop:Generator_UserColumnName="CUSTNAME" type="xs:string" minOccurs="0" />
+              <xs:element name="DUEDATEYN" msprop:Generator_ColumnVarNameInTable="columnDUEDATEYN" msprop:Generator_ColumnPropNameInRow="DUEDATEYN" msprop:Generator_ColumnPropNameInTable="DUEDATEYNColumn" msprop:Generator_UserColumnName="DUEDATEYN" type="xs:int" minOccurs="0" />
+              <xs:element name="DUE_DATEFROM" msprop:Generator_ColumnVarNameInTable="columnDUE_DATEFROM" msprop:Generator_ColumnPropNameInRow="DUE_DATEFROM" msprop:Generator_ColumnPropNameInTable="DUE_DATEFROMColumn" msprop:Generator_UserColumnName="DUE_DATEFROM" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DUE_DATETO" msprop:Generator_ColumnVarNameInTable="columnDUE_DATETO" msprop:Generator_ColumnPropNameInRow="DUE_DATETO" msprop:Generator_ColumnPropNameInTable="DUE_DATETOColumn" msprop:Generator_UserColumnName="DUE_DATETO" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DUETIMEYN" msprop:Generator_ColumnVarNameInTable="columnDUETIMEYN" msprop:Generator_ColumnPropNameInRow="DUETIMEYN" msprop:Generator_ColumnPropNameInTable="DUETIMEYNColumn" msprop:Generator_UserColumnName="DUETIMEYN" type="xs:int" minOccurs="0" />
+              <xs:element name="DUE_TIMEFROM" msprop:Generator_ColumnVarNameInTable="columnDUE_TIMEFROM" msprop:Generator_ColumnPropNameInRow="DUE_TIMEFROM" msprop:Generator_ColumnPropNameInTable="DUE_TIMEFROMColumn" msprop:Generator_UserColumnName="DUE_TIMEFROM" type="xs:string" minOccurs="0" />
+              <xs:element name="DUE_MINFROM" msprop:Generator_ColumnVarNameInTable="columnDUE_MINFROM" msprop:Generator_ColumnPropNameInRow="DUE_MINFROM" msprop:Generator_ColumnPropNameInTable="DUE_MINFROMColumn" msprop:Generator_UserColumnName="DUE_MINFROM" type="xs:string" minOccurs="0" />
+              <xs:element name="TIME_ZONEFROM" msprop:Generator_ColumnVarNameInTable="columnTIME_ZONEFROM" msprop:Generator_ColumnPropNameInRow="TIME_ZONEFROM" msprop:Generator_ColumnPropNameInTable="TIME_ZONEFROMColumn" msprop:Generator_UserColumnName="TIME_ZONEFROM" type="xs:string" minOccurs="0" />
+              <xs:element name="DUE_TIMETO" msprop:Generator_ColumnVarNameInTable="columnDUE_TIMETO" msprop:Generator_ColumnPropNameInRow="DUE_TIMETO" msprop:Generator_ColumnPropNameInTable="DUE_TIMETOColumn" msprop:Generator_UserColumnName="DUE_TIMETO" type="xs:string" minOccurs="0" />
+              <xs:element name="DUE_MINTO" msprop:Generator_ColumnVarNameInTable="columnDUE_MINTO" msprop:Generator_ColumnPropNameInRow="DUE_MINTO" msprop:Generator_ColumnPropNameInTable="DUE_MINTOColumn" msprop:Generator_UserColumnName="DUE_MINTO" type="xs:string" minOccurs="0" />
+              <xs:element name="TIME_ZONETO" msprop:Generator_ColumnVarNameInTable="columnTIME_ZONETO" msprop:Generator_ColumnPropNameInRow="TIME_ZONETO" msprop:Generator_ColumnPropNameInTable="TIME_ZONETOColumn" msprop:Generator_UserColumnName="TIME_ZONETO" type="xs:string" minOccurs="0" />
+              <xs:element name="YTCYN" msprop:Generator_ColumnVarNameInTable="columnYTCYN" msprop:Generator_ColumnPropNameInRow="YTCYN" msprop:Generator_ColumnPropNameInTable="YTCYNColumn" msprop:Generator_UserColumnName="YTCYN" type="xs:int" minOccurs="0" />
+              <xs:element name="Value" msprop:Generator_ColumnVarNameInTable="columnValue" msprop:Generator_ColumnPropNameInRow="Value" msprop:Generator_ColumnPropNameInTable="ValueColumn" msprop:Generator_UserColumnName="Value" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Soft" msprop:Generator_ColumnVarNameInTable="columnSoft" msprop:Generator_ColumnPropNameInRow="Soft" msprop:Generator_ColumnPropNameInTable="SoftColumn" msprop:Generator_UserColumnName="Soft" type="xs:string" minOccurs="0" />
+              <xs:element name="Task" msprop:Generator_ColumnVarNameInTable="columnTask" msprop:Generator_ColumnPropNameInRow="Task" msprop:Generator_ColumnPropNameInTable="TaskColumn" msprop:Generator_UserColumnName="Task" type="xs:string" minOccurs="0" />
+              <xs:element name="Lang" msprop:Generator_ColumnVarNameInTable="columnLang" msprop:Generator_ColumnPropNameInRow="Lang" msprop:Generator_ColumnPropNameInTable="LangColumn" msprop:Generator_UserColumnName="Lang" type="xs:string" minOccurs="0" />
+              <xs:element name="Format" msprop:Generator_ColumnVarNameInTable="columnFormat" msprop:Generator_ColumnPropNameInRow="Format" msprop:Generator_ColumnPropNameInTable="FormatColumn" msprop:Generator_UserColumnName="Format" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:QuoteValue" />
+      <xs:field xpath="mstns:LP_ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

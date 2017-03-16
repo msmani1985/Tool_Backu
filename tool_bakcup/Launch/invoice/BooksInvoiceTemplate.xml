@@ -1,0 +1,53 @@
+<data>
+  <invoice type="2" name="book">
+    <customer custno="default" custname="default" filename="Inv_Books\CRCPressReport.rpt" ></customer>
+    <customer custno="70" custname="CRC Press" filename="Inv_Books\CRCPressReport.rpt" ></customer>
+    <customer custno="83" custname="The WorldBank" filename="Inv_Books\TheWorldBankReport.rpt" ></customer>
+    <customer custno="145" custname="Hodder Education" filename="Inv_Books\Hodder Education.rpt" ></customer>
+    <customer custno="112" custname="Channel View Publications" filename="Inv_Books\channelViewPublications.rpt" ></customer>
+    <customer custno="79" custname="Clarus Press" filename="Inv_Books\ClarusPressReport.rpt" ></customer>
+    <customer custno="107" custname="IndependentCollleges" filename="Inv_Books\IndependentCollleges.rpt" ></customer>
+    <customer custno="139" custname="LoesherEditoreReport" filename="Inv_Books\LoesherEditoreReport.rpt" ></customer>
+    <customer custno="66" custname="RoyalIrishAcademy" filename="Inv_Books\RoyalIrishAcademy.rpt" ></customer>
+    <customer custno="72" custname="ThomsonRoundHall" filename="Inv_Books\ThomsonRoundHall.rpt" ></customer>
+    <customer custno="108" custname="VWM" filename="Inv_Books\VWMReport.rpt" ></customer>
+  </invoice>
+  <invoice type="4" name="project">
+    <customer custno="default" custname="default" filename="Inv_Projects\TheWorldBankReport.rpt" ></customer>
+    <customer custno="83" custname="The WorldBank" filename="Inv_Projects\TheWorldBankReport.rpt" ></customer>
+    <customer custno="138" custname="TheBigword" filename="Inv_Projects\TheBigwordReport.rpt" ></customer>
+    <customer custno="115" custname="Tek Translation International,S.A," filename="Inv_Projects\TekTranslation.rpt" ></customer>
+    <customer custno="68" custname="Taylor and Francis" filename="Inv_Projects\TandFReport.rpt" ></customer>
+    <customer custno="129" custname="Star Technology Solutions" filename="Inv_Projects\StarTechnologyReport.rpt" ></customer>
+    <customer custno="124" custname="San Lucas Medical Limited" filename="Inv_Projects\SanLucasReport.rpt" ></customer>
+    <customer custno="158" custname="RR Donelley" filename="Inv_Projects\RRDonellyReport.rpt" ></customer>
+    <customer custno="130" custname="Polyphonia" filename="Inv_Projects\PolyphoniaReport.rpt" ></customer>
+    <customer custno="154" custname="Merrill Brink International" filename="Inv_Projects\MerrilBrinkReport.rpt" ></customer>
+    <customer custno="125" custname="Logoscript S.L" filename="Inv_Projects\logoscriptReport.rpt" ></customer>
+    <customer custno="146" custname="Lionbridge Espana S.L" filename="Inv_Projects\LionBridgeEspanaReport.rpt" ></customer>
+    <customer custno="134" custname="Interdisciplinary Toxicology" filename="Inv_Projects\InterdiscipilnaryReport.rpt" ></customer>
+    <customer custno="75" custname="Informa" filename="Inv_Projects\InformaReport.rpt" ></customer>
+    <customer custno="148" custname="Global Language Solutions" filename="Inv_Projects\GlobalLanguageReport.rpt" ></customer>
+    <customer custno="127" custname="expertTranslators" filename="Inv_Projects\ExpertTranslators.rpt" ></customer>
+    <customer custno="142" custname="Elanex,Inc" filename="Inv_Projects\ElanexReport.rpt" ></customer>
+    <customer custno="70" custname="CRC Press " filename="Inv_Projects\CRCPressReport.rpt" ></customer>
+    <customer custno="103" custname="Co-Action Publishing" filename="Inv_Projects\Co-ActionPublishingReport.rpt" ></customer>
+    <customer custno="94" custname="Bytheway Publishing Services" filename="Inv_Projects\BythewayPublishingReport.rpt" ></customer>
+    <customer custno="104" custname="Adam Matthew Digital" filename="Inv_Projects\AdamMatthewDigitalReport.rpt" ></customer>
+	<customer custno="81" custname="Chartered Accounts" filename="Inv_Projects\CharteredAccounts.rpt" ></customer>
+  </invoice>
+  <invoice type="6" name="Issues">
+    <customer custno="default" custname="default" filename="Inv_Issues\TandF.rpt"></customer>
+    <customer custno="68" custname="Taylor and Fracis" filename="Inv_Issues\TandF.rpt"></customer>
+    <customer custno="110" custname="Agricultural Institute of Canada " filename="Inv_Issues\AgricultureInstituteofcanada.rpt"></customer>
+    <customer custno="143" custname="Canadian Science Publishing  " filename="Inv_Issues\CanadianScienceReport.rpt"></customer>
+    <customer custno="103" custname="Co-Action Publishing" filename="Inv_Issues\Co-ActionPublishing.rpt"></customer>
+    <customer custno="151" custname="Consejo Superior" filename="Inv_Issues\ConsejoSuperior.rpt"></customer>
+    <customer custno="120" custname="International Journal of Ageing and Later Life" filename="Inv_Issues\InternationalJournalofAging.rpt"></customer>
+    <customer custno="65" custname="LUND - Ecology Building" filename="Inv_Issues\LundEcologyBuilding.rpt"></customer>
+    <customer custno="66" custname="RoyalIrish" filename="Inv_Issues\RoyalIrishAcademy.rpt"></customer>
+    <customer custno="124" custname="San Lucas Medical" filename="Inv_Issues\SanLucasMedical.rpt"></customer>
+    <customer custno="153" custname="Vocabulary Institute Of Learning and Science" filename="Inv_Issues\VocabularyLearning.rpt"></customer>
+    <customer custno="140" custname="Medical Student Research Journal" filename="Inv_Issues\MedicalStudentResearchJournal.rpt"></customer>
+  </invoice>
+</data>

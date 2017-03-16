@@ -1,0 +1,96 @@
+<email proc="getemail(category,custno,1)">
+
+<journal>
+	<bcc>chitra@datapage.org</bcc>
+	<cc>accounts@datapage.org</cc>
+	<subject>Datapage International Ltd - Invoice of Job: [JOBNAME]</subject>
+	<body>
+Dear [PENAME],
+
+Please find attached copies of invoice of Job(s): [JOBNAME] which you requested.
+
+Best Wishes,
+Accounts Department,
+
+Datapage International Ltd.,
+232 Harolds Cross Road,
+Dublin 6W. 
+Tel: 00353 1 4960628
+Fax: 00353 1 4960636
+	</body>
+	<attach id="[JOBNAME].pdf" />
+	<customer custno="2556">
+		<subject>Datapage International Ltd - Invoice spreadsheet(s) of [JOBNAME]</subject>
+		<body></body>
+		<to_second attachment="article.pdf">pm@tandf.com[TO address]</to_second>
+		<bcc/>
+		<cc/>
+		<attach id="[INVOICENO].xls"></attach>
+	</customer>
+	<customer custno="10081">
+		<bcc/>
+		<cc/>
+		<subject/>
+	</customer>
+</journal>
+<book>
+
+	<bcc>chitra@datapage.org</bcc>
+	<cc>accounts@datapage.org</cc>
+	<subject>Datapage International Ltd - Invoice of Job: [JOBNAME]</subject>
+	<body>
+Dear [PENAME],
+
+Please find attached copies of invoice of Job(s): [JOBNAME] which you requested.
+
+Best Wishes,
+Accounts Department,
+
+Datapage International Ltd.,
+232 Harolds Cross Road,
+Dublin 6W.
+Tel: 00353 1 4960628
+Fax: 00353 1 4960636
+	</body>
+<customer custno="2556">
+	<to_second/>
+	<bcc/>
+	<cc/>
+	<subject/>
+	<body/>
+	<bookname bnumber="k10589">
+		<to_second/>
+		<bcc/>
+		<cc/>
+		<subject/>
+		<body/>
+	</bookname>
+</customer>
+</book>
+<project>
+	<bcc>chitra@datapage.org</bcc>
+	<cc>accounts@datapage.org</cc>
+	<subject>Datapage International Ltd - Invoice of Job: [JOBNAME]</subject>
+	<body>
+Dear [PENAME],
+
+Please find attached copies of invoice of Job(s): [JOBNAME] which you requested.
+
+Best Wishes,
+Accounts Department,
+
+Datapage International Ltd.,
+232 Harolds Cross Road,
+Dublin 6W.
+Tel: 00353 1 4960628
+Fax: 00353 1 4960636
+	</body>
+<customer custno="2556">
+	<to_second/>
+	<bcc/>
+	<cc/>
+	<subject/>
+	<body/>
+</customer>
+</project>
+</email>

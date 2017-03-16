@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NASP" targetNamespace="http://tempuri.org/NASP.xsd" xmlns:mstns="http://tempuri.org/NASP.xsd" xmlns="http://tempuri.org/NASP.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="NASP" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="NASP" msprop:Generator_UserDSName="NASP">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="NASP_Invoice" msprop:Generator_TableClassName="NASP_InvoiceDataTable" msprop:Generator_TableVarName="tableNASP_Invoice" msprop:Generator_RowChangedName="NASP_InvoiceRowChanged" msprop:Generator_TablePropName="NASP_Invoice" msprop:Generator_RowDeletingName="NASP_InvoiceRowDeleting" msprop:Generator_RowChangingName="NASP_InvoiceRowChanging" msprop:Generator_RowEvHandlerName="NASP_InvoiceRowChangeEventHandler" msprop:Generator_RowDeletedName="NASP_InvoiceRowDeleted" msprop:Generator_RowClassName="NASP_InvoiceRow" msprop:Generator_UserTableName="NASP_Invoice" msprop:Generator_RowEvArgName="NASP_InvoiceRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ANO" msprop:Generator_ColumnVarNameInTable="columnANO" msprop:Generator_ColumnPropNameInRow="ANO" msprop:Generator_ColumnPropNameInTable="ANOColumn" msprop:Generator_UserColumnName="ANO" type="xs:string" minOccurs="0" />
+              <xs:element name="Articles" msprop:Generator_ColumnVarNameInTable="columnArticles" msprop:Generator_ColumnPropNameInRow="Articles" msprop:Generator_ColumnPropNameInTable="ArticlesColumn" msprop:Generator_UserColumnName="Articles" type="xs:string" minOccurs="0" />
+              <xs:element name="Page" msprop:Generator_ColumnVarNameInTable="columnPage" msprop:Generator_ColumnPropNameInRow="Page" msprop:Generator_ColumnPropNameInTable="PageColumn" msprop:Generator_UserColumnName="Page" type="xs:string" minOccurs="0" />
+              <xs:element name="Pricecode" msprop:Generator_ColumnVarNameInTable="columnPricecode" msprop:Generator_ColumnPropNameInRow="Pricecode" msprop:Generator_ColumnPropNameInTable="PricecodeColumn" msprop:Generator_UserColumnName="Pricecode" type="xs:string" minOccurs="0" />
+              <xs:element name="USD" msprop:Generator_ColumnVarNameInTable="columnUSD" msprop:Generator_ColumnPropNameInRow="USD" msprop:Generator_ColumnPropNameInTable="USDColumn" msprop:Generator_UserColumnName="USD" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

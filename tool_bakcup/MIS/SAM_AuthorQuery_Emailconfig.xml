@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<followup>
+	<customer custname="TandF" custno="2556">
+		<from>nathiya@datapage.org</from>
+		<to>nathiya@datapage.org</to>
+		<to1>subbulakshmi@datapage.org</to1>
+		<cc></cc>
+		<bcc>soundar@datapage.org;nathiya@datapage.org;jincy@datapage.org</bcc>
+		<body>
+Dear [AUTHORNAME],<br/><br/>
+
+I wish to introduce myself as Nathiya, the production assistant for [JOURNALTITLE]. Thank you very much for sending your corrections. Our proof reader has raised the below pending query while incorporating the corrections. Could you please look into this.<br/><br/>
+
+Article ID: [ARTICLEID]<br/><br/>
+
+Article Title: [AUTHORTITLE]<br/><br/>
+
+Query: In page 1, line 15: you have inserted a empty text insertion comment but not correction is provided. Please check and provide the missing insertion text here.<br/><br/>
+
+I have attached the PDF for your reference.<br/><br/>
+
+Please note that the PDF is not an updated one. We will generate an updated PDF as soon as the query has been resolved.<br/><br/>
+
+Please reply to all recipients of this message.<br/><br/>
+
+Thank you very much for your help,<br/><br/>
+
+Best Wishes<br/>
+Nathiya<br/><br/>
+ 
+Nathiya T.<br/>
+Production Assistant - Journals<br/>
+Datapage Tel: +91 8754574275<br/>
+Web: www.datapage.ie<br/>
+
+
+		</body>
+	</customer>
+</followup>
+	
+

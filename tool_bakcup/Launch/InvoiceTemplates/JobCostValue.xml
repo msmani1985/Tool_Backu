@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<DATAPACKET Version="2.0">
+  <ROWDATA>
+    <ROW JOBTYPE="Journal" VALUE="1" />
+    <ROW JOBTYPE="Book" VALUE="2" />
+    <ROW JOBTYPE="Project" VALUE="3" />
+  </ROWDATA>
+</DATAPACKET>

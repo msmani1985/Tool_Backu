@@ -1,0 +1,11 @@
+<jobstatusemail>
+<journal> 
+<customer custno="2556" custname="TandF">
+<from>software@datapage.loc</from>
+<to>chitra@datapage.loc;</to>
+<cc>swapna@datapage.loc;veera@datapage.loc;production@datapage.loc;</cc>
+<tos>sivaraj@datapage.loc</tos>
+<subject>Taylor and Francis Group - Job Status Report - [DATE]</subject>
+</customer>
+</journal>
+</jobstatusemail>

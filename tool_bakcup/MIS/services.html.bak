@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+.style9 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+.style11 {font-size: 8px}
+.style12 {font-size: 9px}
+.style14 {color: #0033CC}
+.style74 {color: #4B8FDF; font-size: 15px; font-family: Verdana, Arial, Helvetica, sans-serif; }
+-->
+</style>
+</head>
+
+<body>
+ <table width="774" border="0" cellspacing="0" cellpadding="0">
+   <tr  style="display:none" >
+     <td height="20" align="center" bgcolor="#E5E5E5" scope="col"><span class="style8"> Home <span class="style12">&gt;&gt;</span> Intranet <span class="style12">&gt;&gt;</span> Locations & Services  </span></td>
+   </tr>
+   <tr  style="display:none" >
+     <td scope="col"><img src="images/white.gif" width="60" height="6" /></td>
+   </tr>
+   <tr>
+     <td align="center" valign="top" scope="row"><table width="774" border="0" align="center" cellpadding="0" cellspacing="0" bordercolor="#000000">
+
+       <tr bordercolor="#CCCCCC">
+         <td height="24" colspan="6" align="left" class="style7 style9" scope="col">
+	       <p class="style8">Following are the three main locations where we have our offices: </p>
+           <p align="left" class="style6 style14">&nbsp;&nbsp;&nbsp;&nbsp;-Datapage International Limited - Dublin, Ireland</p>
+           <p align="left" class="style6" style="color: gray; font-style:italic">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--Operations: Finance and Sales</p>
+           <p align="left" class="style6" style="color: gray; font-style:italic">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--Staff: 2</p>
+           <p align="left" class="style6 style14">&nbsp;&nbsp;&nbsp;&nbsp;-Datapage (India) Private Limited - Chennai, Tamilnadu, India</p>
+           <p align="left" class="style6" style="color: gray; font-style:italic">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--Operations: Production, Software Development, Account Management</p>
+           <p align="left" class="style6" style="color: gray; font-style:italic">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--Staff: 145</p>
+           <p align="left" class="style6 style14" >&nbsp;&nbsp;&nbsp;&nbsp;-Datapage Digital Services Private Limited - Coimbatore, Tamilnadu, India</p>
+           <p align="left" class="style6" style="color: gray; font-style:italic">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--Operations: Text Extraction, Desktop Publishing</p>
+           <p align="left" class="style6" style="color: gray; font-style:italic">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--Staff: 60</p>
+
+		 </td>
+       </tr>
+       <tr bordercolor="#CCCCCC">
+         <td height="24" colspan="6" align="center" class="style7 style9" scope="col">&nbsp;</td>
+       </tr>
+       <tr>
+         <td height="5" colspan="6" align="left" scope="col" class="style8">We provide a full range of prepress, e-publishing and project management services including copy editing and <br/>typesetting for scholarly books, journals and reference works. Following is the detailed list of the services that we offer to publishers worldwide:</td>
+       </tr>
+       <tr>
+         <td width="*" bordercolor="#CCCCCC" >&nbsp;</td>
+         <td width="10" height="421" bordercolor="#CCCCCC"><p class="style12"><br />
+         </p></td>
+         <td width="277" align="left" bordercolor="#CCCCCC"><p class="style12">&nbsp;</p>
+             <p class="style8"><b>Media Conversion</b></p>
+           <ul>
+               <li class="style6 style14"> Legacy Data Conversion</li>
+             <li class="style6 style14"> Content Origination</li>
+             <li class="style6 style14"> OCR Scanning</li>
+             <li class="style6 style14"> Text extraction</li>
+             <li class="style6 style14"> File preparation</li>
+           </ul>
+           <p align="left" class="style11"><span class="style8"><b>File Structuring</b></span></p>
+           <ul>
+               <li class="style6 style14"> File cleanup, pre-editing, tagging and conversion using ATHENA (our in-house structuring tool)</li>
+               <li class="style6 style14"> SGML/XML to customer DTD</li>
+             <li class="style6 style14"> Maths and tables processing</li>
+             <li class="style6 style14"> Conversions from TeX/LateX</li>
+           </ul>
+           <p align="left" class="style11"><span class="style8"><b>Copy Editing</b></span></p>
+           <ul class="style16">
+               <li class="style6 style14"> Language and style editing</li>
+               <li class="style6 style14"> To customer specifications</li>
+           </ul>
+           <p align="left" class="style11"><span class="style8"><b>Artwork Handling</b></span></p>
+           <ul class="style16"><li class="style6 style14">Scanning from originals</li>
+             <li class="style6 style14">Line, halftone, colour</li>
+             <li class="style2"><span class="style6 style14">Electronic art conversions</span><br />
+              </li>
+          </ul>
+             <p class="style11"><span class="style8"><b>Page Composition</b></span></p>
+           <ul>
+               <li class="style6 style14">From structured files</li>
+             <li class="style6 style14"> Flexible platform choice (3B2, Quark (PC & MAC), InDesign (PC & MAC),
+FrameMaker, MS Office)</li>
+             <li class="style6 style14"> Template development (as per the customer DTD)</li>
+             <li class="style6 style14"> Output to PDF</li>
+           </ul>
+		  </td>
+         <td width="*" align="left" bordercolor="#CCCCCC" >&nbsp;</td>
+         <td width="5" height="421" align="left" bordercolor="#C1C1C1"><p class="style12"><br />
+         </p></td>
+         <td width="273" align="left" valign="top" bordercolor="#CCCCCC"><p class="style11">&nbsp;</p>
+           <p class="style11"><span class="style8"><b>Quality Control</b></span></p>
+           <ul>
+               <li class="style6 style14"> Proofreading against author ms</li>
+               <li class="style6 style14"> Layout check</li>
+               <li class="style6 style14"> Matching style against customer spec</li>
+               <li class="style6 style14"> Final check before delivery</li>
+           </ul>
+		   <p class="style11"><span class="style8"><b>Indexing and Contents</b></span></p>
+           <ul>
+               <li class="style6 style14"> Highly experienced indexers with subject expertise </li>
+               <li class="style6 style14"> Auto created from Structured Files</li>
+           </ul>
+           <p class="style11"><span class="style8"><b>Electronic Product Delivery</b></span></p>
+           <ul>
+               <li class="style6 style14">Electronic file output</li>
+               <li class="style6 style14">SGML/XML/HTML conversion</li>
+             <li class="style6 style14"> Postscript and PDF</li>
+             <li class="style6 style14"> E-book and POD</li>
+           </ul>
+           <p class="style11"><span class="style8"><b>Web products</b></span></p>
+           <ul>
+               <li class="style6 style14"> Web enabled packages</li>
+               <li class="style6 style14"> Website development</li>
+               <li class="style6 style14"> CD application development</li>
+          </ul>
+           <p class="style11"><span class="style8"><b>Project Management</b></span></p>
+           <ul>
+               <li class="style6 style14"> Author communication</li>
+               <li class="style6 style14"> Correspondence with customer</li>
+               <li class="style6 style14"> Proof trafficking</li>
+               <li class="style6 style14"> Managing the entire project until final delivery</li>
+          </ul>		  
+		  
+		  </td>
+       </tr>
+     </table></td>
+   </tr>
+ </table>
+ <p>&nbsp;</p>
+</body>
+</html>

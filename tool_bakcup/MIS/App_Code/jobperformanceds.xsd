@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="jobperformanceds" targetNamespace="http://tempuri.org/jobperformanceds.xsd" xmlns:mstns="http://tempuri.org/jobperformanceds.xsd" xmlns="http://tempuri.org/jobperformanceds.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="jobperformanceds" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="jobperformanceds" msprop:Generator_DataSetName="jobperformanceds">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="jobperformanceds" msprop:Generator_UserTableName="jobperformanceds" msprop:Generator_RowDeletedName="jobperformancedsRowDeleted" msprop:Generator_TableClassName="jobperformancedsDataTable" msprop:Generator_RowChangedName="jobperformancedsRowChanged" msprop:Generator_RowClassName="jobperformancedsRow" msprop:Generator_RowChangingName="jobperformancedsRowChanging" msprop:Generator_RowEvArgName="jobperformancedsRowChangeEvent" msprop:Generator_RowEvHandlerName="jobperformancedsRowChangeEventHandler" msprop:Generator_TablePropName="_jobperformanceds" msprop:Generator_TableVarName="tablejobperformanceds" msprop:Generator_RowDeletingName="jobperformancedsRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="LEDATE" msprop:Generator_UserColumnName="LEDATE" msprop:Generator_ColumnPropNameInRow="LEDATE" msprop:Generator_ColumnVarNameInTable="columnLEDATE" msprop:Generator_ColumnPropNameInTable="LEDATEColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="EVNO" msprop:Generator_UserColumnName="EVNO" msprop:Generator_ColumnPropNameInRow="EVNO" msprop:Generator_ColumnVarNameInTable="columnEVNO" msprop:Generator_ColumnPropNameInTable="EVNOColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="STYPENO" msprop:Generator_UserColumnName="STYPENO" msprop:Generator_ColumnPropNameInRow="STYPENO" msprop:Generator_ColumnVarNameInTable="columnSTYPENO" msprop:Generator_ColumnPropNameInTable="STYPENOColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="EVDESCRIPTION" msprop:Generator_UserColumnName="EVDESCRIPTION" msprop:Generator_ColumnPropNameInRow="EVDESCRIPTION" msprop:Generator_ColumnVarNameInTable="columnEVDESCRIPTION" msprop:Generator_ColumnPropNameInTable="EVDESCRIPTIONColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="STYPENAME" msprop:Generator_UserColumnName="STYPENAME" msprop:Generator_ColumnPropNameInRow="STYPENAME" msprop:Generator_ColumnVarNameInTable="columnSTYPENAME" msprop:Generator_ColumnPropNameInTable="STYPENAMEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CATSDUEDATE" msprop:Generator_UserColumnName="CATSDUEDATE" msprop:Generator_ColumnPropNameInRow="CATSDUEDATE" msprop:Generator_ColumnVarNameInTable="columnCATSDUEDATE" msprop:Generator_ColumnPropNameInTable="CATSDUEDATEColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DUEDATE" msprop:Generator_UserColumnName="DUEDATE" msprop:Generator_ColumnPropNameInRow="DUEDATE" msprop:Generator_ColumnVarNameInTable="columnDUEDATE" msprop:Generator_ColumnPropNameInTable="DUEDATEColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DESPATCHDATE" msprop:Generator_UserColumnName="DESPATCHDATE" msprop:Generator_ColumnPropNameInRow="DESPATCHDATE" msprop:Generator_ColumnVarNameInTable="columnDESPATCHDATE" msprop:Generator_ColumnPropNameInTable="DESPATCHDATEColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ANO" msprop:Generator_UserColumnName="ANO" msprop:Generator_ColumnPropNameInRow="ANO" msprop:Generator_ColumnVarNameInTable="columnANO" msprop:Generator_ColumnPropNameInTable="ANOColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

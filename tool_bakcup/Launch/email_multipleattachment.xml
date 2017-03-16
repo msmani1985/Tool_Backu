@@ -1,0 +1,19 @@
+<emailattachment>
+	<journal>
+		<customer custno="2556" custname="TandF"></customer>
+		<customer custno="10081" custname="Co-Action"></customer>
+		<customer custno="2052" custname="LUND - Ecology Building"></customer>
+		<customer custno="10105" custname="San Lucas Medical Limited"></customer>
+		<customer custno="10089" custname="Agricultural Institute of Canada"></customer>
+		<customer custno="10124" custname="The African Field Epidemiology Network"></customer>
+		<customer custno="10119" custname="Canadian Science Publishing"></customer>
+		<customer custno="10132" custname="Consejo Superior de Investigaciones Cientificas"></customer>
+	</journal>
+	<book></book>
+	<project>
+		<customer custno="10081" custname="Co-Action"></customer>
+		<customer custno="10127" custname="Mercatus Center"></customer>
+		<customer custno="10119" custname="Canadian Science Publishing"></customer>
+		<customer custno="10130" custname="Termedia Publishing House"></customer>
+	</project>
+</emailattachment>

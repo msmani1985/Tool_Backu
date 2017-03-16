@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="projectmoduleds" targetNamespace="http://tempuri.org/projectmoduleds.xsd" xmlns:mstns="http://tempuri.org/projectmoduleds.xsd" xmlns="http://tempuri.org/projectmoduleds.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="projectmoduleds" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="projectmoduleds" msprop:Generator_DataSetName="projectmoduleds">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="projectmoduleds" msprop:Generator_UserTableName="projectmoduleds" msprop:Generator_RowDeletedName="projectmoduledsRowDeleted" msprop:Generator_RowChangedName="projectmoduledsRowChanged" msprop:Generator_RowClassName="projectmoduledsRow" msprop:Generator_RowChangingName="projectmoduledsRowChanging" msprop:Generator_RowEvArgName="projectmoduledsRowChangeEvent" msprop:Generator_RowEvHandlerName="projectmoduledsRowChangeEventHandler" msprop:Generator_TableClassName="projectmoduledsDataTable" msprop:Generator_TableVarName="tableprojectmoduleds" msprop:Generator_RowDeletingName="projectmoduledsRowDeleting" msprop:Generator_TablePropName="_projectmoduleds">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PROJECTNO" msprop:Generator_UserColumnName="PROJECTNO" msprop:Generator_ColumnPropNameInRow="PROJECTNO" msprop:Generator_ColumnVarNameInTable="columnPROJECTNO" msprop:Generator_ColumnPropNameInTable="PROJECTNOColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="PTITLE" msprop:Generator_UserColumnName="PTITLE" msprop:Generator_ColumnPropNameInRow="PTITLE" msprop:Generator_ColumnVarNameInTable="columnPTITLE" msprop:Generator_ColumnPropNameInTable="PTITLEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PCOMPLETEDDATE" msprop:Generator_UserColumnName="PCOMPLETEDDATE" msprop:Generator_ColumnPropNameInRow="PCOMPLETEDDATE" msprop:Generator_ColumnVarNameInTable="columnPCOMPLETEDDATE" msprop:Generator_ColumnPropNameInTable="PCOMPLETEDDATEColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="INVNO" msprop:Generator_UserColumnName="INVNO" msprop:Generator_ColumnPropNameInRow="INVNO" msprop:Generator_ColumnVarNameInTable="columnINVNO" msprop:Generator_ColumnPropNameInTable="INVNOColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="COSTTYPEID" msprop:Generator_UserColumnName="COSTTYPEID" msprop:Generator_ColumnPropNameInRow="COSTTYPEID" msprop:Generator_ColumnVarNameInTable="columnCOSTTYPEID" msprop:Generator_ColumnPropNameInTable="COSTTYPEIDColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="PRICECODE" msprop:Generator_UserColumnName="PRICECODE" msprop:Generator_ColumnPropNameInRow="PRICECODE" msprop:Generator_ColumnVarNameInTable="columnPRICECODE" msprop:Generator_ColumnPropNameInTable="PRICECODEColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="NUMPAGES" msprop:Generator_UserColumnName="NUMPAGES" msprop:Generator_ColumnPropNameInRow="NUMPAGES" msprop:Generator_ColumnVarNameInTable="columnNUMPAGES" msprop:Generator_ColumnPropNameInTable="NUMPAGESColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="MPTITLE" msprop:Generator_UserColumnName="MPTITLE" msprop:Generator_ColumnPropNameInRow="MPTITLE" msprop:Generator_ColumnVarNameInTable="columnMPTITLE" msprop:Generator_ColumnPropNameInTable="MPTITLEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PRECEIVEDDATE" msprop:Generator_UserColumnName="PRECEIVEDDATE" msprop:Generator_ColumnVarNameInTable="columnPRECEIVEDDATE" msprop:Generator_ColumnPropNameInRow="PRECEIVEDDATE" msprop:Generator_ColumnPropNameInTable="PRECEIVEDDATEColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PONUMBER" msprop:Generator_UserColumnName="PONUMBER" msprop:Generator_ColumnPropNameInRow="PONUMBER" msprop:Generator_ColumnVarNameInTable="columnPONUMBER" msprop:Generator_ColumnPropNameInTable="PONUMBERColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

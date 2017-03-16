@@ -1,0 +1,98 @@
+<invoice>
+	<customer custno="10081" custname="Co-Action Publishing" filename="CRCPressReport.rpt" >
+		<bookcode filename="CRCPressReport.rpt"></bookcode>
+	</customer>
+	<customer custno="2070" custname="Royal Irish Academy" filename="ClarusPressReport.rpt" >
+		<bookcode filename="ClarusPressReport.rpt" ></bookcode>
+	</customer>
+	<customer custno="10069" custname="Bytheway Publishing Services" filename="CRCPressReport.rpt" >
+		<bookcode  filename="CRCPressReport.rpt"></bookcode>
+	</customer>
+	<customer custno="10088" custname="The One Page Company" filename="CRCPressReport.rpt" >
+		<bookcode  filename="CRCPressReport.rpt"></bookcode>
+	</customer>
+	<customer custno="10091" custname="Channel View Publications" filename="CRCPressReport.rpt" >
+		<bookcode  filename="CRCPressReport.rpt"></bookcode>
+	</customer>
+	<customer custno="10035" custname="Clarus Press" filename="ClarusPressReport.rpt" >
+		<bookcode  filename="ClarusPressReport.rpt"></bookcode>
+	</customer>
+	<customer custno="2558" custname="CRC Press" filename="CRCPressReport.rpt" >
+		<bookcode  filename="CRCPressReport.rpt"></bookcode>
+	</customer>
+	<customer custno="10100" custname="Rusting Publications" filename="ClarusPressReport.rpt" >
+		<bookcode  filename="ClarusPressReport.rpt"></bookcode>
+	</customer>
+	<customer custno="10085" custname="Independent Colleges" filename="ClarusPressReport.rpt" >
+		<bookcode  filename="ClarusPressReport.rpt"></bookcode>
+	</customer>
+	<customer custno="2559" custname="Multilingual Matters" filename="CRCPressReport.rpt" >
+		<bookcode  filename="CRCPressReport.rpt"></bookcode>
+	</customer>
+	<customer custno="10037" custname="The Institute of Chartered Accountants in Ireland " filename="ClarusPressReport.rpt" >
+		<bookcode  filename="ClarusPressReport.rpt"></bookcode>
+	</customer>
+	<customer custno="10028" custname="Thomson Round Hall" filename="ClarusPressReport.rpt" >
+		<bookcode  filename="ClarusPressReport.rpt"></bookcode>
+	</customer>
+	<customer custno="10087" custname="VWM" filename="VMWReport.rpt" >
+		<bookcode  filename="VMWReport.rpt"></bookcode>
+	</customer>
+	<customer custno="10039" custname="The World Bank" filename="CRCPressReport.rpt" >
+		<bookcode  filename="CRCPressReport.rpt"></bookcode>
+	</customer>
+	<customer custno="10097" custname="Ross Print Services  " filename="CRCPressReport.rpt" >
+		<bookcode  filename="CRCPressReport.rpt"></bookcode>
+	</customer>
+	<customer custno="10031" custname="Informa" filename="CRCPressReport.rpt" >
+		<bookcode  filename="CRCPressReport.rpt"></bookcode>
+	</customer>
+	<customer custno="2556" custname="Taylor and Francis" filename="CRCPressReport.rpt" >
+		<bookcode  filename="CRCPressReport.rpt"></bookcode>
+	</customer>
+	<customer custno="10078" custname="OECD" filename="CRCPressReport.rpt" >
+		<bookcode  filename="CRCPressReport.rpt"></bookcode>
+	</customer>
+	<customer custno="10032" custname="Scranton Press" filename="CRCPressReport.rpt" >
+		<bookcode  filename="CRCPressReport.rpt"></bookcode>
+	</customer>
+	<customer custno="10073" custname="Taylor and Francis Scandinavia" filename="CRCPressReport.rpt" >
+		<bookcode  filename="CRCPressReport.rpt"></bookcode>
+	</customer>
+	<customer custno="10105" custname="San Lucas Medical Limited" filename="CRCPressReport.rpt" >
+		<bookcode  filename="CRCPressReport.rpt"></bookcode>
+	</customer>
+	<customer custno="10070" custname="Griffith College Dublin" filename="ClarusPressReport.rpt" >
+		<bookcode  filename="ClarusPressReport.rpt"></bookcode>
+	</customer>
+	<customer custno="10113" custname="Bona Books" filename="ClarusPressReport.rpt" >
+		<bookcode  filename="ClarusPressReport.rpt"></bookcode>
+	</customer>
+	<customer custno="10112" custname="Construction Analysis and Planning, LLC" filename="CRCPressReport.rpt" >
+		<bookcode  filename="CRCPressReport.rpt"></bookcode>
+	</customer>
+	<customer custno="10104" custname="STAR Technology Solutions" filename="STARTechReport.rpt" >
+		<bookcode  filename="STARTechReport.rpt"></bookcode>
+	</customer>
+	<customer custno="10120" custname="Richard J. Buswell(Mallorca)" filename="CRCPressReport.rpt" >
+		<bookcode  filename="CRCPressReport.rpt"></bookcode>
+	</customer>
+	<customer custno="10116" custname="Loescher Editore" filename="CRCPressReport.rpt" >
+		<bookcode  filename="CRCPressReport.rpt"></bookcode>
+	</customer>
+	<customer custno="10059" custname="St. Augustine's Press" filename="CRCPressReport.rpt" >
+		<bookcode  filename="CRCPressReport.rpt"></bookcode>
+	</customer>
+		<customer custno="10122" custname="Hodder Education" filename="CRCPressReport.rpt" >
+		<bookcode filename="CRCPressReport.rpt"></bookcode>
+	</customer>
+	<customer custno="10126" custname="Temenos Press" filename="CRCPressReport.rpt" >
+		<bookcode  filename="CRCPressReport.rpt"></bookcode>
+	</customer>
+		<customer custno="10134" custname="Callprint" filename="CRCPressReport.rpt" >
+		<bookcode  filename="CRCPressReport.rpt"></bookcode>
+	</customer>
+	<customer custno="10137" custname="Merrill Brink International" filename="CRCPressReport.rpt" >
+		<bookcode  filename="CRCPressReport.rpt"></bookcode>
+	</customer>
+</invoice>

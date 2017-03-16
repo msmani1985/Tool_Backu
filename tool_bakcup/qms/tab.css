@@ -1,0 +1,73 @@
+﻿ol#toc 
+{
+    height: 2em;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ol#toc li 
+{
+    float: left;
+    margin: 0 2px 0 0;
+}
+
+ol#toc a 
+{
+    background: #cdcdcd url(tab.png);
+    color: #fff;
+    display: block;
+    float: left;
+    height: 2em;
+    padding-left: 4px;
+    padding-right: 4px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+ol#toc a:hover 
+{
+        /*background-color: Green;*/
+        background-position: 0 -120px;
+        background: -webkit-gradient(linear, left top, left bottom, from(#02B332), to(#034F12));
+        background: -webkit-linear-gradient(bottom, #02B332, #034F12);
+        background: -moz-linear-gradient(bottom, #02B332, #034F12);
+        background: -ms-linear-gradient(bottom, #02B332, #034F12);
+        background: -o-linear-gradient(bottom, #02B332, #034F12);
+        background: linear-gradient(bottom, #02B332, #034F12); 
+}
+
+ol#toc a:hover span {
+    background-position: 100% -120px;
+}
+
+ol#toc li.current a 
+{
+   /* background-color:Aqua;*/
+    border: Green solid 2px;
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-top-right-radius: 3px;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-topright: 3px;
+    border-bottom:0px;
+    background-position: 0 -60px;
+    font-weight: bold;
+}
+
+ol#toc li.current span {
+    background-position: 100% -60px;
+}
+
+ol#toc span {
+    background: url(tab.png) 100% 0; 
+    display: block;
+    line-height: 2em;
+    padding-right: 10px;
+}
+
+div.content {
+    border: Green solid 2px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+ 
+}

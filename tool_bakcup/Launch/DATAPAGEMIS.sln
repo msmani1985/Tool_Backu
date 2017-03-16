@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "D:\...\DATAPAGEMIS\", "..\DATAPAGEMIS", "{475A535A-ED96-4345-A991-88F4E9DD32FD}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.VirtualPath = "/DATAPAGEMIS"
+		Debug.AspNetCompiler.PhysicalPath = "D:\Gnanasekaran\TOOLS\MIS\datapagemis\DATAPAGEMIS\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\DATAPAGEMIS\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/DATAPAGEMIS"
+		Release.AspNetCompiler.PhysicalPath = "D:\Gnanasekaran\TOOLS\MIS\datapagemis\DATAPAGEMIS\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\DATAPAGEMIS\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "2363"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{475A535A-ED96-4345-A991-88F4E9DD32FD}.Debug|.NET.ActiveCfg = Debug|.NET
+		{475A535A-ED96-4345-A991-88F4E9DD32FD}.Debug|.NET.Build.0 = Debug|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

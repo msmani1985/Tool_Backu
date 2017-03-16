@@ -1,0 +1,52 @@
+<EmailConfig>
+	<subject>Invoice of job [JOBNAME]</subject>
+	<body>
+		Dear [PENAME],
+
+		Please find attached copies of invoice of Job: [JOBNAME] which you requested.
+
+		Best Wishes,
+		Accounts Department,
+
+		Datapage International Ltd.,
+		232 Harolds Cross Road,
+		Dublin 6W.
+		Tel: 00353 1 4960628
+		Fax: 00353 1 4960636
+	</body>
+	<Journal>
+		<bcc/>
+		<cc/>
+		<subject></subject>
+		<body></body>
+		<customer name="TaylorandFransis">
+			<bcc/>
+			<cc/>
+			<subject></subject>
+			<jname name ="RAPL">
+				<bcc/>
+			</jname>
+		</customer>
+	</Journal>
+	<Book>
+		<bcc/>
+		<cc/>
+		<subject></subject>
+		<body></body>
+		<customer name="The WorldBank">
+			<bcc/>
+			<cc/>
+			<subject></subject>
+		</customer>
+	</Book>
+	<Project>
+		<bcc/>
+		<cc/>
+		<subject></subject>
+		<body></body>
+		<customer name="CRC Press">
+			<bcc/>
+			<cc/>
+		</customer>
+	</Project>
+</EmailConfig>

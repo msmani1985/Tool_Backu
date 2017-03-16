@@ -1,0 +1,143 @@
+COMMIT WORK;
+SET AUTODDL OFF;
+SET TERM ^ ;
+
+/* Stored procedures */
+
+CREATE PROCEDURE "SP_GET_INVOICE_DETAILS" 
+(
+  "INO" INTEGER
+)
+RETURNS
+(
+  "EDITEDDISK" INTEGER,
+  "COPYEDITPAGES" INTEGER,
+  "COPYEDITPAGES1" INTEGER,
+  "REDRAWCOUNT" INTEGER,
+  "UNEDITEDDISK" INTEGER,
+  "MANUSCRIPT" INTEGER,
+  "NOOFARTICLE" INTEGER,
+  "INVNO" INTEGER,
+  "INVDATE" TIMESTAMP,
+  "FNAME" CHAR(50) CHARACTER SET DOS850,
+  "FADD1" CHAR(50) CHARACTER SET DOS850,
+  "FADD2" CHAR(50) CHARACTER SET DOS850,
+  "FADD3" CHAR(50) CHARACTER SET DOS850,
+  "FADD4" CHAR(50) CHARACTER SET DOS850,
+  "FADD5" CHAR(50) CHARACTER SET DOS850,
+  "FADD6" CHAR(62) CHARACTER SET DOS850,
+  "PEDITOR" CHAR(50) CHARACTER SET DOS850,
+  "VATNO" CHAR(20) CHARACTER SET DOS850,
+  "JCNO2008" INTEGER,
+  "JCNO2009" INTEGER,
+  "ISSAMS" INTEGER,
+  "SAMCODE" INTEGER,
+  "ISCOPYEDITED" INTEGER,
+  "PAGEFORMAT" VARCHAR(25) CHARACTER SET DOS850,
+  "ISARTICLE_BASED" INTEGER,
+  "JOURCODE" VARCHAR(25) CHARACTER SET DOS850,
+  "IISSUENO" VARCHAR(10) CHARACTER SET DOS850
+)
+AS
+BEGIN EXIT; END ^
+
+
+ALTER PROCEDURE "SP_GET_INVOICE_DETAILS" 
+(
+  "INO" INTEGER
+)
+RETURNS
+(
+  "EDITEDDISK" INTEGER,
+  "COPYEDITPAGES" INTEGER,
+  "COPYEDITPAGES1" INTEGER,
+  "REDRAWCOUNT" INTEGER,
+  "UNEDITEDDISK" INTEGER,
+  "MANUSCRIPT" INTEGER,
+  "NOOFARTICLE" INTEGER,
+  "INVNO" INTEGER,
+  "INVDATE" TIMESTAMP,
+  "FNAME" CHAR(50) CHARACTER SET DOS850,
+  "FADD1" CHAR(50) CHARACTER SET DOS850,
+  "FADD2" CHAR(50) CHARACTER SET DOS850,
+  "FADD3" CHAR(50) CHARACTER SET DOS850,
+  "FADD4" CHAR(50) CHARACTER SET DOS850,
+  "FADD5" CHAR(50) CHARACTER SET DOS850,
+  "FADD6" CHAR(62) CHARACTER SET DOS850,
+  "PEDITOR" CHAR(50) CHARACTER SET DOS850,
+  "VATNO" CHAR(20) CHARACTER SET DOS850,
+  "JCNO2008" INTEGER,
+  "JCNO2009" INTEGER,
+  "ISSAMS" INTEGER,
+  "SAMCODE" INTEGER,
+  "ISCOPYEDITED" INTEGER,
+  "PAGEFORMAT" VARCHAR(25) CHARACTER SET DOS850,
+  "ISARTICLE_BASED" INTEGER,
+  "JOURCODE" VARCHAR(25) CHARACTER SET DOS850,
+  "IISSUENO" VARCHAR(10) CHARACTER SET DOS850
+)
+AS
+BEGIN
+FOR
+select (
+cast(f_doubleabs(sum(AREALNOOFPAGES)) as integer) +
+(select cast(f_doubleabs(sum(arealnoofpages)) as integer)
+   from article_dp where ino=:INO and adno in(2)) +
+(Select count(*) from article_dp where ino= :INO and adno in (1,5))
+) as EDITEDDISK ,
+(select sum(AREALNOOFPAGES) from article_dp
+ where adno not in (12,13) and ino = :INO) as CopyEditPages,
+(select sum(AREALNOOFPAGES) from article_dp where AEXTRA_COPY_EDIT = 'Y' and ino = :INO) as CopyEditPages1 ,
+(select count(artno) from art_dp left join article_dp on art_dp.ano=article_dp.ano
+ where art_dp.redraw ='Y' and article_dp.ino= :INO) as REDRAWCOUNT,
+(select (sum(AREALNOOFPAGES) + (Select count(*) from article_dp where ino= :INO and adno in (1,5))) from article_dp
+where adno not in (12,13,1,5) and catno = 21 and ino = :INO) as UNEDITEDDISK,
+(select (sum(AREALNOOFPAGES) + (Select count(*) from article_dp where ino= :INO and adno in (1,5))) from article_dp
+where adno not in (12,13,1,5) and catno not in (3,21) and ino= :INO) as MANUSCRIPT,
+(select count(*) from article_dp where adno=3 and ino= :INO) as NoofArticles
+  , IINVOICENO ,IINVOICEDATE,
+financialsite_dp.FINSITENAME,
+financialsite_dp.FINSITEADDRESS1,
+financialsite_dp.FINSITEADDRESS2,
+financialsite_dp.FINSITEADDRESS3,
+financialsite_dp.FINSITEADDRESS4,
+financialsite_dp.FINSITEADDRESS5,
+financialsite_dp.FINSITEADDRESS6,
+ INVDISPLAYNAME,
+financialsite_dp.FINSITEVATNO,
+JCNO_2008, JCNO_2009, ISSAM, COPYEDIT_PRICECODE, ISCOPYEDIT , FORMAT , ISARTICLE_BASED, JOURCODE,IISSUENO
+ from issue_dp
+ join journal_dp on journal_dp.journo=issue_dp.journo
+ join article_dp on journal_dp.journo=article_dp.journo and issue_dp.ino = article_dp.ino and article_dp.ino=:INO
+  and article_dp.adno not in (12,13,1,5,2)
+ and ((catno = 3) or (catno is null))
+ join  financialsite_dp on journal_dp.finsiteno=financialsite_dp.finsiteno
+ join contact_dp on journal_dp.jprodedno=contact_dp.conno
+ join pagetrim_dp on journal_dp.pagetrimno=pagetrim_dp.pagetrimno
+where ino=:INO
+group by
+IINVOICENO ,IINVOICEDATE,
+financialsite_dp.FINSITENAME,
+financialsite_dp.FINSITEADDRESS1,
+financialsite_dp.FINSITEADDRESS2,
+financialsite_dp.FINSITEADDRESS3,
+financialsite_dp.FINSITEADDRESS4,
+financialsite_dp.FINSITEADDRESS5,
+financialsite_dp.FINSITEADDRESS6,
+ INVDISPLAYNAME,
+financialsite_dp.FINSITEVATNO,
+JCNO_2008, JCNO_2009, ISSAM, COPYEDIT_PRICECODE, ISCOPYEDIT , FORMAT , ISARTICLE_BASED, JOURCODE,IISSUENO
+INTO : EDITEDDISK,:COPYEDITPAGES,:COPYEDITPAGES1,:REDRAWCOUNT,:UNEDITEDDISK,:MANUSCRIPT,:NOOFARTICLE,
+     :INVNO,:INVDATE,
+     :FNAME,:FADD1,:FADD2,:FADD3,:FADD4,:FADD5,:FADD6,:PEDITOR,:VATNO,:JCNO2008,:JCNO2009
+    ,:ISSAMS,:SAMCODE,:ISCOPYEDITED ,:PAGEFORMAT ,:ISARTICLE_BASED  ,:JOURCODE,:IISSUENO
+  DO
+   BEGIN
+   SUSPEND;
+   END
+END
+ ^
+
+SET TERM ; ^
+COMMIT WORK;
+SET AUTODDL ON;

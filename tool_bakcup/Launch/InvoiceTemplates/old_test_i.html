@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<HTML>
+<HEAD>
+<STYLE type="text/css">
+
+BODY{max-width : 750px; FONT-FAMILY:VERDANA, ARIAL; FONT-SIZE:10PT;margin:0 0 0 0;}
+DIV{BACKGROUND:WHITE;}
+IMG {
+ text-align:right;
+ vertical-align:top;
+}
+P {
+ text-align:left;
+ line-height:24px;
+}
+
+TABLE {
+ border-collapse:collapse;
+ text-align:center;
+ vertical-align:top;
+}
+TR {
+ vertical-align:middle;
+ height:auto
+}
+TH {
+ text-align:left;
+ vertical-align:top;
+ font-weight:normal;
+}
+TD { 
+ text-align:left;
+ vertical-align:middle;
+}
+.lastcell{text-align:right;padding-right:20px;width:80px}
+.subheading{font-weight:bold}
+.elehead{border-top:2px solid black;border-bottom:2px solid black;height:50px;font-weight:bold}
+</STYLE>
+    <link href="default.css" type="text/css" rel="stylesheet" />    
+</HEAD>
+<body>
+    <form style="background:white;text-align:left;" id="frmPreview" runat="server">
+	<table width="750px" cellpadding="3" cellspacing="3" border="0"> <!-- two column page table -->
+	<tr>
+		<th colspan="6" >
+			<table width="100%" border="0" height="360px"><tr>
+			<td width="510px" style="vertical-align:top" colspan="4">
+				<table cellpadding="3" style="margin-top:20px;border:2px solid black;" >
+				<tr>
+					<td width="130px">Invoice No:</td>
+					<td>[INVOICE_NUMBER]</td>
+				</tr>
+				<tr>
+					<td width="130px">Invoice Date:</td>
+					<td>[INVOICE_DATE]</td>
+				</tr>
+				</table>
+				<table width="360px" cellpadding="3" style="margin-top:20px;border:2px solid black;height:100px" class="TABLETO">
+				<tr>
+					<td style="vertical-align:top" rowspan="10" width="50"><B>To:</B></td>
+					<td style="vertical-align:top" >
+						Datapage International Ltd.<br/>
+						14 Docklands Innovation Centre<br/>
+						East Wall Road<br/>
+						Dublin 3<br/>
+						Ireland<br/>
+						Tel: +353 1 4960628<br/>
+						Email: accounts@datapage.ie<br/>
+						Web: www.datapage.ie
+					</td>
+				</tr>
+				</table>
+				<table width="360px" cellpadding="3" style="margin-top:20px;border:2px solid black"  class="TABLETO">
+				<tr>
+				<td width="150px">Our ref:</td>
+				<td>N/A</td>
+				</tr>
+				<tr>
+				<td>Production Editor:</td>
+				<td>[PEDITOR]</td>
+				</tr>
+				<tr>
+				<td>Author:</td>
+				<td>Taylor &amp; Francis Journals</td>
+				</tr>
+				</table>
+				<table width="360px" cellpadding="3" style="display:none;margin-top:20px;"  class="TABLETO">
+				<tr>
+				<td width="130px">Our VAT No:</td>
+				<td>---------------</td>
+				</tr><tr>
+				<td>Your VAT No:</td>
+				<td>IE 8213371S</td>
+				</tr>
+				</table>
+			</td>
+			<td width="100px" style="color:white">testing of empty space</td>
+			<td align="right" width="240px" style="vertical-align:top">
+				<table width="100%" style="text-align:right" cellpadding="0" cellpadding="0" class="TABLETO">
+					<tr><td><IMG src="images/Datapage.jpg" /></td></tr>
+					<tr><td>Datapage (India) Private Limited</td></tr>
+					<tr><td>Dugar Towers-5th Floor</td></tr>
+					<tr><td>New No.34, Marshall's Road</td></tr>
+					<tr><td>Egmore</td></tr>
+					<tr><td>Chennai - 600 008</td></tr>
+					<tr><td>India</td></tr>
+					<tr><td>Tel: +91 44 28542225</td></tr>
+					<tr><td>E-mail: info@datapage.org</td></tr>
+					<tr><td>Internet: www.datapage.ie</td></tr>
+				</table>
+			</td></tr></table>
+		</th>
+	</tr>
+	<tr><td COLSPAN="6">
+	[VALUES_ROWS]
+	</td></tr>
+	</table>
+</form>
+</body>
+</HTML>

@@ -1,0 +1,9 @@
+<jobstatusemail >
+<journal> 
+<customer custno="2556" custname="TandF">
+<to>sivaraj@datapage.org</to>
+<from>software@datapage.org</from>
+<subject>Job Status Report - [DATE]</subject>
+</customer>
+</journal>
+</jobstatusemail>

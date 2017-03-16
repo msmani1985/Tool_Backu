@@ -1,0 +1,162 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="QMS_StyleSheet.aspx.cs" Inherits="qmsstylesheet" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Untitled Page</title>
+      <link href="default.css" type="text/css" rel="stylesheet" />
+      <link href="scripts/tabs.css" rel="stylesheet" type="text/css" />
+    
+        <style type="text/css">
+    .tblstyle td
+    {
+    padding:2px;
+    border-top-style:none;
+    border-bottom-style:solid;
+    border-left-style:solid;
+    border-right-style:none;
+    border-color:Black;
+    border-width:thin;
+
+
+    }
+ .tblstyle th
+ {
+    height:10px;
+    width: 544px;
+    position:relative;
+    text-align:center;
+    border-top-style:solid;
+    border-bottom-style:solid;
+    border-left-style:solid;
+    border-right-style:none;
+    border-color:Black;
+    border-width:thin;
+    background-color:Honeydew;
+
+
+}
+    </style>
+<script type="text/javascript" >
+ 
+function Getdivdata() {
+
+
+document.getElementById("divNEWRECORD").style.display = "inline";
+
+}
+function ShowAlert(DivID)
+{
+    try
+    {
+        //Get object
+        var obj = document.getElementById(DivID);
+        if ( obj != null )
+        {
+            //display div object
+            obj.style.display = "block";
+        }
+        //return false so no post back occurs
+        return false;
+    }
+    catch(e)
+    {
+        alert(e);
+        //return false so no post back occurs
+        return false;
+    }
+}
+
+</script>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+    
+   
+   <div>
+   <table>
+   <tr>
+   <td style="width: 97px"><asp:Button ID="btnNEW" Text="New" runat="server" Width="99px" OnClick="btnNEW_Click" /> </td>
+   </tr>
+   </table>
+   </div> 
+   <asp:GridView ID="gvSAMProfileNew" EnableViewState="true" runat="server" OnRowCreated="gvSAMProfileNew_RowCreated"   OnRowDataBound="gvSAMProfileNew_RowDataBound" OnRowCommand="gvSAMProfileNew_RowCommand" OnRowEditing="gvSAMProfileNew_RowEditing" Height="69px" Width="882px" OnRowUpdated="gvSAMProfileNew_RowUpdated" OnRowUpdating="gvSAMProfileNew_RowUpdating" OnSelectedIndexChanged="gvSAMProfileNew_SelectedIndexChanged"  >
+  <Columns> 
+  
+<asp:ButtonField Text="EDIT" CommandName="Edit" />
+<asp:ButtonField Text="UPDATE" CommandName="Update" />
+
+
+<asp:TemplateField>
+<ItemTemplate>
+<asp:HiddenField ID="hdnJRNLCODE" runat="server" Value='<%# Eval("Journal Acronym") %>' />
+<asp:TextBox ID="TextBox1" Visible="false" Text='<%# Eval("Journal Title") %>'  runat="server"></asp:TextBox>
+<asp:TextBox ID="TextBox2" Visible="false" Text='<%# Eval("Production Editor") %>' runat="server"></asp:TextBox>
+<asp:TextBox ID="TextBox3" Visible="false" Text='<%# Eval("Trim Size") %>' runat="server"></asp:TextBox>
+<asp:TextBox ID="TextBox4" Visible="false" Text='<%# Eval("Is CopyEdit") %>' runat="server"></asp:TextBox>
+<asp:TextBox ID="TextBox5" Visible="false" Text='<%# Eval("Is Sensitive") %>' runat="server"></asp:TextBox>
+<asp:TextBox ID="TextBox6" Visible="false" Text='<%# Eval("Is SAM") %>' runat="server"></asp:TextBox>
+<asp:TextBox ID="TextBox7" Visible="false" Text='<%# Eval("FPM Journal") %>' runat="server"></asp:TextBox>
+<asp:TextBox ID="TextBox8" Visible="false" runat="server"></asp:TextBox>
+<asp:TextBox ID="TextBox9" Visible="false" Text='<%# Eval("Template update date") %>'  runat="server"></asp:TextBox>
+<asp:TextBox ID="TextBox10" Visible="false" Text='<%# Eval("Journal Acronym") %>' runat="server"></asp:TextBox>
+
+<asp:ImageButton ID="imgWordSAMPROFILE" runat="server" Visible="false" OnClick="imgWordSAMPROFILE_Click" CommandName="imgWordSAMPROFILE"  />
+<asp:ImageButton ID="imgWordStyleSheet" runat="server" Visible="false" CommandName="imgWordStyleSheet"   />
+<asp:ImageButton ID="ïmgPdf" runat="server" Visible="false" CommandName="ïmgPdf" />
+</ItemTemplate>
+
+
+
+</asp:TemplateField>
+
+ </Columns>
+
+
+
+
+ 
+   </asp:GridView>
+   <asp:Label ID="lblRESULT" runat="server"></asp:Label>
+<div>
+   <asp:Button ID="btnSAVE" Text="Save Excel" runat="server" OnClick="btnSAVE_Click" Visible="false" />
+   
+</div>
+
+
+<div id="divNEWRECORD" style=" display:none">
+<table style="width: 879px; height: 131px">
+<tr><td style="width: 58px"></td> <td style="width: 240px"><asp:Label ID="lblJRNLACR" runat="server" Text="Journal Acronym"></asp:Label> </td><td style="width: 586px"></td><asp:TextBox ID="txtJRNLACR" runat="server"></asp:TextBox><td style="width: 3px"></td> </tr>
+<tr><td style="width: 58px"></td> <td style="width: 240px"><asp:Label ID="lblJRNLTIT" runat="server" Text="Journal Title"></asp:Label> </td><td style="width: 586px"></td><asp:TextBox ID="txtJRNLTIT" runat="server"></asp:TextBox><td style="width: 3px"></td> </tr>
+<tr><td style="width: 58px"></td> <td style="width: 240px"><asp:Label ID="lblProdEdit" runat="server" Text="Production Editor"></asp:Label> </td><td style="width: 586px"></td><asp:TextBox ID="txtlblProdEdit" runat="server"></asp:TextBox><td style="width: 3px"></td> </tr>
+
+<tr><td style="width: 58px"></td> <td style="width: 240px"><asp:Label ID="lblTrimSize" runat="server" Text="Trim Size"></asp:Label> </td><td style="width: 586px"></td><asp:TextBox ID="txtTrimSize" runat="server"></asp:TextBox><td style="width: 3px"></td> </tr>
+<tr><td style="width: 58px"></td> <td style="width: 240px"><asp:Label ID="lblIsCopyEdit" runat="server" Text="Is CopyEdit"></asp:Label> </td><td style="width: 586px"></td><asp:TextBox ID="txtIsCopyEdit" runat="server"></asp:TextBox><td style="width: 3px"></td> </tr>
+<tr><td style="width: 58px"></td> <td style="width: 240px"><asp:Label ID="lblIsSensitive" runat="server" Text="Is Sensitive"></asp:Label> </td><td style="width: 586px"></td><asp:TextBox ID="txtIsSensitive" runat="server"></asp:TextBox><td style="width: 3px"></td> </tr>
+
+<tr><td style="width: 58px"></td> <td style="width: 240px"><asp:Label ID="lblIsSAM" runat="server" Text="Is SAM"></asp:Label> </td><td style="width: 586px"></td><asp:TextBox ID="txtIsSAM" runat="server"></asp:TextBox><td style="width: 3px"></td> </tr>
+<tr><td style="width: 58px"></td> <td style="width: 240px"><asp:Label ID="lblFPMJournal" runat="server" Text="FPM Journal"></asp:Label> </td><td style="width: 586px"></td><asp:TextBox ID="txtFPMJournal" runat="server"></asp:TextBox><td style="width: 3px"></td> </tr>
+<tr><td style="width: 58px"></td> <td style="width: 240px"><asp:Label ID="lblRevisedssrecdate" runat="server" Text="Revised stylesheet received date"></asp:Label> </td><td style="width: 586px"></td><asp:TextBox ID="txtRevisedssrecdate" runat="server"></asp:TextBox><td style="width: 3px"></td> </tr>
+
+<tr><td style="width: 58px"></td> <td style="width: 240px"><asp:Label ID="lblTemplateupdatedate" runat="server" Text="Template update date"></asp:Label> </td><td style="width: 586px"></td><asp:TextBox ID="txtTemplateupdatedate" runat="server"></asp:TextBox><td style="width: 3px"></td> </tr>
+</table>
+
+<table style="width: 877px">
+<tr>
+<td style="width: 225px; height: 22px;" ></td>
+   <td style="height: 22px" >
+       <asp:Button ID="btnSaveNew" runat="server" Text="Save" Width="114px" /> <asp:Button ID="btnCancelNew" runat="server" Text="Cancel" Width="160px" /> </td>
+    <td style="height: 22px" ></td>
+    <td style="width: 7px; height: 22px;"></td>
+</tr>
+</table>
+
+</div>
+ 
+
+    
+    </form>
+</body>
+</html>

@@ -1,0 +1,375 @@
+<invoice>
+	<customer custno="2556" custname="Taylor and Francis" filename="CpatInformaReport.rpt" >
+		<projectcode filename="CpatInformaReport.rpt"></projectcode>
+	</customer>
+	<customer custno="2556XML" custname="Taylor and Francis" filename="TandFXMLReport.rpt" >
+		<projectcode filename="TandFXMLReport.rpt"></projectcode>
+	</customer>
+	<customer custno="2558" custname="CRC Press" filename="CpatInformaReport.rpt" >
+		<projectcode filename="CpatInformaReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10091" custname="Channel View Publications" filename="CpatInformaReport.rpt" >
+		<projectcode filename="CpatInformaReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10096" custname="Irish Taxation Institute" filename="CpatInformaReport.rpt" >
+		<projectcode filename="CpatInformaReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10037" custname="The Institute of Chartered Accountants in Ireland" filename="CpatInformaReport.rpt" >
+		<projectcode filename="CpatInformaReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10090" custname="BHO" filename="BHOReport.rpt" >
+		<projectcode filename="BHOReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10082" custname="Adam Matthew Digital" filename="AdamMathewReport.rpt" >
+		<projectcode filename="AdamMathewReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10134" custname="Callprint" filename="AdamMathewReport.rpt" >
+		<projectcode filename="AdamMathewReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10094" custname="Tek Translation International, S.A." filename="TekTranslationReport.rpt" >
+		<projectcode filename="TekTranslationReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10031" custname="Informa" filename="CpatInformaReport.rpt" >
+		<projectcode filename="CpatInformaReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10072" custname="Informa UK Limited" filename="CpatInformaReport.rpt" >
+		<projectcode filename="CpatInformaReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10098" custname="Medknow Publications" filename="CpatInformaReport.rpt" >
+		<projectcode filename="CpatInformaReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10035" custname="Clarus Press" filename="CpatInformaReport.rpt" >
+		<projectcode filename="CpatInformaReport.rpt"></projectcode>
+	</customer>
+<!--<customer custno="10081" custname="Co-Action Publishing" filename="CpatInformaReport.rpt" >
+		<projectcode filename="CpatInformaReport.rpt"></projectcode>
+	</customer>-->
+<!--	<customer custno="10081" custname="Co-Action Publishing" filename="AfricanfieldReport.rpt" >
+		<projectcode filename="AfricanfieldReport.rpt"></projectcode>
+	</customer>-->
+	<customer custno="10085" custname="Independent Colleges" filename="CpatInformaReport.rpt" >
+		<projectcode filename="CpatInformaReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10078" custname="OECD" filename="CpatInformaReport.rpt" >
+		<projectcode filename="CpatInformaReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10095" custname="PIP Printing and Marketing Services" filename="CpatInformaReport.rpt" >
+		<projectcode filename="CpatInformaReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10073" custname="Taylor and Francis Scandinavia" filename="CpatInformaReport.rpt" >
+		<projectcode filename="CpatInformaReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10062" custname="The Celtic Press" filename="CpatInformaReport.rpt" >
+		<projectcode filename="CpatInformaReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10039" custname="The World Bank " filename="CpatInformaReport.rpt" >
+		<projectcode filename="CpatInformaReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10109" custname="Health Finance" filename="CpatInformaReport.rpt" >
+		<projectcode filename="CpatInformaReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10057" custname="Verlag Dr. Otto Schmidt" filename="VerlogReport.rpt" >
+		<projectcode filename="VerlogReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10064" custname="Adam Matthew Publications" filename="AdamMathewReport.rpt" >
+		<projectcode filename="AdamMathewReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10075" custname="BPP Learning Media " filename="CpatInformaReport.rpt" >
+		<projectcode filename="CpatInformaReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10077" custname="Duke University Libraries " filename="CpatInformaReport.rpt" >
+		<projectcode filename="CpatInformaReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10093" custname="EVRS" filename="CpatInformaReport.rpt" >
+		<projectcode filename="CpatInformaReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10040" custname="Psychology Press Ltd" filename="CpatInformaReport.rpt" >
+		<projectcode filename="CpatInformaReport.rpt"></projectcode>
+	</customer>
+	<customer custno="2070" custname="Royal Irish Academy" filename="CpatInformaReport.rpt" >
+		<projectcode filename="CpatInformaReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10092" custname="Medical Education Online " filename="CpatInformaReport.rpt" >
+		<projectcode filename="CpatInformaReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10102" custname="JMedCBR Defense" filename="CpatInformaReport.rpt" >
+		<projectcode filename="CpatInformaReport.rpt"></projectcode>
+	</customer>
+		<!--<customer custno="10106" custname="Interdisciplinary Toxicology" filename="CpatInformaReport.rpt" >
+		<projectcode filename="CpatInformaReport.rpt"></projectcode>
+	</customer>-->
+	<customer custno="10106" custname="Interdisciplinary Toxicology" filename="AfricanfieldReport.rpt" >
+		<projectcode filename="AfricanfieldReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10103" custname="Logoscript, S.L." filename="TekTranslationReport.rpt" >
+		<projectcode filename="TekTranslationReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10148" custname="Pactera Services (Beijing) Limited" filename="TekTranslationReport.rpt" >
+		<projectcode filename="TekTranslationReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10108" custname="experTTranslators" filename="TekTranslationReport.rpt" >
+		<projectcode filename="TekTranslationReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10114" custname="Language Connect" filename="LanguageConnect.rpt" >
+		<projectcode filename="LanguageConnect.rpt"></projectcode>
+	</customer>
+	<customer custno="10110" custname="Polyphonia" filename="TekTranslationReport.rpt" >
+		<projectcode filename="TekTranslationReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10139" custname="Verba-Translations SARL" filename="TekTranslationReport.rpt" >
+		<projectcode filename="TekTranslationReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10104" custname="STAR Technology Solutions" filename="StarTechReport.rpt" >
+		<projectcode filename="StarTechReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10163" custname="Lionbridge - Ireland" filename="Lionbridge - Ireland.rpt" >
+		<projectcode filename="Lionbridge - Ireland.rpt"></projectcode>
+	</customer>
+	<customer custno="10123" custname="Lionbridge Espana SL" filename="StarTechReport.rpt" >
+		<projectcode filename="StarTechReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10152" custname="Lionbridge Italy Srl" filename="StarTechReport.rpt" >
+		<projectcode filename="StarTechReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10167" custname="Lionbridge Mumbai" filename="StarTechReport.rpt" >
+		<projectcode filename="StarTechReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10170" custname="Lionbridge Slovak" filename="StarTechReport.rpt" >
+		<projectcode filename="StarTechReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10107" custname="CLS Communication Ltd" filename="TekTranslationReport.rpt" >
+		<projectcode filename="TekTranslationReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10105" custname="San Lucas Medical Limited" filename="SanLucasReport.rpt" >
+		<projectcode filename="SanLucasReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10131" custname="Optimal Clinical" filename="SanLucasReport.rpt" >
+		<projectcode filename="SanLucasReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10111" custname="MO Group International" filename="TekTranslationReport.rpt" >
+		<projectcode filename="TekTranslationReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10115" custname="thebigword" filename="TekTranslationReport.rpt" >
+		<projectcode filename="TekTranslationReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10159" custname="thebigword-UK" filename="TekTranslationReport.rpt" >
+		<projectcode filename="TekTranslationReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10160" custname="thebigword-US" filename="TekTranslationReport.rpt" >
+		<projectcode filename="TekTranslationReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10161" custname="thebigword-Japan" filename="TekTranslationReport.rpt" >
+		<projectcode filename="TekTranslationReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10172" custname="thebigword-China" filename="TekTranslationReport.rpt" >
+		<projectcode filename="TekTranslationReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10118" custname="Elanex, Inc." filename="TekTranslationReport.rpt" >
+		<projectcode filename="TekTranslationReport.rpt"></projectcode>
+	</customer>
+	<!--<customer custno="10121" custname="Tehran University of Medical Sciences" filename="CpatInformaReport.rpt" >
+		<projectcode filename="CpatInformaReport.rpt"></projectcode>
+	</customer>-->
+	<customer custno="10121" custname="Tehran University of Medical Sciences" filename="TehranUniversityReport.rpt" >
+		<projectcode filename="TehranUniversityReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10130" custname="Termedia Publishing House" filename="TehranUniversityReport.rpt" >
+		<projectcode filename="TehranUniversityReport.rpt"></projectcode>
+	</customer>
+	
+	<customer custno="10168" custname="Polish Urological Association" filename="PolishUrologicalAssociation.rpt" >
+		<projectcode filename="PolishUrologicalAssociation.rpt"></projectcode>
+	</customer>
+
+	<customer custno="10164" custname="The Collins Press" filename="TheCollinsPress.rpt" >
+		<projectcode filename="TheCollinsPress.rpt"></projectcode>
+	</customer>
+	<customer custno="10165" custname="SouthTrade International" filename="TheCollinsPress.rpt" >
+		<projectcode filename="TheCollinsPress.rpt"></projectcode>
+	</customer>
+	<customer custno="10069" custname="Bytheway Publishing Services" filename="CpatInformaReport.rpt">
+		<projectcode filename="CpatInformaReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10089" custname="Agricultural Institute of Canada" filename="CpatInformaReport.rpt" >
+		<projectcode filename="CpatInformaReport.rpt"></projectcode>
+  </customer>
+	<customer custno="10119" custname="Canadian Science Publishing" filename="NRCResearchPress.rpt" >
+		<projectcode filename="NRCResearchPress.rpt"></projectcode>
+  </customer>
+  <customer custno="10122" custname="Hodder Education" filename="CpatInformaReport.rpt" >
+		<projectcode filename="CpatInformaReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10124" custname="The African Field Epidemiology Network" filename="AfricanfieldReport.rpt" >
+		<projectcode filename="AfricanfieldReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10125" custname="Global Language Solutions, Inc." filename="GlobalLanguageReport.rpt" >
+		<projectcode filename="GlobalLanguageReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10127" custname="Mercatus Center" filename="CpatInformaReport.rpt" >
+		<projectcode filename="CpatInformaReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10128" custname="WebCertain Group Ltd" filename="TekTranslationReport.rpt" >
+		<projectcode filename="TekTranslationReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10133" custname="Trinity College" filename="CpatInformaReport.rpt" >
+		<projectcode filename="CpatInformaReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10136" custname="Baguette Translations Ltd" filename="TekTranslationReport.rpt" >
+		<projectcode filename="TekTranslationReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10134" custname="Callprint" filename="AdamMathewReport.rpt" >
+		<projectcode filename="AdamMathewReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10129" custname="Inland Fisheries Ireland" filename="Inland FisheriesReport.rpt" >
+		<projectcode filename="Inland FisheriesReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10137" custname="Merrill Brink International" filename="TekTranslationReport.rpt" >
+		<projectcode filename="TekTranslationReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10162" custname="Merrill Brink International - US" filename="TekTranslationReport.rpt" >
+		<projectcode filename="TekTranslationReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10137" custname="Merrill Brink International - Ireland" filename="TekTranslationReport.rpt" >
+		<projectcode filename="TekTranslationReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10143" custname="RR Donnelley" filename="TekTranslationReport.rpt" >
+		<projectcode filename="TekTranslationReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10158" custname="RR Donnelley - France" filename="TekTranslationReport.rpt" >
+		<projectcode filename="TekTranslationReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10157" custname="RR Donnelley - UK" filename="TekTranslationReport.rpt" >
+		<projectcode filename="TekTranslationReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10156" custname="RR Donnelley - Honk Kong" filename="TekTranslationReport.rpt" >
+		<projectcode filename="TekTranslationReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10155" custname="RR Donnelley - Spain" filename="TekTranslationReport.rpt" >
+		<projectcode filename="TekTranslationReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10154" custname="RR Donnelley - Luxemberg" filename="TekTranslationReport.rpt" >
+		<projectcode filename="TekTranslationReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10153" custname="RR Donnelley - US" filename="TekTranslationReport.rpt" >
+		<projectcode filename="TekTranslationReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10142" custname="Venga Corporation" filename="TekTranslationReport.rpt" >
+		<projectcode filename="TekTranslationReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10144" custname="Global Lingo" filename="TekTranslationReport.rpt" >
+		<projectcode filename="TekTranslationReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10171" custname="Global Lingo Romania" filename="TekTranslationReport.rpt" >
+		<projectcode filename="TekTranslationReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10150" custname="TransPerfect Translations" filename="TekTranslationReport.rpt" >
+		<projectcode filename="TekTranslationReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10151" custname="Centuries Limited" filename="TekTranslationReport.rpt" >
+		<projectcode filename="TekTranslationReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10145" custname="DCU Language Services" filename="TekTranslationReport.rpt" >
+		<projectcode filename="TekTranslationReport.rpt"></projectcode>
+	</customer>
+	<customer custno="10117" custname="Medical Student Research Journal" filename="TekTranslationReport.rpt" >
+	</customer>
+
+	<customer custno="10166" custname="VGTU" filename="VGTU.rpt" >
+		<projectcode filename="VGTU.rpt"></projectcode>
+	</customer>
+
+	<customer custno="10174" custname="Journal of Mobile Technology in Medicine" filename="JMTM.rpt" >
+	<projectcode filename="JMTM.rpt"></projectcode>
+	</customer>
+	
+	<customer custno="10081" custname="Co-Action Publishing" filename="CoActionPublishing.rpt" >
+	<projectcode filename="CoActionPublishing.rpt"></projectcode>
+	</customer>
+	
+	<customer custno="10179" custname="WA Skills Training Pty Ltd" filename="WASkills TrainingPtyLtd.rpt" >
+	<projectcode filename="WASkills TrainingPtyLtd.rpt"></projectcode>
+	</customer>
+	
+	<customer custno="10177" custname="ISASS" filename="ISASS.rpt" >
+	<projectcode filename="ISASS.rpt"></projectcode>
+	</customer>
+	
+	<customer custno="10175" custname="FAO" filename="FAO.rpt" >
+		<projectcode filename="FAO.rpt"></projectcode>
+	</customer>
+	
+	<customer custno="10176" custname="Targem translation" filename="Targem translation.rpt" >
+		<projectcode filename="Targem translation.rpt"></projectcode>
+	</customer>
+	
+	<customer custno="10180" custname="The LanguageWorks, Inc." filename="The LanguageWorks.rpt" >
+		<projectcode filename="The LanguageWorks.rpt"></projectcode>
+	</customer>
+
+	<customer custno="10181" custname="Local Concept" filename="Local Concept.rpt" >
+		<projectcode filename="Local Concept.rpt"></projectcode>
+	</customer>
+
+	<customer custno="10182" custname="RR Donnelley - Poland" filename="RR Donnelley - Poland.rpt" >
+		<projectcode filename="RR Donnelley - Poland.rpt"></projectcode>
+	</customer>
+	
+	<customer custno="10183" custname="Fernando Castaneda" filename="Fernando Castaneda.rpt" >
+		<projectcode filename="Fernando Castaneda.rpt"></projectcode>
+	</customer>
+	
+	<customer custno="10185" custname="Thalassaemia International Federation" filename="Thalassaemia International Federation.rpt" >
+		<projectcode filename="Thalassaemia International Federation.rpt"></projectcode>
+	</customer>
+	
+	<customer custno="10184" custname="Computational and Structural Biotechnology Journal" filename="Computational and Structural Biotechnology Journal.rpt" >
+		<projectcode filename="Computational and Structural Biotechnology Journal.rpt"></projectcode>
+	</customer>
+	
+	<customer custno="10189" custname="UTSePRESS" filename="UTSePRESS.rpt" >
+		<projectcode filename="UTSePRESS.rpt"></projectcode>
+	</customer>
+	<customer custno="10195" custname="Perstige Network" filename="PerstigeNetwork.rpt" >
+		<projectcode filename="PerstigeNetwork.rpt"></projectcode>
+	</customer>
+	<customer custno="10186" custname="Design Factory" filename="DesignFactoryReport.rpt" >
+		<projectcode filename="DesignFactoryReport.rpt"></projectcode>
+    </customer>
+  <customer custno="10197" custname="Brightlines Translation" filename="BrightLines.rpt" >
+    <projectcode filename="BrightLines.rpt"></projectcode>
+  </customer>
+  <customer custno="10190" custname="African Online Scientific Information Systems" filename="AOSIS.rpt" >
+    <projectcode filename="AOSIS.rpt"></projectcode>
+  </customer>
+  <customer custno="10243" custname="Divergent Language Solutions" filename="DLS.rpt" >
+    <projectcode filename="DLS.rpt"></projectcode>
+  </customer>
+  <customer custno="10245" custname="RR Donnelley - Canada" filename="TekTranslationReport.rpt" >
+		<projectcode filename="TekTranslationReport.rpt"></projectcode>
+  </customer>
+  <customer custno="10244" custname="Get Fletch Ltd" filename="GetFletch.rpt" >
+    <projectcode filename="GetFletch.rpt"></projectcode>
+  </customer>
+  <customer custno="10246" custname="ANTIOPE TRADUCTIONS" filename="ANTIOPE.rpt" >
+    <projectcode filename="ANTIOPE.rpt"></projectcode>
+  </customer>
+	<customer custno="10247" custname="Berkeley Books" filename="BB.rpt" >
+		<projectcode filename="BB.rpt"></projectcode>
+	</customer>
+	<customer custno="10198" custname="PNB Publishers" filename="TehranUniversityReport.rpt" >
+		<projectcode filename="TehranUniversityReport.rpt"></projectcode>
+	</customer>
+		<customer custno="10199" custname="Morningside Translations, Inc." filename="Morningside.rpt" >
+		<projectcode filename="Morningside.rpt"></projectcode>
+	</customer>
+	<customer custno="10250" custname="Aktuel Translations" filename="AktuelTranslations.rpt" >
+		<projectcode filename="AktuelTranslations.rpt"></projectcode>
+	</customer>
+	<customer custno="10255" custname="Premier Irish Translation" filename="PIT.rpt" >
+		<projectcode filename="PIT.rpt"></projectcode>
+	</customer>
+	<customer custno="10259" custname="Medical Communications" filename="MC.rpt" >
+		<projectcode filename="MC.rpt"></projectcode>
+	</customer>
+</invoice>
+

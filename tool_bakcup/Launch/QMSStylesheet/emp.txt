@@ -1,0 +1,33 @@
+Emp Id                               int
+FirstName                          varchar
+SureName                          varchar
+Designation_id                    int
+Date_Of_birth                    datetime
+Join_Date                           datetime
+last_visit		          datetime
+location_id                          int
+employee number                int
+salary                                  int
+team_join_date                   datetime
+leave_date                          datetime
+Blood_group                      varchar
+Contact Address                 varchar
+Emp team name                  varchar
+			
+
+http://csharpdotnetfreak.blogspot.com/2009/09/popup-update-refresh-parent-child.html
+*
+http://www.c-sharpcorner.com/forums/thread/113974/pop-up-window-in-gridview.aspx
+http://challlengebrains.blogspot.in/2011/08/refresh-gridview-control-on-parent-page.html
+
+http://aspdotnetcode.blogspot.in/2010/08/openpopwnidowwithquerystringc.html
+
+http://www.aspsnippets.com/Articles/Modal-PopUp-using-JavaScript.aspx
+
+http://dotnetwithrajiv.wordpress.com/tag/show-modalpopup-to-edit-asp-net-gridview-row-values-without-using-ajaxcontroltoolkit/
+
+http://nice-tutorials.blogspot.in/2009/03/opening-pop-up-window-from-datagrid.html
+
+http://praveenlearnseveryday.net/2012/08/29/asp-net-webform-popup-in-a-new-window-with-a-changed-title-text/
+*valida
+http://mrbool.com/validation-in-javascript-emails-letters-and-empty-input-textbox/25472

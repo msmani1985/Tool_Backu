@@ -1,0 +1,179 @@
+using System;
+using System.Data;
+using System.Configuration;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+using System.Data.Odbc;
+using CrystalDecisions.Shared;
+using CrystalDecisions.CrystalReports.Engine;
+
+/// <summary>
+/// Summary description for invoicereport
+/// </summary>
+public class invoicereport
+{
+    OdbcConnection RptConnection;
+    ReportDocument RptDoc;
+    //OdbcDataAdapter RptAdaptor;
+    double PAmount;
+ 	public invoicereport()
+	{
+		//
+		// TODO: Add constructor logic here
+		//
+	}
+    public void DBInvoice()
+    {
+        //OdbcConnection DBCon = null;
+        //DBCon = new OdbcConnection(ConfigurationManager.ConnectionStrings["conStrInvoice"].ToString());
+        RptConnection = new OdbcConnection(ConfigurationManager.ConnectionStrings["conStrIBLive"].ToString());
+        RptConnection.Open();
+
+        //return DBCon;
+    }
+    public void DBClose()
+    {
+        if (RptConnection != null)
+        {
+            if (RptConnection.State != ConnectionState.Closed)
+                RptConnection.Close();
+            RptConnection.Dispose();
+        }
+    }
+    public DataSet InvoiceDataset(int RIssueNo, int Category)
+    {
+        //MPath = MapPath;
+        //location = Location;
+        CustCategory = Category;
+        IssueNo = RIssueNo;
+        datasourceIB DIB = new datasourceIB();
+        try
+        {
+            //RptConnection = DBInvoice();
+            
+            if (Category == 2)/////////For Books
+            {
+                //RptAdaptor = new OdbcDataAdapter("Select * from SP_SELECT_BOOKS_INVOICE_NEW where BNO1=" + IssueNo + "", RptConnection);
+                //RptDataSet2 = new InvoiceBooks();
+                //RptAdaptor.Fill(RptDataSet2);
+                //RptAdaptor = new OdbcDataAdapter("Select * from SP_SELECT_BOOKS_INVOICE_NEW where BNO1=" + IssueNo + "", RptConnection);
+                return DIB.InvoiceDataSet("Select * from SP_SELECT_BOOKS_INVOICE_NEW where BNO1=" + IssueNo + "", "InvoiceBooks", CommandType.StoredProcedure);
+
+
+            }
+            else if (Category == 3)/////For Projects
+            {
+
+                string BindQry = "SELECT  PCREDITED_IND,PCCNO,PCREDITED,PEMAIL_FLAG_IND,PINVOICED_IND,PINVOICEDDATE_IND,CONTACT_DP.CONEMAIL," +
+                        " CONTACT_DP.CONEMAIL2, FINANCIALSITE_DP.FINSITEMAIL, FINANCIALSITE_DP.FINSITEMAIL1," +
+                        " FINANCIALSITE_DP.FINSITECONTACT,FINANCIALSITE_DP.FINSITECONTACT1,FINANCIALSITE_DP.FINSITEMAILOPTION,PEMAIL_FLAG,customer_Dp.custemail," +
+                        " PNOOFPAGES, (PNOOFCHARGEDPAGES) AS PCPAGES, (PNOOFCHARGEDARTICLES) AS PCARTICLES, PCOST, PROJECTNO," +
+                        " PROJECTS_DP.CUSTNO, CUSTOMER_DP.CUSTNAME, PCODE, PTITLE, PRECEIVEDDATE, PDUEDATE, PCOMPLETEDDATE, PRINTNO, PPRODEDNO," +
+                        " PPRODMANNO, PADDITEMS, PADDCHARGES, PINVOICED, PINVOICEDDATE, INVNO, PDESCRIPTION, PCOMMENTS, PDIGITAL," +
+                        " PROJECTS_DP.DIGITALPRODNO, PROJECTS_DP.TPLATNO, FINSITENO, DNO, STNO, EMPNO, STYPENO, PCNO_2007, PCNO_2008,PCNO_2009,PROJECTS_DP.CONNO," +
+                        " PDESPATCHED, PACOSTDESC1, PACOSTDESC2, PACOSTDESC3, PACOSTDESC4, PACOSTDESC5, PACNO1, PACNO2, PACNO3, PACNO4, PACNO5," +
+                        " PROJECTS_DP.PAQTY1, PROJECTS_DP.PAQTY2, PROJECTS_DP.PAQTY3, PROJECTS_DP.PAQTY4, PROJECTS_DP.PAQTY5, " +
+                        " F_ROUNDFLOAT(PROJECTS_DP.PAQTY1,0.5) AS PAQTY1, F_ROUNDFLOAT(PROJECTS_DP.PAQTY2,0.5) AS PAQTY2," +
+                        " F_ROUNDFLOAT(PROJECTS_DP.PAQTY3,0.5) AS PAQTY3, F_ROUNDFLOAT(PROJECTS_DP.PAQTY4,0.5) AS PAQTY4," +
+                        " F_ROUNDFLOAT(PROJECTS_DP.PAQTY5,0.5) AS PAQTY5, F_LRTRIM(CONTACT_DP.CONFIRSTNAME) || ' ' || F_LRTRIM(CONTACT_DP.CONSURNAME) " +
+                        " as CONFULLNAME,DIGITALPRODUCTS_DP.PRODCODE, TYPESETPLATFORM_DP.TPLATCODE, DEPARTMENT_DP.DNAME, STATUS_DP.STDESCRIPTION, " +
+                        " EMPLOYEE_DP.EMPNAME, STYPE_DP.STYPENAME, PROJECTS_DP.PONUMBER, PROJECTS_DP.PNOOFCHARACTERS, " +
+                        " financialsite_dp.FINSITENAME,financialsite_dp.FINSITEADDRESS1,financialsite_dp.FINSITEADDRESS2," +
+                        " financialsite_dp.FINSITEADDRESS3,financialsite_dp.FINSITEADDRESS4,financialsite_dp.FINSITEADDRESS5," +
+                        " financialsite_dp.FINSITEADDRESS6,financialsite_dp.FINSITEVATNO,PJOBNUMBER,PODATE,PISBN,INVDISPLAYNAME " +
+                        " FROM PROJECTS_DP LEFT JOIN CUSTOMER_DP ON PROJECTS_DP.CUSTNO=CUSTOMER_DP.CUSTNO LEFT JOIN DIGITALPRODUCTS_DP ON " +
+                        " PROJECTS_DP.DIGITALPRODNO=DIGITALPRODUCTS_DP.DIGITALPRODNO LEFT JOIN TYPESETPLATFORM_DP ON " +
+                        " PROJECTS_DP.TPLATNO=TYPESETPLATFORM_DP.TPLATNO LEFT JOIN CONTACT_DP ON PROJECTS_DP.CONNO=CONTACT_DP.CONNO LEFT JOIN " +
+                        " DEPARTMENT_DP ON PROJECTS_DP.DNO=DEPARTMENT_DP.DNO LEFT JOIN STATUS_DP ON PROJECTS_DP.STNO=STATUS_DP.STNO LEFT JOIN " +
+                        " EMPLOYEE_DP ON PROJECTS_DP.EMPNO=EMPLOYEE_DP.EMPNO LEFT JOIN STYPE_DP ON PROJECTS_DP.STYPENO=STYPE_DP.STYPENO LEFT JOIN " +
+                        " FINANCIALSITE_DP ON PROJECTS_DP.FINSITENO=FINANCIALSITE_DP.FINSITENO WHERE PROJECTS_DP.projectno=" + IssueNo;
+
+
+
+                //RptAdaptor = new OdbcDataAdapter(BindQry, RptConnection);
+                //RptDataSet4 = new InvoiceProjects();
+                //RptAdaptor.Fill(RptDataSet4);
+
+                return DIB.InvoiceDataSet(BindQry, "InvoiceProjects", CommandType.StoredProcedure);
+
+            }
+            else////////////////////For Journal
+            {
+                //RptAdaptor = new OdbcDataAdapter("Select * from SP_GET_INVOICE_DETAILS(" + IssueNo.ToString() + ")  a join financialsite_dp  b on B.finsiteno=a.finno", RptConnection);
+                //RptDataSet = new Invoice_Details();
+                //RptAdaptor.Fill(RptDataSet);
+                return DIB.InvoiceDataSet("Select * from SP_GET_INVOICE_DETAILS(" + IssueNo.ToString() + ")  a join financialsite_dp  b on B.finsiteno=a.finno", "InvoiceJournal", CommandType.StoredProcedure);
+
+            }
+            PAmount = GetPriceValue('T');
+            //This is For Medknow Customer Only see in india invoice but display doublin invoice format 
+            //so set location in dublin
+            //if (Currency.ToUpper() == "INR".ToUpper())
+            //    location = "d";
+
+        }
+        catch (Exception e)
+        {
+            throw e;
+        }
+        finally
+        {
+            //DBClose(RptConnection);
+            DIB = null;
+        }
+
+    }
+    public string GetReport(DataSet BookDs, string CustNo, string RptType1)
+    {
+
+        try
+        {
+            RptDoc = new ReportDocument();
+            if (CustCategory == 2)////////////For Books
+            {
+                //RptAdaptor.Fill(RptDataSet2);
+                FName = GetReportName(RptDataSet2.Tables[1].Rows[0]["BNO1"].ToString(), CustNo);
+                RptDoc.FileName = FName;
+                RptDoc.SetDataSource(RptDataSet2.Tables[1]);
+
+                if (location == "d")/////////////For SubReport(SubReport use in Dublin Report)
+                {
+                    ReportDocument SubRptDoc = new ReportDocument();
+                    RptDataSet3 = new InvoiceBooksAddress();
+                    RptAdaptor2 = new OdbcDataAdapter("select * from customer_dp x,financialsite_dp y where x.finsiteno=y.finsiteno and x.custno='" + CustNo + "'", RptConnection);
+                    RptAdaptor2.Fill(RptDataSet3);
+                    SubRptDoc = RptDoc.Subreports[0];
+                    SubRptDoc.SetDataSource(RptDataSet3.Tables[1]);
+                    //string val = RptDoc.Subreports[0].ParameterFields["testval1"].CurrentValues.ToString();
+
+                }
+                double baamt = 0;
+
+                for (int i = 1; i < 6; i++)
+                {
+                    if (RptDataSet2.Tables[1].Rows[0]["BACNO" + i + "1"].ToString() != "")
+                        baamt = PriceCode(Convert.ToInt16(RptDataSet2.Tables[1].Rows[0]["BACNO" + i + "1"].ToString()));
+                    RptDoc.SetParameterValue("BACOST" + i + "Amount", baamt);
+                    baamt = 0;
+                }
+
+            }
+            RptDoc.SetParameterValue("TSAmount", PAmount);
+        }
+        catch (Exception exp1)
+        {
+
+            throw exp1;
+
+        }
+        finally
+        { }
+    }
+         
+
+
+}

@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<followup>
+  <customer custname="TandF" custno="2556">
+    <from>nathiya@datapage.org</from>
+    <to>nathiya@datapage.org</to>
+    <to1>subbulakshmi@datapage.org</to1>
+    <cc></cc>
+    <bcc>soundar@datapage.org;nathiya@datapage.org;jincy@datapage.org</bcc>
+    <body>
+      Dear [AUTHORNAME],<br/><br/>
+
+      I wish to introduce myself as Nathiya, the production assistant for [JOURNALTITLE]<br/><br/>
+
+      Article ID: [ARTICLEID]<br/><br/>
+
+      Article Title: [AUTHORTITLE]<br/><br/>
+
+      Unfortunately we have not received your corrections for this article so we are unable to proceed with the revised proofs.<br/><br/>
+
+      We would be grateful if you could send your corrections tomorrow, or let us know if this will not be possible for any reason.<br/><br/>
+
+      Thank you very much for your help,<br/><br/>
+
+      Best Wishes<br/>
+      Nathiya<br/><br/>
+
+      Nathiya T.<br/>
+      Production Assistant - Journals<br/>
+      Datapage Tel: +91 8754574275<br/>
+      Web: www.datapage.ie<br/>
+
+
+    </body>
+  </customer>
+</followup>
+
+
+<!-- Commented by Gnanasekaran; dt:28-Nov-2013; 11:18AM; for email id changes
+<?xml version="1.0" encoding="utf-8" ?>
+<followup>
+	<customer custname="TandF" custno="2556">
+		<to1>soundar@datapage.org;jude@datapage.org</to1>
+		<to>subbulakshmi@datapage.org</to>
+		<cc>sivaraj@datapage.org;subbulakshmi@datapage.org</cc>
+		<body>
+			<html>
+				<body>
+
+Author Email: [AUTHOREMAIL]<br/><br/>
+
+Production Editor Email: [PEEMAIL]<br/><br/>
+
+Dear [AUTHORNAME],<br/><br/>
+
+I wish to introduce myself as Jude, the production assistant for [JOURNALTITLE]<br/><br/>
+
+Article ID: [ARTICLEID]<br/><br/>
+
+Article Title: [AUTHORTITLE]<br/><br/>
+
+Unfortunately we have not received your corrections for this article so we are unable to proceed with the revised proofs.<br/><br/>
+
+We would be grateful if you could send your corrections tomorrow, or let us know if this will not be possible for any reason.<br/><br/>
+
+Thank you very much for your help,<br/><br/>
+
+Best Wishes<br/>
+Jude<br/><br/>
+
+Jude Rajkumar<br/>
+Production Assistant - Journals<br/>
+Datapage Tel: +44 207 0997498<br/>
+Web: www.datapage.ie<br/>
+			</body>
+			</html>
+		</body>
+	</customer>
+</followup>
+	
+
+-->

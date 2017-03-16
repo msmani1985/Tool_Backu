@@ -1,0 +1,23 @@
+<jobbag>
+	<mail_port>25</mail_port>
+	<mail_host>192.9.200.116</mail_host>
+	<from>software@datapage.loc</from>
+	<emailgroup1>
+		<to1>subbulakshmi@datapage.loc</to1>
+		<to>group3@datapage.loc;qcbooks@datapage.loc;artworks@datapage.loc</to>
+		<customer custid="83"	cusname="The World Bank" />
+		<customer custid="81" custname="The Institute of Chartered Accountants in Ireland" />
+		<customer custid="94" custname="Bytheway Publishing Services" />
+		<customer custid="66" custname="Royal Irish Academy" />
+		<customer custid="86" custname="St. Augustine's Press" />
+	</emailgroup1>
+	<emailgroup2>
+		<to1>subbulakshmi@datapage.loc</to1>
+		<to>group4@datapage.loc;qcbooks@datapage.loc;artworks@datapage.loc</to>
+		<customer custid="145" custname="Hodder Education" />
+		<customer custid="70" custname="CRC Press" />
+		<customer custid="72" custname="Thomson Round Hall" />
+		<customer custid="79" custname="Clarus Press" />
+	</emailgroup2>	
+	
+</jobbag>

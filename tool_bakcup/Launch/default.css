@@ -1,0 +1,596 @@
+﻿BODY
+{
+	background: WHITE; /*#F5FAFA;*/
+	font-family: Verdana, Tahoma, arial;
+	font-size: 9pt;
+	margin: 0 0 0 0;
+	z-index: 100;
+}
+FORM
+{
+	margin: 0 0 0 0;
+}
+DIV
+{
+	z-index: 1000;
+}
+TABLE
+{
+	z-index: 1000;
+	font-size: 8pt
+}
+TD
+{
+	vertical-align: middle;
+	z-index: 1000;
+	background-color: inherit;
+}
+INPUT
+{
+	font-weight: normal;
+	font-size: 8pt;
+	font-family: Verdana, Tahoma, Arial, sans-serif;
+	z-index: 1000;
+}
+
+TEXTAREA
+{
+	font-weight: normal;
+	font-size: 8pt;
+	font-family: Verdana, Tahoma, Arial, sans-serif;
+	z-index: 1000;
+}
+
+SELECT
+{
+	font-weight: normal;
+	font-size: 8pt;
+	font-family: Verdana, Tahoma, Arial, sans-serif;
+	z-index: 1000;
+}
+
+BUTTON
+{
+	background-color: GREEN;
+	font-weight: bold;
+	font-size: 8pt;
+	width: 60pt;
+	color: white;
+	height: 16pt;
+	text-align: center;
+	cursor: pointer;
+	z-index: 1000;
+}
+
+A:link
+{
+	text-decoration: none;
+}
+A:visited
+{
+	text-decoration: none;
+}
+A:active
+{
+	text-decoration: none;
+}
+A:hover
+{
+	text-decoration: none;
+	color: inherit;
+}
+.dpbutton
+{
+	background-color: GREEN;
+	font-weight: bold;
+	font-size: 8pt;
+	width: 60pt;
+	color: white;
+	height: 16pt;
+	text-align: center;
+	cursor: pointer;
+}
+.dpbuttonActive
+{
+	background-color: GREEN;
+	font-weight: bold;
+	font-size: 8pt;
+	width: 60pt;
+	color: white;
+	height: 17pt;
+	text-align: center;
+	cursor: pointer;
+	border:solid 1px yellow;
+}
+.dpbuttonInActive
+{
+	background-color: gray;
+	font-weight: bold;
+	font-size: 7pt;
+	width: 60pt;
+	color: white;
+	height: 15pt;
+	text-align: center;
+	cursor: pointer;
+	border:solid 1px gray;
+}
+.menuTable
+{
+	/*margin-top: 8px;*/
+	margin-left: 2px;
+	font-family: Verdana, Tahoma, arial;
+	font-size: 8pt;
+	text-align: center;
+	cursor: pointer;
+	vertical-align: middle;
+}
+
+a.msglink:visited
+{
+/*font-weight: bold;*/
+color:white;
+text-decoration:none;
+}
+       
+a.msglink:active
+{
+/*font-weight: bold;*/
+color:white;
+text-decoration:none;
+}
+                 
+a.msglink:link
+{
+/*font-weight: bold;*/
+color:white;
+text-decoration:none;
+}
+
+.submenuTable
+{
+	/*margin-left: 12px;*/
+	background-color: rgb(190,190,190);
+	font-family: Verdana, Tahoma, arial;
+	font-size: 8.5pt;
+	line-height: 20px;
+	color: white;
+	text-align: left;
+	cursor: pointer;
+}
+.menuDarker
+{
+	background: GREEN;
+	padding-left: 12px;
+	/*line-height: 20px;*/
+	color: White;
+	font-size: 8pt;
+	text-align: left;
+	text-transform :uppercase ;
+	font-family: Verdana, Tahoma, arial;
+}
+
+.menumoseover
+{
+	background: #02a703;
+	color: White;
+	padding-left: 12px;
+	font-size: 8pt;
+	text-align: left;
+	/*font-weight: bold;*/
+	text-transform :uppercase ;
+	font-family: Verdana, Tahoma, arial;
+}
+.menuLighter
+{
+	padding-left:10px;
+	color: Black;
+	text-align: left;
+	font-size: 7.5pt;
+	font-weight: bold;
+	font-family: Verdana, Tahoma, arial;
+}
+.menuLighter a
+{
+	color:Black;
+	text-decoration:none;
+}
+.menuLighter a:active
+{
+	color:White;
+	text-decoration:none;
+}
+
+/*.menuLighter a:link
+{
+	color:Black;
+	text-decoration:none;
+}
+.menuLighter a:active
+{
+	color:White;
+	text-decoration:none;
+}
+.menuLighter a:visited
+{
+	color:Black;
+	text-decoration:none;
+}
+.menuLighter a:hover
+{
+	color:White;
+	text-decoration:none;
+}*/
+.dptitle
+{
+	font-family: Verdana, Tahoma, Arial;
+	font-size: 12pt;
+	font-weight: bold;
+	text-align: left;
+	margin-left: 10px;
+/*	margin-top: 25px;*/
+	margin-bottom: 15px;
+	border-bottom: 1px solid GREEN;
+	color: Green;
+	width: 90%;
+	height: 30px;
+}
+.dpheader
+{
+	font-family: Verdana, Tahoma, Arial;
+	text-align: left;
+	font-weight: bold;
+	margin-left: 10px;
+/*	margin-top: 25px;*/
+	margin-bottom: 15px;
+	border-bottom: 1px solid GREEN;
+	color: Green;
+}
+.bordertable
+{
+	border-left: 1px solid;
+	border-right: 1px solid;
+	border-top: 1px solid;
+	border-bottom: 1px solid;
+	border-color: GREEN;
+	padding: 2 2 2 2;
+}
+.dpGreenHeader
+{
+	background: GREEN;
+	color: White;
+	font-weight: bold;
+	height: 30px;
+	vertical-align: middle;
+	text-align: left;
+	text-indent: 5px;
+}
+.dpLtGreenHeader
+{
+	border-bottom: solid 1px Green;
+	background: #f0fff0;
+	color: GREEN;
+	font-size: 10pt;
+	font-weight: bold;
+	height: 30px;
+	vertical-align: middle;
+	text-align: left;
+}
+.dpJobGreenHeader
+{
+	border-bottom: solid 1px Green;
+	background: #f0fff0;
+	color: GREEN;
+	font-size: 10pt;
+	font-weight: bold;
+	height: 20px;
+	vertical-align: middle;
+	text-align: left;
+}
+.errorMsg
+{
+	color: Red;
+	font-weight: bold;
+	font-size: 10pt;
+	text-align: center;
+}
+.displaymsg
+{
+	color: Red;
+	font-size: 10pt;
+	text-align: center;
+}
+.borderdiv
+{
+	margin-left: 10px;
+	text-align: center;
+	border: 2px solid GREEN;
+	overflow: auto;
+}
+.darkbackground {background: GREEN;	color: White;	text-align: left; 
+	    
+	}
+.darkbackground1 {background: GREEN; width:auto;	color: White;	text-align: center; 
+	    
+	}
+.FreezeHeader
+{
+	position:relative;
+    cursor: default;
+    top: expression(this.offsetParent.scrollTop);
+    z-index: 10;
+}
+
+.lightbackground
+{
+	background: WHITE; /*#F5FAFA;*/
+	color: Black;
+	text-align: left;
+}
+.dullbackground 
+{
+	background: #E0E0E0;color: Black;
+	text-align: left;
+}
+
+.editbackground
+{
+	background: pink;
+	color: Black;
+	text-align: left;
+	width :100px;
+}
+.GridList
+{
+	border: 1px solid GREEN;
+	overflow: auto;
+	width: 90%;
+	height: 350px;
+	margin-top: 10px;
+}
+.error
+{
+	color: Red;
+	font-weight: bold;
+	font-size: 10pt;
+	text-align: center;
+}
+. divwithborder
+{
+	border: 2px solid GREEN;
+}
+.ItemHidden
+{
+	visibility: hidden;
+}
+.CursorAdd
+{
+	cursor: pointer;
+}
+.TxtBox
+{
+	border: solid 1px #ccc;
+	/*
+	height:12px;
+	font-size: 12px;
+	*/
+}
+
+.TxtBoxWatermark
+{
+	border: solid 1px #ccc;
+	font-size: 9pt;
+}
+.winTABButton
+{
+	background-color:Green;
+	color:White;
+	height:25px;
+}
+.winTABButtonSelected
+{
+	background-color:LightGrey;
+	color:Black;
+	height:25px;
+}
+.HeaderText
+{
+	color: Green;
+	font-size:8pt;
+	font-weight: bold;
+}
+
+A.link1:link    {font-family: Arial, Helvetica, sans-serif; 
+	color: Green; text-decoration: none; font-size:9pt;}
+A.link1:visited {font-family: Arial, Helvetica, sans-serif;
+	color: Green; text-decoration: none; font-size:9pt;}
+A.link1:active  {font-family: Arial, Helvetica, sans-serif;
+	color: Green; text-decoration: none; font-size:9pt;}
+A.link1:hover   {font-family: Arial, Helvetica, sans-serif;
+	color: red ; text-decoration: underline; font-size:9pt;}
+
+
+/*tr.GVFixedHeader { font-weight:bold; color:white;  background-color:green ; position:relative; 
+	
+                 top:expression(this.parentNode.parentNode.parentNode.scrollTop -2);
+                 z-index:100;
+                  } 
+  */               
+tr.GVFixedHeader
+{
+	font-weight:bold; color:White; background-color:Green;
+}
+tr.GVFixedHeader a:visited
+{
+font-weight: bold;
+color:white;
+text-decoration:none;
+}
+       
+tr.GVFixedHeader a:active
+{
+font-weight: bold;
+color:white;
+text-decoration:none;
+}
+                 
+tr.GVFixedHeader a:link
+{
+font-weight: bold;
+color:white;
+text-decoration:none;
+}
+                 
+.GVFixedFooter { font-weight:bold; color:white; background-color: green ; position:relative;
+                 bottom:expression(getScrollBottom(this.parentNode.parentNode.parentNode.parentNode));}
+    
+.HeadText
+{
+	color:Green;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:12pt;
+	font-weight:bold;
+}
+.borderblack
+{
+	border-left: 1px solid;
+	border-right: 1px solid;
+	border-top: 1px solid;
+	border-bottom: 1px solid;
+	border-color: Black;
+	padding: 2 2 2 2;
+}
+.captiontext
+{
+	font-weight:bold;
+	font-size:7pt;
+	color:Black;
+	text-align:left;
+	width:300px;
+	
+}
+.labeltxt
+{
+	font-weight: normal;
+	font-size: 8pt;
+	font-family: Verdana, Tahoma, Arial, sans-serif;
+	z-index: 1000;
+}
+.headerbackground
+{
+/*	background-color:#E0E0E0;*/
+	/*background-color:#FFCCCC;*/
+	text-align:center;
+	color:Green;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:12pt;
+	font-weight:bold;
+}	
+.captiontext2
+{
+	font-weight:bold;
+	font-size:8pt;
+	color:Black;
+	text-align:left;
+	width:45%;
+	
+	
+}
+
+.div_style
+{
+	/*background-color:LightGrey;
+	border: solid 1px #000040;
+	position:relative;*/
+	
+  position: absolute;
+  top: 0; /* These positions makes sure that the overlay */
+  bottom: 0;  /* will cover the entire parent */
+  left: 0;
+  width: 100%;
+  background: #000;
+  opacity: 0.4;
+  -moz-opacity: 0.65; /* older Gecko-based browsers */
+  filter:alpha(opacity=40); /* For IE6&7 */
+
+	
+}
+.div_small
+{
+	top:100px;
+	left:150px;
+	visibility:visible;
+	background:MintCream;
+	/*width:250px;
+	height:100px;
+	background-color:#FFCCCC;*/
+	position:absolute;
+}
+.div_small2
+{
+	top:200px;
+	left:150px;
+	visibility:visible;
+	background:MintCream;
+	/*width:250px;
+	height:100px;
+	background-color:#FFCCCC;*/
+	position:absolute;
+}
+.div_hide
+{
+	display:none;
+	color:White;
+	z-index:1000;
+	/*background-color:Blue;
+	MintCream*/
+}
+.dpGreentitle
+{
+	border-bottom: solid 1px Green;
+	background: #f0fff0;
+	color: GREEN;
+	font-size: 10pt;
+	font-weight: bold;
+	height: 15px;
+	vertical-align: middle;
+	text-align: left;
+}
+.div_display
+{
+	top:400px;
+	left:350px;
+	visibility:visible;
+	background:MintCream;
+	/*width:250px;
+	height:100px;
+	background-color:#FFCCCC;*/
+	position:absolute;
+}
+.gridalternaterow
+{
+	background: #f0fff0;
+	color: Black;
+	text-align: left;
+}
+.wraptxt
+{
+	word-wrap: break-word;
+}
+
+.textheader
+{
+	/*border-bottom: solid 1px Green;
+	background: #f0fff0;*/
+	color: GREEN;
+	font-size: 10pt;
+	font-weight: bold;
+	height: 15px;
+	vertical-align: middle;
+	text-align: center;
+}
+.divstyle
+{
+	border:solid 1px green;
+	text-align:left; padding-left:10px; border-left-width:0px; border-right-width:0px; overflow:auto;
+	width:600px; height:330px;
+}

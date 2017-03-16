@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NatureAsia" targetNamespace="http://tempuri.org/NatureAsia.xsd" xmlns:mstns="http://tempuri.org/NatureAsia.xsd" xmlns="http://tempuri.org/NatureAsia.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="NatureAsia" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="NatureAsia" msprop:Generator_DataSetName="NatureAsia">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="NatureAsia_Invoice" msprop:Generator_TableClassName="NatureAsia_InvoiceDataTable" msprop:Generator_TableVarName="tableNatureAsia_Invoice" msprop:Generator_TablePropName="NatureAsia_Invoice" msprop:Generator_RowDeletingName="NatureAsia_InvoiceRowDeleting" msprop:Generator_RowChangingName="NatureAsia_InvoiceRowChanging" msprop:Generator_RowEvHandlerName="NatureAsia_InvoiceRowChangeEventHandler" msprop:Generator_RowDeletedName="NatureAsia_InvoiceRowDeleted" msprop:Generator_UserTableName="NatureAsia_Invoice" msprop:Generator_RowChangedName="NatureAsia_InvoiceRowChanged" msprop:Generator_RowEvArgName="NatureAsia_InvoiceRowChangeEvent" msprop:Generator_RowClassName="NatureAsia_InvoiceRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ANO" msprop:Generator_ColumnVarNameInTable="columnANO" msprop:Generator_ColumnPropNameInRow="ANO" msprop:Generator_ColumnPropNameInTable="ANOColumn" msprop:Generator_UserColumnName="ANO" type="xs:string" minOccurs="0" />
+              <xs:element name="ARTICLES" msprop:Generator_ColumnVarNameInTable="columnARTICLES" msprop:Generator_ColumnPropNameInRow="ARTICLES" msprop:Generator_ColumnPropNameInTable="ARTICLESColumn" msprop:Generator_UserColumnName="ARTICLES" type="xs:string" minOccurs="0" />
+              <xs:element name="PAGECOUNT" msprop:Generator_ColumnVarNameInTable="columnPAGECOUNT" msprop:Generator_ColumnPropNameInRow="PAGECOUNT" msprop:Generator_ColumnPropNameInTable="PAGECOUNTColumn" msprop:Generator_UserColumnName="PAGECOUNT" type="xs:string" minOccurs="0" />
+              <xs:element name="RESEARCHPAGE" msprop:Generator_ColumnVarNameInTable="columnRESEARCHPAGE" msprop:Generator_ColumnPropNameInRow="RESEARCHPAGE" msprop:Generator_ColumnPropNameInTable="RESEARCHPAGEColumn" msprop:Generator_UserColumnName="RESEARCHPAGE" type="xs:string" minOccurs="0" />
+              <xs:element name="ARTREPROCESS" msprop:Generator_ColumnVarNameInTable="columnARTREPROCESS" msprop:Generator_ColumnPropNameInRow="ARTREPROCESS" msprop:Generator_ColumnPropNameInTable="ARTREPROCESSColumn" msprop:Generator_UserColumnName="ARTREPROCESS" type="xs:string" minOccurs="0" />
+              <xs:element name="CE" msprop:Generator_ColumnVarNameInTable="columnCE" msprop:Generator_ColumnPropNameInRow="CE" msprop:Generator_ColumnPropNameInTable="CEColumn" msprop:Generator_UserColumnName="CE" type="xs:string" minOccurs="0" />
+              <xs:element name="FIRSTPROOF" msprop:Generator_ColumnVarNameInTable="columnFIRSTPROOF" msprop:Generator_ColumnPropNameInRow="FIRSTPROOF" msprop:Generator_ColumnPropNameInTable="FIRSTPROOFColumn" msprop:Generator_UserColumnName="FIRSTPROOF" type="xs:string" minOccurs="0" />
+              <xs:element name="REVISES" msprop:Generator_ColumnVarNameInTable="columnREVISES" msprop:Generator_ColumnPropNameInRow="REVISES" msprop:Generator_ColumnPropNameInTable="REVISESColumn" msprop:Generator_UserColumnName="REVISES" type="xs:string" minOccurs="0" />
+              <xs:element name="PRESS" msprop:Generator_ColumnVarNameInTable="columnPRESS" msprop:Generator_ColumnPropNameInRow="PRESS" msprop:Generator_ColumnPropNameInTable="PRESSColumn" msprop:Generator_UserColumnName="PRESS" type="xs:string" minOccurs="0" />
+              <xs:element name="ONLINE" msprop:Generator_ColumnVarNameInTable="columnONLINE" msprop:Generator_ColumnPropNameInRow="ONLINE" msprop:Generator_ColumnPropNameInTable="ONLINEColumn" msprop:Generator_UserColumnName="ONLINE" type="xs:string" minOccurs="0" />
+              <xs:element name="PRICE" msprop:Generator_ColumnVarNameInTable="columnPRICE" msprop:Generator_ColumnPropNameInRow="PRICE" msprop:Generator_ColumnPropNameInTable="PRICEColumn" msprop:Generator_UserColumnName="PRICE" type="xs:string" minOccurs="0" />
+              <xs:element name="USD" msprop:Generator_ColumnVarNameInTable="columnUSD" msprop:Generator_ColumnPropNameInRow="USD" msprop:Generator_ColumnPropNameInTable="USDColumn" msprop:Generator_UserColumnName="USD" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

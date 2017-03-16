@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<preserve resultType="8" virtualPath="/DATAPAGEMIS/global.asax" hash="ffffffffd626fdcb" filehash="ffffd9f63456dd7d" flags="150000" assembly="App_global.asax" type="ASP.global_asax">
+    <filedeps>
+        <filedep name="/DATAPAGEMIS/global.asax" />
+    </filedeps>
+</preserve>

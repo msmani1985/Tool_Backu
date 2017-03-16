@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<followup>
+	<customer custname="TandF" custno="2556">
+		<from></from>
+		<to></to>
+		<to1>subbulakshmi@datapage.org</to1>
+		<cc></cc>
+		<bcc>bharath@datapage.org;nathiya@datapage.org;group1@datapage.org</bcc>
+		<body>
+Dear [AUTHORNAME],<br/><br/>
+ 
+Ref: [ARTICLECODE] – "[AUTHORTITLE]".<br/><br/>
+ 
+Thank you for submitting the corrections.<br/><br/>
+ 
+Our production team has raised the below pending/outstanding queries while incorporating the corrections:<br/><br/>
+ 
+[AUTHORCORRECTON]<br/><br/>
+
+Could you please look into this and let me know your response at the earliest possible?
+ 
+I have attached the proof of your article for your kind reference.
+ 
+Thank you so much for your co-operation and understanding!<br/><br/>
+ 
+Best wishes,<br/>
+[FPMJOURNAME] <br/><br/>
+
+		</body>
+	</customer>
+</followup>

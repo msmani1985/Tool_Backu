@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="abc" targetNamespace="http://tempuri.org/abc.xsd" xmlns:mstns="http://tempuri.org/abc.xsd" xmlns="http://tempuri.org/abc.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="ConnectionString (Web.config)" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ConnectionString.ConnectionString" Provider="System.Data.Odbc">
+          </Connection>
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataSet1TableAdapter" GeneratorDataComponentClassName="DataSet1TableAdapter" Name="DataSet1" UserDataComponentName="DataSet1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Web.config)" DbObjectName="" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="False" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="False" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="True">
+                    <CommandText>SELECT l.LEDate, l.LEndDate, e.Emp_FName, CAST(a.AArticleCode AS CHAR(50)) as AArticleCode, l.SNo, s.SName, e.DNo, s.SNO_TimeSheet FROM loggedevents_dp l
+LEFT OUTER JOIN article_dp a ON l.Ano = a.Ano
+INNER JOIN Employee_dp e ON e.EmpNo = l.EmpNo
+INNER JOIN Stage_dp s ON l.SNo = s.SNo
+</CommandText>
+                    <Parameters>
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="EMP_FNAME" DataSetColumn="EMP_FNAME" />
+              <Mapping SourceColumn="SNAME" DataSetColumn="SNAME" />
+              <Mapping SourceColumn="LEDATE" DataSetColumn="LEDATE" />
+              <Mapping SourceColumn="LENDDATE" DataSetColumn="LENDDATE" />
+              <Mapping SourceColumn="SNO" DataSetColumn="SNO" />
+              <Mapping SourceColumn="Column1" DataSetColumn="COLUMN1" />
+              <Mapping SourceColumn="DNO" DataSetColumn="DNO" />
+            </Mappings>
+            <Sources>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="abc" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="abc" msprop:Generator_DataSetName="abc">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataSet1" msprop:Generator_UserTableName="DataSet1" msprop:Generator_RowDeletedName="DataSet1RowDeleted" msprop:Generator_RowChangedName="DataSet1RowChanged" msprop:Generator_RowClassName="DataSet1Row" msprop:Generator_RowChangingName="DataSet1RowChanging" msprop:Generator_RowEvArgName="DataSet1RowChangeEvent" msprop:Generator_RowEvHandlerName="DataSet1RowChangeEventHandler" msprop:Generator_TableClassName="DataSet1DataTable" msprop:Generator_TableVarName="tableDataSet1" msprop:Generator_RowDeletingName="DataSet1RowDeleting" msprop:Generator_TablePropName="DataSet1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="EMP_FNAME" msprop:Generator_UserColumnName="EMP_FNAME" msprop:Generator_ColumnVarNameInTable="columnEMP_FNAME" msprop:Generator_ColumnPropNameInRow="EMP_FNAME" msprop:Generator_ColumnPropNameInTable="EMP_FNAMEColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SNAME" msprop:Generator_UserColumnName="SNAME" msprop:Generator_ColumnVarNameInTable="columnSNAME" msprop:Generator_ColumnPropNameInRow="SNAME" msprop:Generator_ColumnPropNameInTable="SNAMEColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LEDATE" msprop:Generator_UserColumnName="LEDATE" msprop:Generator_ColumnVarNameInTable="columnLEDATE" msprop:Generator_ColumnPropNameInRow="LEDATE" msprop:Generator_ColumnPropNameInTable="LEDATEColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="LENDDATE" msprop:Generator_UserColumnName="LENDDATE" msprop:Generator_ColumnVarNameInTable="columnLENDDATE" msprop:Generator_ColumnPropNameInRow="LENDDATE" msprop:Generator_ColumnPropNameInTable="LENDDATEColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SNO" msprop:Generator_UserColumnName="SNO" msprop:Generator_ColumnVarNameInTable="columnSNO" msprop:Generator_ColumnPropNameInRow="SNO" msprop:Generator_ColumnPropNameInTable="SNOColumn" type="xs:int" />
+              <xs:element name="COLUMN1" msprop:Generator_UserColumnName="COLUMN1" msprop:Generator_ColumnPropNameInRow="COLUMN1" msprop:Generator_ColumnVarNameInTable="columnCOLUMN1" msprop:Generator_ColumnPropNameInTable="COLUMN1Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DNO" msprop:Generator_UserColumnName="DNO" msprop:Generator_ColumnPropNameInRow="DNO" msprop:Generator_ColumnVarNameInTable="columnDNO" msprop:Generator_ColumnPropNameInTable="DNOColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Emp_ID" msprop:Generator_UserColumnName="Emp_ID" msprop:Generator_ColumnVarNameInTable="columnEmp_ID" msprop:Generator_ColumnPropNameInRow="Emp_ID" msprop:Generator_ColumnPropNameInTable="Emp_IDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SNO_TimeSheet" msprop:Generator_UserColumnName="SNO_TimeSheet" msprop:Generator_ColumnPropNameInRow="SNO_TimeSheet" msprop:Generator_ColumnVarNameInTable="columnSNO_TimeSheet" msprop:Generator_ColumnPropNameInTable="SNO_TimeSheetColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint2">
+      <xs:selector xpath=".//mstns:DataSet1" />
+      <xs:field xpath="mstns:SNAME" />
+    </xs:unique>
+    <xs:unique name="Constraint3" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DataSet1" />
+      <xs:field xpath="mstns:SNO" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

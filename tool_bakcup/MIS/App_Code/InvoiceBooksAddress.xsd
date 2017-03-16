@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="InvoiceBooksAddress" targetNamespace="http://tempuri.org/InvoiceBooksAddress.xsd" xmlns:mstns="http://tempuri.org/InvoiceBooksAddress.xsd" xmlns="http://tempuri.org/InvoiceBooksAddress.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="InvoiceBooksAddress" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="InvoiceBooksAddress" msprop:Generator_DataSetName="InvoiceBooksAddress">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataSet" msprop:Generator_UserTableName="DataSet" msprop:Generator_RowDeletedName="DataSetRowDeleted" msprop:Generator_RowChangedName="DataSetRowChanged" msprop:Generator_RowClassName="DataSetRow" msprop:Generator_RowChangingName="DataSetRowChanging" msprop:Generator_RowEvArgName="DataSetRowChangeEvent" msprop:Generator_RowEvHandlerName="DataSetRowChangeEventHandler" msprop:Generator_TableClassName="DataSetDataTable" msprop:Generator_TableVarName="tableDataSet" msprop:Generator_RowDeletingName="DataSetRowDeleting" msprop:Generator_TablePropName="DataSet">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FINSITENO" msprop:Generator_UserColumnName="FINSITENO" msprop:Generator_ColumnVarNameInTable="columnFINSITENO" msprop:Generator_ColumnPropNameInRow="FINSITENO" msprop:Generator_ColumnPropNameInTable="FINSITENOColumn" type="xs:int" />
+              <xs:element name="FINSITENAME" msprop:Generator_UserColumnName="FINSITENAME" msprop:Generator_ColumnVarNameInTable="columnFINSITENAME" msprop:Generator_ColumnPropNameInRow="FINSITENAME" msprop:Generator_ColumnPropNameInTable="FINSITENAMEColumn" type="xs:string" />
+              <xs:element name="FINSITEADDRESS1" msprop:Generator_UserColumnName="FINSITEADDRESS1" msprop:Generator_ColumnVarNameInTable="columnFINSITEADDRESS1" msprop:Generator_ColumnPropNameInRow="FINSITEADDRESS1" msprop:Generator_ColumnPropNameInTable="FINSITEADDRESS1Column" type="xs:string" />
+              <xs:element name="FINSITEADDRESS2" msprop:Generator_UserColumnName="FINSITEADDRESS2" msprop:Generator_ColumnVarNameInTable="columnFINSITEADDRESS2" msprop:Generator_ColumnPropNameInRow="FINSITEADDRESS2" msprop:Generator_ColumnPropNameInTable="FINSITEADDRESS2Column" type="xs:string" />
+              <xs:element name="FINSITEADDRESS3" msprop:Generator_UserColumnName="FINSITEADDRESS3" msprop:Generator_ColumnVarNameInTable="columnFINSITEADDRESS3" msprop:Generator_ColumnPropNameInRow="FINSITEADDRESS3" msprop:Generator_ColumnPropNameInTable="FINSITEADDRESS3Column" type="xs:string" />
+              <xs:element name="FINSITEADDRESS4" msprop:Generator_UserColumnName="FINSITEADDRESS4" msprop:Generator_ColumnVarNameInTable="columnFINSITEADDRESS4" msprop:Generator_ColumnPropNameInRow="FINSITEADDRESS4" msprop:Generator_ColumnPropNameInTable="FINSITEADDRESS4Column" type="xs:string" />
+              <xs:element name="FINSITEADDRESS5" msprop:Generator_UserColumnName="FINSITEADDRESS5" msprop:Generator_ColumnVarNameInTable="columnFINSITEADDRESS5" msprop:Generator_ColumnPropNameInRow="FINSITEADDRESS5" msprop:Generator_ColumnPropNameInTable="FINSITEADDRESS5Column" type="xs:string" />
+              <xs:element name="FINSITEADDRESS6" msprop:Generator_UserColumnName="FINSITEADDRESS6" msprop:Generator_ColumnVarNameInTable="columnFINSITEADDRESS6" msprop:Generator_ColumnPropNameInRow="FINSITEADDRESS6" msprop:Generator_ColumnPropNameInTable="FINSITEADDRESS6Column" type="xs:string" minOccurs="0" />
+              <xs:element name="Btype1" msprop:Generator_UserColumnName="Btype1" msprop:Generator_ColumnVarNameInTable="columnBtype1" msprop:Generator_ColumnPropNameInRow="Btype1" msprop:Generator_ColumnPropNameInTable="Btype1Column" type="xs:int" minOccurs="0" />
+              <xs:element name="FINSITEMAIL" msprop:Generator_UserColumnName="FINSITEMAIL" msprop:Generator_ColumnVarNameInTable="columnFINSITEMAIL" msprop:Generator_ColumnPropNameInRow="FINSITEMAIL" msprop:Generator_ColumnPropNameInTable="FINSITEMAILColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="BNO" msprop:Generator_UserColumnName="BNO" msprop:Generator_ColumnPropNameInRow="BNO" msprop:Generator_ColumnVarNameInTable="columnBNO" msprop:Generator_ColumnPropNameInTable="BNOColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

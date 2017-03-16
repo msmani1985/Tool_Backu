@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="sqlProductivityDS" targetNamespace="http://tempuri.org/sqlProductivityDS.xsd" xmlns:mstns="http://tempuri.org/sqlProductivityDS.xsd" xmlns="http://tempuri.org/sqlProductivityDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="sqlProductivityDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="sqlProductivityDS" msprop:Generator_DataSetName="sqlProductivityDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="sqlProductivityDs" msprop:Generator_UserTableName="sqlProductivityDs" msprop:Generator_RowDeletedName="sqlProductivityDsRowDeleted" msprop:Generator_RowChangedName="sqlProductivityDsRowChanged" msprop:Generator_RowClassName="sqlProductivityDsRow" msprop:Generator_RowChangingName="sqlProductivityDsRowChanging" msprop:Generator_RowEvArgName="sqlProductivityDsRowChangeEvent" msprop:Generator_RowEvHandlerName="sqlProductivityDsRowChangeEventHandler" msprop:Generator_TableClassName="sqlProductivityDsDataTable" msprop:Generator_TableVarName="tablesqlProductivityDs" msprop:Generator_RowDeletingName="sqlProductivityDsRowDeleting" msprop:Generator_TablePropName="sqlProductivityDs">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="loggedevent_id" msprop:Generator_UserColumnName="loggedevent_id" msprop:Generator_ColumnVarNameInTable="columnloggedevent_id" msprop:Generator_ColumnPropNameInRow="loggedevent_id" msprop:Generator_ColumnPropNameInTable="loggedevent_idColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="job_id" msprop:Generator_UserColumnName="job_id" msprop:Generator_ColumnVarNameInTable="columnjob_id" msprop:Generator_ColumnPropNameInRow="job_id" msprop:Generator_ColumnPropNameInTable="job_idColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="job_type_name" msprop:Generator_UserColumnName="job_type_name" msprop:Generator_ColumnVarNameInTable="columnjob_type_name" msprop:Generator_ColumnPropNameInRow="job_type_name" msprop:Generator_ColumnPropNameInTable="job_type_nameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="code" msprop:Generator_UserColumnName="code" msprop:Generator_ColumnVarNameInTable="columncode" msprop:Generator_ColumnPropNameInRow="code" msprop:Generator_ColumnPropNameInTable="codeColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="task_name" msprop:Generator_UserColumnName="task_name" msprop:Generator_ColumnVarNameInTable="columntask_name" msprop:Generator_ColumnPropNameInRow="task_name" msprop:Generator_ColumnPropNameInTable="task_nameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="start_time" msprop:Generator_UserColumnName="start_time" msprop:Generator_ColumnVarNameInTable="columnstart_time" msprop:Generator_ColumnPropNameInRow="start_time" msprop:Generator_ColumnPropNameInTable="start_timeColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="end_time" msprop:Generator_UserColumnName="end_time" msprop:Generator_ColumnVarNameInTable="columnend_time" msprop:Generator_ColumnPropNameInRow="end_time" msprop:Generator_ColumnPropNameInTable="end_timeColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="min" msprop:Generator_UserColumnName="min" msprop:Generator_ColumnVarNameInTable="columnmin" msprop:Generator_ColumnPropNameInRow="min" msprop:Generator_ColumnPropNameInTable="minColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="achived_value" msprop:Generator_UserColumnName="achived_value" msprop:Generator_ColumnVarNameInTable="columnachived_value" msprop:Generator_ColumnPropNameInRow="achived_value" msprop:Generator_ColumnPropNameInTable="achived_valueColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="comments" msprop:Generator_UserColumnName="comments" msprop:Generator_ColumnVarNameInTable="columncomments" msprop:Generator_ColumnPropNameInRow="comments" msprop:Generator_ColumnPropNameInTable="commentsColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="empname" msprop:Generator_UserColumnName="empname" msprop:Generator_ColumnVarNameInTable="columnempname" msprop:Generator_ColumnPropNameInRow="empname" msprop:Generator_ColumnPropNameInTable="empnameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="job_stage_name" msprop:Generator_UserColumnName="job_stage_name" msprop:Generator_ColumnVarNameInTable="columnjob_stage_name" msprop:Generator_ColumnPropNameInRow="job_stage_name" msprop:Generator_ColumnPropNameInTable="job_stage_nameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="workingday" msprop:Generator_UserColumnName="workingday" msprop:Generator_ColumnVarNameInTable="columnworkingday" msprop:Generator_ColumnPropNameInRow="workingday" msprop:Generator_ColumnPropNameInTable="workingdayColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="cust_name" msprop:Generator_UserColumnName="cust_name" msprop:Generator_ColumnPropNameInRow="cust_name" msprop:Generator_ColumnVarNameInTable="columncust_name" msprop:Generator_ColumnPropNameInTable="cust_nameColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

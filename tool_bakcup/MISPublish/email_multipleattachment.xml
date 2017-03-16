@@ -1,0 +1,44 @@
+<emailattachment>
+	<journal>
+	  <customer custno="2556" custname="TandF"></customer>
+	  <customer custno="10081" custname="Co-Action"></customer>
+	  <customer custno="2052" custname="LUND - Ecology Building"></customer>
+	  <customer custno="10105" custname="San Lucas Medical Limited"></customer>
+	  <customer custno="10089" custname="Agricultural Institute of Canada"></customer>
+	  <customer custno="10124" custname="The African Field Epidemiology Network"></customer>
+	  <customer custno="10119" custname="Canadian Science Publishing"></customer>
+	  <customer custno="10132" custname="Consejo Superior de Investigaciones Cientificas"></customer>
+      <customer custno="10190" custname="African Online Scientific Information Systems"></customer>
+      <customer custno="10191" custname="Charlesworth"></customer>
+	  <customer custno="10189" custname="UTSePRESS"></customer>
+	  <customer custno="10117" custname="Medical Student Research Journal"></customer>
+	  <customer custno="10216" custname="Decker"></customer>
+      <customer custno="10210" custname="ANS"></customer>
+	  <customer custno="10228" custname="National Association of School Psychologists"></customer>
+	  <customer custno="10229" custname="Nature"></customer>
+	  <customer custno="10201" custname="Allen Press"></customer>
+	  <customer custno="10196" custname="Royal College of Psychiatrists"></customer>
+	  <customer custno="10101" custname="Barnboken"></customer>
+	  <customer custno="10219" custname="SGM"></customer>
+	  <customer custno="10214" custname="Company of Biologists"></customer>
+	  <customer custno="10238" custname="Brazilian Journal of Medical and Biological Resear"></customer>
+	  <customer custno="10221" custname="Institution of Civil Engineers"></customer>
+	  <customer custno="10211" custname="BMJ"></customer>
+	  <customer custno="10231" custname="Purdue University Press"></customer>
+	  <customer custno="10233" custname="Scientific Electronic Library Online"></customer>
+	  <customer custno="10254" custname="Maryann"></customer>
+	  <customer custno="10235" custname="UK Books"></customer>
+	  <customer custno="10213" custname="Clinics"></customer>
+	  <customer custno="10205" custname="American Society for Bone and Mineral Research"></customer>
+	  <customer custno="10236" custname="Chronic Diseases and Injuries in Canada"></customer>
+	  <customer custno="10264" custname="University of Michigan Library"></customer>
+	</journal>
+	<book></book>
+	<project>
+		<customer custno="10081" custname="Co-Action"></customer>
+		<customer custno="10127" custname="Mercatus Center"></customer>
+		<customer custno="10119" custname="Canadian Science Publishing"></customer>
+		<customer custno="10130" custname="Termedia Publishing House"></customer>
+		<customer custno="10198" custname="PNB Publishers"></customer>
+	</project>
+</emailattachment>

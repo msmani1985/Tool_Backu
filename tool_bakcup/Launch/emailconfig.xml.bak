@@ -1,0 +1,401 @@
+<email proc="getemail(category,custno,1)">
+	<journal>
+		<bcc>lorraine@donnelly.iol.ie;accounts@datapage.org</bcc>
+		<cc>chitra@datapage.org</cc>
+		<subject>Datapage International Ltd - Invoice [JOBNAME]</subject>
+		<body>
+[FCONTACT],
+
+Please find attached copy of invoice of Job(s): [JOBNAME] which you requested.
+
+Best Regards
+Accounts Department
+Datapage
+
+Tel.: +353 1 6572576
+Fax.: +91 44 42085158
+Web: www.datapage.ie
+		</body>
+		<attach id="[JOBNAME].pdf" />
+		<customer custno="2556" finsiteno="470" name="Taylor and Francis">
+			<subject>Datapage International Ltd - Invoice [SPREADSHEET] for [JOBNAME]</subject>
+			<cc/>
+			<bcc/>
+			<attach id="[INVOICENO].xls" />
+		<body>
+[FCONTACT],
+
+Please find attached your [SPREADSHEET] for the above issue.
+
+Best Regards
+Accounts Department
+Datapage
+
+Tel.: +353 1 6572576
+Fax.: +91 44 42085158
+Web: www.datapage.ie
+		</body>
+			<second_to>plinvoicesandstatements@informa.com</second_to>
+			<second_subject>Datapage Intl Ltd - [BATCH] batch of invoices for [MONTHYEAR]</second_subject>
+			<second_body>
+Hi,
+
+Please find attached your [BATCH] batch of invoices for [MONTHYEAR].
+
+Best Regards
+Accounts Department
+Datapage
+
+Tel.: +353 1 6572576
+Fax.: +91 44 42085158
+Web: www.datapage.ie
+			</second_body>
+			
+		</customer>
+		<customer custno="10072" finsiteno="10063" name="Informa UK TF">
+			<to>plinvoicesandstatements@informa.com</to>
+		</customer>
+		<customer custno="10040" finsiteno="10020"  name="Psychology Press">
+			<subject>Datapage International Ltd - Issue(s) [JOBNAME]</subject>
+			<!--<to>plinvoicesandstatements@informa.com</to>-->
+			<!--<fcontact>Accounts Department</fcontact>-->
+			<cc/>
+			<bcc/>
+			<attach id="[JOBNAME].pdf" />
+			<second_to>plinvoicesandstatements@informa.com</second_to>
+			<second_subject>Datapage Intl Ltd - [BATCH] batch of invoices for [MONTHYEAR]</second_subject>
+			<second_body>
+Hi,
+
+Please find attached your [BATCH] batch of invoices for [MONTHYEAR].
+
+Best Regards
+Accounts Department
+Datapage
+
+Tel.: +353 1 6572576
+Fax.: +91 44 42085158
+Web: www.datapage.ie
+			</second_body>
+		</customer>
+		<customer custno="10072" finsiteno="10063"  name="Informa Healthcare">
+			<to>PLPJBQueries@informa.com</to>
+		</customer>
+
+		<customer custno="2052" finsiteno="474"  name="LUND - Ecology Building">
+			<to>lis-marie.nilsson@ekol.lu.se</to>
+			<cc>accountspayable@wiley.co.uk;chitra@datapage.org</cc>
+			<fcontact>Lis-Marie</fcontact>
+		</customer>
+		<customer custno="10081" finsiteno="10081"  name="Co-Action">
+			<subject>Datapage International Ltd - [INVOICE] [JOBNAME]</subject>
+			<body>
+[FCONTACT],
+
+Please find attached your [INVOICE] for work completed on the following:-
+
+[Invoice-Content]
+
+Best Regards
+Accounts Department
+Datapage
+
+Tel.: +353 1 6572576
+Fax.: +91 44 42085158
+Web: www.datapage.ie
+			</body>
+			<to>lena.wistrand@co-action.net</to>
+			<fcontact>Lena</fcontact>
+		</customer>
+		<customer custno="10105" finsiteno="10131"  name="San Lucas Medical Limited ">
+			<subject>Datapage International Ltd - [INVOICE] [JOBNAME]</subject>
+			<body>
+[FCONTACT],
+
+Please find attached your [INVOICE] for work completed on the following:-
+
+[Invoice-Content]
+
+Best Regards
+Accounts Department
+Datapage
+
+Tel.: +353 1 6572576
+Fax.: +91 44 42085158
+Web: www.datapage.ie
+			</body>
+			<to>oneal.ayson@slm-journals.com;oneal.ayson@sanlucasmedical.com</to>
+			<fcontact>Oneal</fcontact>
+		</customer>
+		<customer custno="10089" finsiteno="10097"   name="Agricultural Institute of Canada">
+			<to>journals@aic.ca</to>
+			<fcontact>Tim</fcontact>
+		</customer>
+		<customer custno="10099" finsiteno="10118"  name="Linopings Uni IJAL(International Journal of Ageing and Later Life)">
+			<to>laura.machat@isv.liu.se</to>
+			<fcontact>Laura</fcontact>
+		</customer>
+		<customer custno="10101" finsiteno="10126"  name="Swedish Inst of Childrens Bookd (Barnboken)">
+			<to>lillemor.Torstensson@sbi.kb.se</to>
+			<fcontact>Lillemor</fcontact>
+		</customer>
+	</journal>
+	<book>
+		<bcc>lorraine@donnelly.iol.ie;accounts@datapage.org</bcc>
+		<cc>srikanth@datapage.org</cc>
+		<!--<subject>Datapage International Ltd - Invoices [JOBNAME]</subject>-->
+		<subject>Datapage International Ltd - Invoice No. [INVOICENO] - [BTITLE] </subject>
+		<body>
+[FCONTACT],
+
+Please find attached your invoice for work completed on the above title.
+
+Best Regards
+Accounts Department
+Datapage
+
+Tel.: +353 1 6572576
+Fax.: +91 44 42085158
+Web: www.datapage.ie
+
+		</body>
+		<customer custno="2558" finsiteno="10003"  name="CRC Press">
+			<fcontact>Accounts Department</fcontact>
+			<to>tfap@taylorandfrancis.com</to>
+		</customer>
+		<customer custno="10082" finsiteno="10082"   name="Adam Matthew Digital">
+			<fcontact>Carol</fcontact>
+			<to>carol@amdigital.co.uk</to>
+			<cc>nisha.rahul@datapage.org</cc>
+		</customer>
+		<customer  custno="10035" finsiteno="10019" name="Clarus Press">
+			<fcontact>David</fcontact>
+			<to>davidmccartney@claruspress.ie</to>
+		</customer>
+		<customer custno="10035"  finsiteno="10099" name="Clarus Press - Griffith Law School">
+			<fcontact>Pamela</fcontact>
+			<to>pamela.donegan@gcd.ie</to>
+		</customer>
+		<customer custno="10087" finsiteno="10091"  name="VWM">
+			<fcontact>Dennis</fcontact>
+			<to>dblack@vwm-online.com</to>
+		</customer>
+		<customer custno="10028" finsiteno="10006"  name="Thomson Round Hall">
+			<fcontact>Anne</fcontact>
+			<to>anne.waters@thomsonreuters.com</to>
+			<cc>susan.kane@thomsonreuters.com;srikanth@datapage.org</cc>
+		</customer>
+		<customer custno="10069" finsiteno="10061"  name="Bytheway Publishing Services">
+			<fcontact>Betty</fcontact>
+			<to>bettybytheway@frontiernet.net</to>
+		</customer>
+		<customer custno="10091" finsiteno="10100"  name="Channel View Publications">
+			<fcontact>Tommi</fcontact>
+			<to>tommi@multilingual-matters.com</to>
+			<cc>nisha.rahul@datapage.org</cc>
+		</customer>
+		<customer custno="10085" finsiteno="10089"  name="Independent Colleges">
+			<fcontact>Philip</fcontact>
+			<to>philip.burke@independentcolleges.ie</to>
+			<cc>APHelp@sws.ie;srikanth@datapage.org</cc>
+		</customer>
+		<customer custno="10039" finsiteno="10018"  name="World Bank">
+			<fcontact>Erin</fcontact>
+			<subject>Datapage International Ltd - Invoice No. [INVOICENO] - [BTITLE] </subject>
+			<to>eradner@worldbank.org</to>
+			<cc>[PEEMAIL];nisha.rahul@datapage.org</cc>
+			<!--<cc>Eg: Janet Sasser (jsasser@worldbank.org) Elizabeth Kline (ekline@worldbank.org)</cc>-->
+		</customer>
+		<customer custno="10039" finsiteno="10129"  name="World Bank Investment">
+			<fcontact>Accounts Department</fcontact>
+			<to>WBVendorInvoices@worldbank.org</to>
+			<cc>[PEEMAIL];nisha.rahul@datapage.org</cc>
+		</customer>
+		<customer custno="10037" finsiteno="10125"  name="The Institute of Chartered Accountants in Ireland ">
+			<fcontact>Ann</fcontact>
+			<to>Ann.Doyle@charteredaccountants.ie</to>
+			<cc>nisha.rahul@datapage.org</cc>
+		</customer>
+		<customer custno="10037" finsiteno="10015"  name="The Institute of Chartered Accountants in Ireland ">
+			<fcontact>Ann</fcontact>
+			<to>Ann.Doyle@charteredaccountants.ie</to>
+			<cc>nisha.rahul@datapage.org</cc>
+		</customer>
+		<customer custno="10037" finsiteno="10123"  name="The Institute of Chartered Accountants in Ireland ">
+			<fcontact>Ann</fcontact>
+			<to>Ann.Doyle@charteredaccountants.ie</to>
+			<cc>nisha.rahul@datapage.org</cc>
+		</customer>
+		<customer custno="2070" finsiteno="10010"  name="Royal Irish Academy">
+			<fcontact>John</fcontact>
+			<to>j.owens@ria.ie</to>
+		</customer>
+		<customer custno="10059" finsiteno="10037"  name="St. Augustine Press">
+			<fcontact>Bruce</fcontact>
+			<to>bruce@staugustine.net</to>
+			<cc>nisha.rahul@datapage.org</cc>
+		</customer>
+		<customer custno="10102" finsiteno="10127"  name="JMedCBR Defense">
+			<fcontact>Barbara</fcontact>
+			<to>editor@jmedcbr.org</to>
+			<cc>nisha.rahul@datapage.org</cc>
+		</customer>
+		<customer custno="10081" finsiteno="10081"  name="Co-Action">
+			<to>lena.wistrand@co-action.net</to>
+			<fcontact>Lena</fcontact>
+		</customer>
+		<customer custno="10105" finsiteno="10131"  name="San Lucas Medical Limited ">
+			<to>lena.wistrand@co-action.net</to>
+			<fcontact>Lena</fcontact>
+		</customer>
+	</book>
+	<project>
+		<bcc>lorraine@donnelly.iol.ie;accounts@datapage.org</bcc>
+		<cc>srikanth@datapage.org</cc>
+		<subject>Datapage International Ltd - Invoice No. [INVOICENO] - [PTITLE]</subject>
+		<body>
+[FCONTACT],
+
+Please find attached your invoice for work completed on the above title.
+
+Best Regards
+Accounts Department
+Datapage
+
+Tel.: +353 1 6572576
+Fax.: +91 44 42085158
+Web: www.datapage.ie
+		</body>
+		<customer  custno="10035" finsiteno="10019" name="Clarus Press">
+			<fcontact>David</fcontact>
+			<to>davidmccartney@claruspress.ie</to>
+		</customer>
+		<customer custno="10035"  finsiteno="10099" name="Clarus Press - Griffith Law School">
+			<fcontact>Pamela</fcontact>
+			<to>pamela.donegan@gcd.ie</to>
+		</customer>
+		<customer custno="2558" finsiteno="10003"  name="CRC Press">
+			<fcontact>Accounts Department</fcontact>
+			<to>tfap@taylorandfrancis.com</to>
+		</customer>
+		<customer custno="10094" finsiteno="10109"  name="Tek Translation International, S.A.">
+			<fcontact>Accounts Department</fcontact>
+			<to>suppliersinvoices@tektrans.com</to>
+		</customer>
+		<customer custno="10103" finsiteno="10128"  name="Logoscript">
+			<fcontact>Accounts Department</fcontact>
+			<to>accounting@logoscript.com</to>
+		</customer>
+		<customer custno="10082" finsiteno="10082"   name="Adam Matthew Digital">
+			<fcontact>Carol</fcontact>
+			<to>carol@amdigital.co.uk</to>
+			<cc>nisha.rahul@datapage.org</cc>
+		</customer>
+		<customer custno="10031" finsiteno="10119"  name="Informa Life Sciences BPI">
+			<fcontact>Anne</fcontact>
+			<to>Anne.Montgomery@informausa.com</to>
+		</customer>
+		<customer custno="10031" finsiteno="10004"  name="Informa Life Sciences BTN">
+			<subject>Datapage International Ltd - Invoice No. [INVOICENO] - [PTITLE]</subject>
+			<fcontact>Colleen</fcontact>
+			<to>Colleen.Smith@informausa.com</to>
+			<cc>Natalie.goode@informausa.com;srikanth@datapage.org</cc>
+		</customer>
+		<customer custno="10031" finsiteno="10133"  name="Informa Life Sciences ISJ">
+			<subject>Datapage International Ltd - Invoice No. [INVOICENO] - [PTITLE]</subject>
+			<fcontact>Rindy</fcontact>
+			<to>Rindy.Portfolio@informausa.com</to>
+			<cc>srikanth@datapage.org</cc>
+		</customer>
+		<customer custno="10037" finsiteno="10125"  name="The Institute of Chartered Accountants in Ireland ">
+			<fcontact>Ann</fcontact>
+			<to>Ann.Doyle@charteredaccountants.ie</to>
+			<cc>nisha.rahul@datapage.org</cc>
+		</customer>
+		<customer custno="10037" finsiteno="10015"  name="The Institute of Chartered Accountants in Ireland ">
+			<fcontact>Ann</fcontact>
+			<to>Ann.Doyle@charteredaccountants.ie</to>
+			<cc>nisha.rahul@datapage.org</cc>
+		</customer>
+		<customer custno="10037" finsiteno="10123"  name="The Institute of Chartered Accountants in Ireland ">
+			<fcontact>Ann</fcontact>
+			<to>Ann.Doyle@charteredaccountants.ie</to>
+			<cc>nisha.rahul@datapage.org</cc>
+		</customer>
+		<customer custno="10039" finsiteno="10018"  name="World Bank">
+			<fcontact>Erin</fcontact>
+			<to>eradner@worldbank.org</to>
+			<cc>[PEEMAIL];nisha.rahul@datapage.org</cc>
+		</customer>
+		<customer custno="10039" finsiteno="10129"  name="World Bank Investment">
+			<fcontact></fcontact>
+			<to>WBVendorInvoices@worldbank.org</to>
+			<cc>[PEEMAIL];nisha.rahul@datapage.org</cc>
+		</customer>
+		<customer custno="10085" finsiteno="10089"  name="Independent Colleges">
+			<fcontact>Philip</fcontact>
+			<to>philip.burke@independentcolleges.ie</to>
+			<cc>APHelp@sws.ie;srikanth@datapage.org</cc>
+		</customer>
+		<customer custno="10091" finsiteno="10100"  name="Channel View Publications">
+			<fcontact>Tommi</fcontact>
+			<to>tommi@multilingual-matters.com</to>
+			<cc>nisha.rahul@datapage.org</cc>
+		</customer>
+
+		<customer custno="10059" finsiteno="10037"  name="St. Augustine Press">
+			<fcontact>Bruce</fcontact>
+			<to>bruce@staugustine.net</to>
+			<cc>nisha.rahul@datapage.org</cc>
+		</customer>
+
+		<customer custno="2070" finsiteno="10010"  name="Royal Irish Academy">
+			<fcontact>John</fcontact>
+			<to>j.owens@ria.ie</to>
+		</customer>
+		<customer custno="10092" finsiteno="10103"  name="Medical Education Online">
+			<fcontact>David</fcontact>
+			<to>dsolomon@msu.edu</to>
+		</customer>
+		<customer custno="10028" finsiteno="10006"  name="Thomson Round Hall">
+			<fcontact>Anne</fcontact>
+			<to>anne.waters@thomsonreuters.com</to>
+			<cc>susan.kane@thomsonreuters.com;srikanth@datapage.org</cc>
+		</customer>
+		<customer custno="10069" finsiteno="10061"  name="Bytheway Publishing Services">
+			<fcontact>Betty</fcontact>
+			<to>bettybytheway@frontiernet.net</to>
+		</customer>
+		<customer custno="10087" finsiteno="10091"  name="VWM">
+			<fcontact>Dennis</fcontact>
+			<to>dblack@vwm-online.com</to>
+		</customer>
+		<customer custno="10104" finsiteno="10130"  name="STAR Technology Solutions">
+			<fcontact>Paul</fcontact>
+			<to>paul.quigley@star-ts.com</to>
+			<cc>[PEEMAIL];srikanth@datapage.org</cc>
+		</customer>
+		<customer custno="10107" finsiteno="10134"  name="CLS Communication Ltd">
+			<fcontact>Accounts Department</fcontact>
+			<to>invoice-uk@cls-communication.com</to>
+			<cc>[PEEMAIL];srikanth@datapage.org</cc>
+		</customer>
+		<customer custno="10108" finsiteno="10135"  name="experTTranslators">
+			<fcontact>Adam</fcontact>
+			<to>expert@experTranslators.co.uk</to>
+		</customer>
+		<customer custno="10102" finsiteno="10127"  name="JMedCBR Defense">
+			<fcontact>Barbara</fcontact>
+			<to>editor@jmedcbr.org</to>
+			<cc>nisha.rahul@datapage.org</cc>
+		</customer>
+		<customer custno="10081" finsiteno="10081"  name="Co-Action">
+			<to>lena.wistrand@co-action.net</to>
+			<fcontact>Lena</fcontact>
+		</customer>
+		<customer custno="10105" finsiteno="10131"  name="San Lucas Medical Limited ">
+			<to>lena.wistrand@co-action.net</to>
+			<fcontact>Lena</fcontact>
+		</customer>
+	</project>
+</email>

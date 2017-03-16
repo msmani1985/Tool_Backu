@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="LPQuoteDesc" targetNamespace="http://tempuri.org/LPQuoteDesc.xsd" xmlns:mstns="http://tempuri.org/LPQuoteDesc.xsd" xmlns="http://tempuri.org/LPQuoteDesc.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="LPQuoteDesc" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="LPQuoteDesc" msprop:Generator_UserDSName="LPQuoteDesc">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="QuoteDesc" msprop:Generator_TableClassName="QuoteDescDataTable" msprop:Generator_TableVarName="tableQuoteDesc" msprop:Generator_TablePropName="QuoteDesc" msprop:Generator_RowDeletingName="QuoteDescRowDeleting" msprop:Generator_RowChangingName="QuoteDescRowChanging" msprop:Generator_RowEvHandlerName="QuoteDescRowChangeEventHandler" msprop:Generator_RowDeletedName="QuoteDescRowDeleted" msprop:Generator_UserTableName="QuoteDesc" msprop:Generator_RowChangedName="QuoteDescRowChanged" msprop:Generator_RowEvArgName="QuoteDescRowChangeEvent" msprop:Generator_RowClassName="QuoteDescRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="LP_ID" msprop:Generator_ColumnVarNameInTable="columnLP_ID" msprop:Generator_ColumnPropNameInRow="LP_ID" msprop:Generator_ColumnPropNameInTable="LP_IDColumn" msprop:Generator_UserColumnName="LP_ID" type="xs:string" minOccurs="0" />
+              <xs:element name="TaskName" msprop:Generator_ColumnVarNameInTable="columnTaskName" msprop:Generator_ColumnPropNameInRow="TaskName" msprop:Generator_ColumnPropNameInTable="TaskNameColumn" msprop:Generator_UserColumnName="TaskName" type="xs:string" minOccurs="0" />
+              <xs:element name="Rate" msprop:Generator_ColumnVarNameInTable="columnRate" msprop:Generator_ColumnPropNameInRow="Rate" msprop:Generator_ColumnPropNameInTable="RateColumn" msprop:Generator_UserColumnName="Rate" type="xs:string" minOccurs="0" />
+              <xs:element name="Desc" msprop:Generator_ColumnVarNameInTable="columnDesc" msprop:Generator_ColumnPropNameInRow="Desc" msprop:Generator_ColumnPropNameInTable="DescColumn" msprop:Generator_UserColumnName="Desc" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

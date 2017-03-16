@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<followup>
+	<customer custname="TandF" custno="2556">
+		<from>nathiya@datapage.org</from>
+		<to></to>
+		<to1>subbulakshmi@datapage.org</to1>
+		<cc></cc>
+		<bcc>soundar@datapage.org;nathiya@datapage.org;jincy@datapage.org;bharath@datapage.org;shanthi@datapage.org;group1@datapage.org</bcc>
+		<body>
+Dear [AUTHORNAME],<br/><br/>
+
+My name is Nathiya and I am the Production Assistant for <i>[JOURNALTITLE]</i>.
+Thank you very much for sending in the corrections to your article,"[AUTHORTITLE]".
+I have gone through your corrected proofs and note that a few Author Queries
+remain unanswered. Could you please provide responses for the below queries as soon as possible?<br/><br/>
+
+[AUTHORCORRECTON]<br/><br/>
+
+I have attached the PDF of your article for easy reference. Please note that the PDF is not
+an updated one. We will generate an updated PDF as soon as the queries have been
+resolved. <br/><br/>
+
+Please reply to all recipients of this message. <br/><br/>
+
+Thank you very much for your help. <br/><br/>
+
+Best Wishes<br/>
+Nathiya<br/><br/>
+ 
+Nathiya<br/>
+Production Assistant - Journals<br/>
+Datapage Tel: +91-8754574275<br/>
+Web: www.datapage.ie<br/>
+
+
+		</body>
+	</customer>
+</followup>
+	
+

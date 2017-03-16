@@ -1,0 +1,924 @@
+﻿using System;
+using System.Data;
+using System.Configuration;
+using System.Collections;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+using System.Text;
+ 
+public partial class Delphi_Job_Issue : System.Web.UI.Page
+{
+    protected int id = 1;
+    private Delphi_Issue oIssue = new Delphi_Issue();
+    private static DataTable dtIssue = new DataTable();
+    private static string sSortExpression = "";
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        //Todo
+        if (Session["employeeid"] == null)
+        {
+            throw new Exception("Session Expired!");
+        }
+        if (!IsPostBack) this.popScreen();
+        else
+        {
+            if (oIssue.IsInvoiced(hfI_ID.Value.Trim())) this.toggleSaveOption(false);
+            else this.toggleSaveOption(true);
+        }
+    }
+    public void Alert(string sMessage)
+    {
+        ClientScript.RegisterStartupScript(this.GetType(), "onload", "<script>alert(\"" + sMessage + "\");</script>");
+    }
+
+
+   
+
+
+    private void popScreen()
+    {
+        //pop customers
+        DataSet dscust = oIssue.getCustomers();
+        drpIssuecustomer.DataSource = dscust;
+        drpIssuecustomer.DataTextField = dscust.Tables[0].Columns[1].ToString();
+        drpIssuecustomer.DataValueField = dscust.Tables[0].Columns[0].ToString();
+        drpIssuecustomer.DataBind();
+        drpIssuecustomer.Items.Insert(0, new ListItem("-- select --", "0"));
+        drpIssueJournal.Items.Insert(0, new ListItem("-- select --", "0"));
+        //--
+        lstAdvancedCustomer.DataSource = dscust;
+        lstAdvancedCustomer.DataTextField = dscust.Tables[0].Columns[1].ToString();
+        lstAdvancedCustomer.DataValueField = dscust.Tables[0].Columns[0].ToString();
+        lstAdvancedCustomer.DataBind();
+        //pop stages
+        DataSet dsStage = oIssue.getIssueStages();
+        drpIssueStage.DataSource = dsStage;
+        drpIssueStage.DataTextField = dsStage.Tables[0].Columns[1].ToString();
+        drpIssueStage.DataValueField = dsStage.Tables[0].Columns[0].ToString();
+        drpIssueStage.DataBind();
+        drpIssueStage.Items.Insert(0, new ListItem("-- select --", "0"));
+        //pop advanc search stages
+        ////////////////DataSet dsAdvStage = oIssue.getStageTypes();
+        ////////////////lstAdvancedStage.DataSource = dsAdvStage;
+        ////////////////lstAdvancedStage.DataTextField = dsAdvStage.Tables[0].Columns[1].ToString();
+        ////////////////lstAdvancedStage.DataValueField = dsAdvStage.Tables[0].Columns[0].ToString();
+        ////////////////lstAdvancedStage.DataBind();
+        //////////////////pop OnHold type
+        ////////////////DataSet dsHoldtyp = oIssue.getOnHoldTypes();
+        ////////////////drpIssueOnHoldType.DataSource = dsHoldtyp;
+        ////////////////drpIssueOnHoldType.DataTextField = dsHoldtyp.Tables[0].Columns[1].ToString();
+        ////////////////drpIssueOnHoldType.DataValueField = dsHoldtyp.Tables[0].Columns[0].ToString();
+        ////////////////drpIssueOnHoldType.DataBind();
+        ////////////////drpIssueOnHoldType.Items.Insert(0, new ListItem("-- select --", "0"));
+        //////////////////pop cover month & year
+        ////////////////for (int i = 0; i < 12; i++) drpIssueCoverMonth.Items.Insert(i, new ListItem((i + 1).ToString(), (i + 1).ToString()));
+        ////////////////for (int j = 2008; j <= DateTime.Now.Year + 2; j++) drpIssueCoverYear.Items.Insert(0, new ListItem(j.ToString(), j.ToString()));
+        ////////////////drpIssueCoverMonth.Items.Insert(0, new ListItem("-- select --", "0"));
+        ////////////////drpIssueCoverYear.Items.Insert(0, new ListItem("-- select --", "0"));
+        ////////////////// pop sales job group
+        ////////////////DataSet dsSalesGrp = oIssue.getSalesGroup();
+        ////////////////drpIssueSalesGroup.DataSource = dsSalesGrp;
+        ////////////////drpIssueSalesGroup.DataTextField = dsSalesGrp.Tables[0].Columns[1].ToString();
+        ////////////////drpIssueSalesGroup.DataValueField = dsSalesGrp.Tables[0].Columns[0].ToString();
+        ////////////////drpIssueSalesGroup.DataBind();
+        ////////////////drpIssueSalesGroup.Items.Insert(0, new ListItem("-- select --", "0"));
+        //
+        txtIssueSdate.Attributes.Add("readonly", "readonly");
+        txtIssueDdate.Attributes.Add("readonly", "readonly");
+        txtIssueHDdate.Attributes.Add("readonly", "readonly");
+        txtIssueCrdPriceNo.Attributes.Add("readonly", "readonly");
+        txtAdvRecDate1.Attributes.Add("readonly", "readonly");
+        txtAdvRecDate2.Attributes.Add("readonly", "readonly");
+        txtAdvDueDate1.Attributes.Add("readonly", "readonly");
+        txtAdvDueDate2.Attributes.Add("readonly", "readonly");
+        txtAdvHlfDueDate1.Attributes.Add("readonly", "readonly");
+        txtAdvHlfDueDate2.Attributes.Add("readonly", "readonly");
+        txtAdvCatsDueDate1.Attributes.Add("readonly", "readonly");
+        txtAdvCatsDueDate2.Attributes.Add("readonly", "readonly");
+
+        for (int i = 0; i < 12; i++) drpIssueCoverMonth.Items.Insert(i, new ListItem((i + 1).ToString(), (i + 1).ToString()));
+        for (int j = 2008; j <= DateTime.Now.Year + 2; j++) drpIssueCoverYear.Items.Insert(0, new ListItem(j.ToString(), j.ToString()));
+        drpIssueCoverMonth.Items.Insert(0, new ListItem("-- select --", "0"));
+        drpIssueCoverYear.Items.Insert(0, new ListItem("-- select --", "0"));
+
+        //pop Invoice type and cost type
+        ////////////////////DataSet dsCost = oIssue.getIssueCostDetailsByID("", "");
+        ////////////////////drpCostInvoiceType.DataSource = dsCost.Tables[0];
+        ////////////////////drpCostInvoiceType.DataValueField = dsCost.Tables[0].Columns[0].ToString();
+        ////////////////////drpCostInvoiceType.DataTextField = dsCost.Tables[0].Columns[1].ToString();
+        ////////////////////drpCostInvoiceType.DataBind();
+        ////////////////////drpCostType.DataSource = dsCost.Tables[1];
+        ////////////////////drpCostType.DataValueField = dsCost.Tables[1].Columns[0].ToString();
+        ////////////////////drpCostType.DataTextField = dsCost.Tables[1].Columns[1].ToString();
+        ////////////////////drpCostType.DataBind();
+        ////////////////////drpCostInvoiceType.Items.Insert(0, new ListItem("-- select --", "0"));
+        ////////////////////drpCostInvoiceTypeItem.Items.Insert(0, new ListItem("-- select --", "0"));
+        ////////////////////drpCostType.Items.Insert(0, new ListItem("-- select --", "0"));
+        ////////////////////txtCostQuantity.Enabled = true;
+        ////////////////////txtCostQuantity.Text = "0";
+        // commented by sivaraj on 31 oct. 2012
+        //if (Session["despatchgroup"] == null || Session["despatchgroup"].ToString() != "true"){
+        //    chkIssueDespatch.Visible = false;
+        //}
+        //show 1st panel
+        if (Request.QueryString["q"] != null &&
+            Request.QueryString["q"].ToString().Trim() != "")
+        {
+            string pageQuery = Request.QueryString["q"].ToString().Trim();
+            switch (pageQuery)
+            {
+                case "new_issue":
+                    drpIssuecustomer.Enabled = true;
+                    drpIssueJournal.Enabled = true;
+                    txtIssueNo.Enabled = true;
+                    lblIssueHeader.Text = "New Issue";
+                    imgIssueHeader.Src = "images/tools/new.png";
+                    imgID_stdate.Visible = false;
+                    imgID_dudate.Visible = false;
+                    imgID_hdudate.Visible = false;
+           
+                    this.showPanel(tabIssueDetails);
+                    break;
+            }
+        }
+        else this.showPanel(tabGeneral);
+        txtSearch.Attributes.Add("onkeydown", "if(event.which || event.keyCode){if ((event.which == 13) ||(event.keyCode == 13)){document.getElementById('" + btnSearch.ClientID + "').click();return false;}} else {return true}; ");
+    }
+    private void showPanel(HtmlGenericControl panel)
+    {
+        switch (panel.ID)
+        {
+            case "tabGeneral":
+                if (this.hfI_Name.Value != "")
+                    lblIssueSummary.Text = "Issue : " + this.hfI_Journal.Value.Trim() + " " + this.hfI_Name.Value.Trim();
+                miGeneral.Attributes.Add("class", "current");
+                miIssueDetails.Attributes.Add("class", "");
+                miIssueLogEvents.Attributes.Add("class", "");
+                miIssuePagination.Attributes.Add("class", "");
+                this.tabGeneral.Visible = true;
+                this.tabIssueDetails.Visible = false;
+                this.tabLogEvents.Visible = false;
+                this.tabPaginate.Visible = false;
+                break;
+            case "tabIssueDetails":
+                if (this.hfI_Name.Value != "")
+                    lblIssueHeader.Text = "Edit Issue : " + this.hfI_Journal.Value.Trim() + " " + this.hfI_Name.Value.Trim();
+                miGeneral.Attributes.Add("class", "");
+                miIssueDetails.Attributes.Add("class", "current");
+                miIssueLogEvents.Attributes.Add("class", "");
+                miIssuePagination.Attributes.Add("class", "");
+                this.tabGeneral.Visible = false;
+                this.tabIssueDetails.Visible = true;
+                this.tabLogEvents.Visible = false;
+                this.tabPaginate.Visible = false;
+                break;
+            case "tabLogEvents":
+                if (this.hfI_Name.Value != "")
+                    lblIssueHeader.Text = "Issue : " + this.hfI_Journal.Value.Trim() + " " + this.hfI_Name.Value.Trim();
+                miGeneral.Attributes.Add("class", "");
+                miIssueDetails.Attributes.Add("class", "");
+                miIssueLogEvents.Attributes.Add("class", "current");
+                miIssuePagination.Attributes.Add("class", "");
+                this.tabGeneral.Visible = false;
+                this.tabIssueDetails.Visible = false;
+                this.tabLogEvents.Visible = true;
+                this.tabPaginate.Visible = false;
+       
+                break;
+
+            case "tabPaginate":
+                if (this.hfI_Name.Value != "")
+                    lblIssueHeader.Text = "Issue : " + this.hfI_Journal.Value.Trim() + " " + this.hfI_Name.Value.Trim();
+                miGeneral.Attributes.Add("class", "");
+                miIssueDetails.Attributes.Add("class", "");
+                miIssueLogEvents.Attributes.Add("class", "current");
+                miIssuePagination.Attributes.Add("class", "");
+                this.tabGeneral.Visible = false;
+                this.tabIssueDetails.Visible = false;
+                this.tabLogEvents.Visible = false;
+                this.tabPaginate.Visible = true;
+
+                break;
+         
+           
+        }
+    }
+    protected void btnSearch_Click(object sender, EventArgs e)
+    {
+        sSortExpression = "";
+        if (Request["__EVENTARGUMENT"] != null
+            && Request["__EVENTARGUMENT"].ToLower() == "advanced")
+        {
+            char IsHold = 'N';
+            string[] aIssSearch = new string[23];
+            string sCompleted = "";
+            if (chkAdvOnHold.Checked) IsHold = 'Y';
+            if (chkAdvCompleted.Checked) sCompleted = "completed";
+            txtAdvJourCode.Text = txtAdvJourCode.Text.ToUpper();
+            aIssSearch[0] = "";
+            aIssSearch[1] = "";
+            aIssSearch[2] = "advanced";
+            aIssSearch[3] = sCompleted;
+            aIssSearch[4] = txtAdvJourCode.Text.Trim();
+            aIssSearch[5] = drpAdvJourCodeExp.SelectedItem.Value;
+            aIssSearch[6] = txtAdvIssueNum.Text.Trim();
+            aIssSearch[7] = drpAdvIssueNumExp.SelectedItem.Value;
+            aIssSearch[8] = IsHold.ToString();
+            aIssSearch[9] = drpAdvRecExpr.SelectedItem.Value;
+            aIssSearch[10] = txtAdvRecDate1.Text.Trim();
+            aIssSearch[11] = txtAdvRecDate2.Text.Trim();
+            aIssSearch[12] = drpAdvDueExpr.SelectedItem.Value;
+            aIssSearch[13] = txtAdvDueDate1.Text.Trim();
+            aIssSearch[14] = txtAdvDueDate2.Text.Trim();
+            aIssSearch[15] = drpAdvHlfDueRecExpr.SelectedItem.Value;
+            aIssSearch[16] = txtAdvHlfDueDate1.Text.Trim();
+            aIssSearch[17] = txtAdvHlfDueDate2.Text.Trim();
+            aIssSearch[18] = drpAdvCatsDueExpr.SelectedItem.Value;
+            aIssSearch[19] = txtAdvCatsDueDate1.Text.Trim();
+            aIssSearch[20] = txtAdvCatsDueDate2.Text.Trim();
+            string sStageIDs = "";
+            for (int x = 0; x < lstAdvancedStage.Items.Count; x++)
+            {
+                if (lstAdvancedStage.Items[x].Selected)
+                    sStageIDs += lstAdvancedStage.Items[x].Value + ",";
+            }
+            sStageIDs = sStageIDs.TrimEnd(',');
+            string sCustIDs = "";
+            for (int y = 0; y < lstAdvancedCustomer.Items.Count; y++)
+            {
+                if (lstAdvancedCustomer.Items[y].Selected)
+                    sCustIDs += lstAdvancedCustomer.Items[y].Value + ",";
+            }
+            sCustIDs = sCustIDs.TrimEnd(',');
+            aIssSearch[21] = sStageIDs;
+            aIssSearch[22] = sCustIDs;
+            DataSet dsi = oIssue.getIssues(aIssSearch);
+            dtIssue = dsi.Tables[0].Copy();
+            gvIssues.DataSource = dsi;
+            gvIssues.DataBind();
+        }
+        else
+        {
+            char CompleteFlag = 'N';
+            if (chkViewCompleted.Checked) CompleteFlag = 'Y';
+            DataSet dsi = oIssue.getIssues(txtSearch.Text.Trim().ToUpper(), CompleteFlag);
+            dtIssue = dsi.Tables[0].Copy();
+            gvIssues.DataSource = dsi;
+            gvIssues.DataBind();
+        }
+        this.hfI_ID.Value = "";
+        this.hfI_Name.Value = "";
+        this.showPanel(tabGeneral);
+    }
+    protected void gvIssues_RowDataBound(object sender, GridViewRowEventArgs e)
+    {
+        if (e.Row.RowType == DataControlRowType.DataRow)
+        {
+            e.Row.Style.Add("cursor", "pointer");
+            e.Row.Attributes["onmouseover"] =
+                "javascript:setMouseOverColor(this);";
+            e.Row.Attributes["onmouseout"] =
+                "javascript:setMouseOutColor(this);";
+            e.Row.Attributes["onclick"] =
+                "javascript:setColor(this,'" + ((HiddenField)e.Row.FindControl("hfgvIssueID")).Value.Trim() + "','" + ((HiddenField)e.Row.FindControl("hfgvIssueName")).Value.Trim() + "','" + ((HiddenField)e.Row.FindControl("hfgvJournal")).Value.Trim() + "');";
+            e.Row.Attributes["ondblclick"] =
+                "javascript:__doPostBack('lnkArticledetails','')";
+        }
+        else if (e.Row.RowType == DataControlRowType.Header)
+        {
+            foreach (TableCell cell in e.Row.Cells)
+            {
+                if (cell.HasControls())
+                {
+                    LinkButton btn = (LinkButton)cell.Controls[0];
+                    if (btn != null)
+                    {
+                        Image img = new Image(); img.Attributes.Add("align", "absmiddle");
+                        if (sSortExpression == btn.CommandArgument && ViewState[sSortExpression] != null)
+                        {
+                            if ((SortDirection)ViewState[sSortExpression] == SortDirection.Ascending)
+                                img.ImageUrl = "~/images/tools/arrow_up.png";
+                            else
+                                img.ImageUrl = "~/images/tools/arrow_down.png";
+                            cell.Controls.Add(img);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    private void loadIssueDetails(string sIssueID)
+    {
+        sIssueID = sIssueID.Trim();
+        if (sIssueID != "")
+        {
+            drpIssuecustomer.Enabled = false;
+            drpIssueJournal.Enabled = false;
+            txtIssueNo.Enabled = false;
+            txtIssueSdate.Text = "";
+            txtIssueDdate.Text = "";
+            txtIssueHDdate.Text = "";
+            txtIssueCrdPriceNo.Text = "";
+            imgID_stdate.Visible = false;
+            imgID_dudate.Visible = false;
+            imgID_hdudate.Visible = false;
+ 
+            //pop details
+            DataSet dsIssue = oIssue.getIssueDetailsByID(sIssueID);
+            lblIssueHeader.Text = "Edit Issue";
+            imgIssueHeader.Src = "images/tools/edit.png";
+            DataRow row = dsIssue.Tables[0].Rows[0];
+            if (row["invoice_no"].ToString().Trim() != "") this.toggleSaveOption(false);
+            else this.toggleSaveOption(true);
+            drpIssuecustomer.ClearSelection();
+            if (drpIssuecustomer.Items.FindByValue(row["customer_id"].ToString().Trim()) != null)
+                drpIssuecustomer.Items.FindByValue(row["customer_id"].ToString().Trim()).Selected = true;
+            drpIssuecustomer_SelectedIndexChanged(null, null);
+            if (drpIssueJournal.Items.FindByValue(row["JOURNO"].ToString().Trim()) != null)
+                drpIssueJournal.Items.FindByValue(row["JOURNO"].ToString().Trim()).Selected = true;
+            txtIssueNo.Text = row["IISSUENO"].ToString().Trim();
+          //  txtIssueTitle.Text = row["TITLE"].ToString().Trim();
+            //////////if (row["onhold_history_id"].ToString().Trim() != "")
+            //////////    chkIssueOnHold.Checked = true;
+            //////////else chkIssueOnHold.Checked = false;
+            drpIssueCoverMonth.ClearSelection();
+            if (drpIssueCoverMonth.Items.FindByValue(row["ICOVERMONTH"].ToString().Trim()) != null)
+                drpIssueCoverMonth.Items.FindByValue(row["ICOVERMONTH"].ToString().Trim()).Selected = true;
+            drpIssueCoverYear.ClearSelection();
+            if (drpIssueCoverYear.Items.FindByValue(row["ICOVERYEAR"].ToString().Trim()) != null)
+                drpIssueCoverYear.Items.FindByValue(row["ICOVERYEAR"].ToString().Trim()).Selected = true;
+           
+            txtIssueComments.Text = row["icomments"].ToString().Trim();
+           // txtIssueInvoiceDesc.Text = row["invoice_description"].ToString().Trim();
+            drpIssueStage.ClearSelection();
+            //drpIssueStage.DataSource = dsIssue.Tables[1];
+            //drpIssueStage.DataTextField = dsIssue.Tables[1].Columns["STYPENAME"].ToString();
+            //drpIssueStage.DataValueField = dsIssue.Tables[1].Columns["STYPENO"].ToString();
+
+            if (drpIssueStage.Items.FindByValue(row["STYPENO"].ToString().Trim()) != null)
+                drpIssueStage.Items.FindByValue(row["STYPENO"].ToString().Trim()).Selected = true;
+            drpIssueStage.DataBind();
+            drpIssueStage.Items.Insert(0, new ListItem("-- select --", "0"));
+         if (dsIssue.Tables[1].Rows.Count != 0)
+            {
+                if (dsIssue.Tables[1].Rows[0]["despatch_date"].ToString().Trim() == "")
+                {
+                    txtIssueSdate.Text = dsIssue.Tables[1].Rows[0]["received_date"].ToString().Trim();
+                    txtIssueDdate.Text = dsIssue.Tables[1].Rows[0]["due_date"].ToString().Trim();
+                    txtIssueHDdate.Text = dsIssue.Tables[1].Rows[0]["half_due_date"].ToString().Trim();
+                }
+                
+            }
+            else
+            {
+                txtIssueSdate.Text = "";
+                txtIssueDdate.Text = "";
+                txtIssueHDdate.Text = "";
+                
+               
+            }
+            
+        }
+    }
+
+
+
+    private void toggleSaveOption(bool IsVisible)
+    {
+        if (IsVisible)
+        {
+            cmd_Save_Issue.Visible = true;
+            //Comment by subbu 31 may 2012 for testing sivaraj request
+            //if (Session["invoicegroup"] != null && Session["invoicegroup"].ToString() == "true"){
+            //    cmd_Save_Cost.Visible = true;
+            //    cmd_Cost_orderindex.Visible = true;
+            //}
+            //else{
+            //    cmd_Save_Cost.Visible = false;
+            //    cmd_Cost_orderindex.Visible = false;
+            //}
+  
+            chkIssueOnHold.Enabled = true;
+        }
+        else
+        {
+            cmd_Save_Issue.Visible = false;
+            //cmd_Save_Cost.Visible = false;
+            //cmd_Cost_orderindex.Visible = false;
+
+            chkIssueOnHold.Enabled = false;
+        }
+
+    }
+    protected void cmd_New_Issue_Click(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("Delphi_job_issue.aspx?q=new_issue", true);
+    }
+    private bool validateScreen()
+    {
+        int i = 1;
+        string sMessage = "";
+        if (drpIssuecustomer.SelectedItem.Value == "0") sMessage += i++ + ". Select a Customer\\r\\n";
+        if (drpIssueJournal.SelectedItem.Value == "0") sMessage += i++ + ". Select a Journal\\r\\n";
+        if (txtIssueNo.Text.Trim() == "") sMessage += i++ + ". Enter Issue No.\\r\\n";
+        if (hfI_ID.Value.Trim() == "")
+        {
+            if (drpIssueStage.SelectedItem.Value == "0")/* ||
+            txtIssueSdate.Text == "" || txtIssueDdate.Text == "" || txtIssueHDdate.Text == "")*/
+            {
+                //sMessage += i++ + ". Select a Job Stage, Enter start date, \\rdue date and half due date\\r\\n";
+                sMessage += i++ + ". Select a Issue Stage\\r\\n";
+            }
+            else if (txtIssueSdate.Text == "" || txtIssueDdate.Text == "" || txtIssueHDdate.Text == "")
+            {
+                //sMessage += i++ + ". Enter start date, due date and half due date\\r\\n";
+            }
+            else
+            {
+                if (DateTime.Parse(txtIssueDdate.Text) < DateTime.Parse(txtIssueSdate.Text))
+                {
+                    sMessage += i++ + ". Invalid Due Date\\r\\n";
+                }
+                if ((DateTime.Parse(txtIssueSdate.Text) > DateTime.Parse(txtIssueHDdate.Text)) ||
+                    (DateTime.Parse(txtIssueHDdate.Text) > DateTime.Parse(txtIssueDdate.Text)))
+                {
+                    sMessage += i++ + ". Invalid Half Due Date\\r\\n";
+                }
+            }
+        }
+        else
+        {
+            if (drpIssueStage.SelectedItem.Value != "0")
+            {
+                if (txtIssueSdate.Text == "" || txtIssueDdate.Text == "" || txtIssueHDdate.Text == "")
+                {
+                    //sMessage += i++ + ". Enter start date, due date and half due date\\r\\n";
+                }
+                else
+                {
+                    if (DateTime.Parse(txtIssueDdate.Text) < DateTime.Parse(txtIssueSdate.Text))
+                    {
+                        sMessage += i++ + ". Invalid Due Date\\r\\n";
+                    }
+                    if ((DateTime.Parse(txtIssueSdate.Text) > DateTime.Parse(txtIssueHDdate.Text)) ||
+                        (DateTime.Parse(txtIssueHDdate.Text) > DateTime.Parse(txtIssueHDdate.Text)))
+                    {
+                        sMessage += i++ + ". Invalid Half Due Date\\r\\n";
+                    }
+                }
+            }
+        }
+        //if (drpIssueSalesGroup.SelectedItem.Value == "0") sMessage += i++ + ". Select a Sales Group\\r\\n";
+        if (i > 1)
+        {
+            Alert(sMessage);
+            return false;
+        }
+        return true;
+    }
+
+    protected void cmd_Save_Issue_Click(object sender, ImageClickEventArgs e)
+    {
+        string[] aIssueDetails;
+        try
+        {
+            if (validateScreen())
+            {
+                if (hfI_ID.Value.Trim() == "")
+                {
+                    //insert Issue
+                    aIssueDetails = new string[27];
+                    //aIssueDetails[0] = "6"; // jobtype_id for Issue
+                    aIssueDetails[0] = drpIssueJournal.SelectedItem.Value.Trim();
+                    aIssueDetails[1] = txtIssueNo.Text.Trim();
+                    aIssueDetails[2] = drpIssueCoverMonth.SelectedItem.Text.Trim();
+                    aIssueDetails[3] = drpIssueCoverYear.SelectedItem.Text.Trim();
+                    aIssueDetails[4] = txtIssueComments.Text.Trim();
+                    //stage
+                    aIssueDetails[5] = drpIssueStage.SelectedItem.Value.Trim();
+                    if (txtIssueSdate.Text.Trim() != "") aIssueDetails[6] = DateTime.Parse(txtIssueSdate.Text.Trim()).ToString("MM/dd/yyyy");
+                    else aIssueDetails[6] = "";
+                    if (txtIssueDdate.Text.Trim() != "") aIssueDetails[7] = DateTime.Parse(txtIssueDdate.Text.Trim()).ToString("MM/dd/yyyy");
+                    else aIssueDetails[7] = "";
+                    if (txtIssueHDdate.Text.Trim() != "") aIssueDetails[8] = DateTime.Parse(txtIssueHDdate.Text.Trim()).ToString("MM/dd/yyyy");
+                    else aIssueDetails[8] = "";
+                    if (txtIssueCrdPriceNo.Text != "")
+                        aIssueDetails[9] = txtIssueCrdPriceNo.Text.Trim();
+                    else aIssueDetails[9] ="0";
+                    aIssueDetails[10] = drpCredited.SelectedItem.Text.Trim();
+                    aIssueDetails[11] = drpCreditedIndia.SelectedItem.Text.Trim();
+
+                    aIssueDetails[12] = "N";
+                    aIssueDetails[13] = "N";
+                    aIssueDetails[14] = "N";
+                    aIssueDetails[15] = "N";
+                    aIssueDetails[16] = "N";
+                    aIssueDetails[17] = "N";
+                    aIssueDetails[18] = "N";
+                    aIssueDetails[19] = "N";
+                    aIssueDetails[20] = "0";
+                    aIssueDetails[21] = "0";
+                    aIssueDetails[22] = "N";
+                    aIssueDetails[23] = "N";
+                    aIssueDetails[24] = "N";
+                    aIssueDetails[25] = "N";
+                    aIssueDetails[26] = Session["employeeid"].ToString().Trim();
+      
+
+                    string msg = this.oIssue.InsertIssue(aIssueDetails);
+                    if (msg.Contains("Issue creation failed!") ||
+                        msg.Contains("Issue Already Exists!")) Alert(msg);
+                    else
+                    {
+                        hfI_ID.Value = msg;
+                        this.loadIssueDetails(msg);
+                        Alert("Successfully Saved.");
+                    }
+                }
+                else
+                {
+                    //update Issue
+                   aIssueDetails = new string[28];
+                    //aIssueDetails[0] = "6"; // jobtype_id for Issue
+                    aIssueDetails[0] = drpIssueJournal.SelectedItem.Value.Trim();
+                    aIssueDetails[1] = txtIssueNo.Text.Trim();
+                    aIssueDetails[2] = drpIssueCoverMonth.SelectedItem.Text.Trim();
+                    aIssueDetails[3] = drpIssueCoverYear.SelectedItem.Text.Trim();
+                    aIssueDetails[4] = txtIssueComments.Text.Trim();
+                    //stage
+                    aIssueDetails[5] = drpIssueStage.SelectedItem.Value.Trim();
+                    if (txtIssueSdate.Text.Trim() != "") aIssueDetails[6] = DateTime.Parse(txtIssueSdate.Text.Trim()).ToString("MM/dd/yyyy");
+                    else aIssueDetails[6] = "";
+                    if (txtIssueDdate.Text.Trim() != "") aIssueDetails[7] = DateTime.Parse(txtIssueDdate.Text.Trim()).ToString("MM/dd/yyyy");
+                    else aIssueDetails[7] = "";
+                    if (txtIssueHDdate.Text.Trim() != "") aIssueDetails[8] = DateTime.Parse(txtIssueHDdate.Text.Trim()).ToString("MM/dd/yyyy");
+                    else aIssueDetails[8] = "";
+                    if (txtIssueCrdPriceNo.Text != "")
+                        aIssueDetails[9] = txtIssueCrdPriceNo.Text.Trim();
+                    else aIssueDetails[9] ="0";
+                    aIssueDetails[10] = drpCredited.SelectedItem.Text.Trim();
+                    aIssueDetails[11] = drpCreditedIndia.SelectedItem.Text.Trim();
+
+                    aIssueDetails[12] = "N";
+                    aIssueDetails[13] = "N";
+                    aIssueDetails[14] = "N";
+                    aIssueDetails[15] = "N";
+                    aIssueDetails[16] = "N";
+                    aIssueDetails[17] = "N";
+                    aIssueDetails[18] = "N";
+                    aIssueDetails[19] = "N";
+                    aIssueDetails[20] = "0";
+                    aIssueDetails[21] = "0";
+                    aIssueDetails[22] = "N";
+                    aIssueDetails[23] = "N";
+                    aIssueDetails[24] = "N";
+                    aIssueDetails[25] = "N";
+                    aIssueDetails[26] = Session["employeeid"].ToString().Trim();
+                    aIssueDetails[27] = hfI_ID.Value.ToString();
+
+                    string msg = this.oIssue.UpdateIssue(aIssueDetails);
+                    if (msg.Contains("Error updating Issue:")) Alert(msg);
+                    else
+                    {
+                        this.loadIssueDetails(msg);
+                        Alert("Successfully Saved.");
+                    }
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            Response.Write(ex.Message);
+        }
+        finally { aIssueDetails = null; }
+    }
+    protected void cmd_Print_Issue_Click(object sender, ImageClickEventArgs e)
+    {
+
+    }
+    protected void lnkGeneral_Click(object sender, EventArgs e)
+    {
+        this.showPanel(tabGeneral);
+    }
+    protected void lnkIssuedetails_Click(object sender, EventArgs e)
+    {
+        if (hfI_ID.Value != "")
+        {
+            loadIssueDetails(hfI_ID.Value.Trim());
+        }
+        this.showPanel(tabIssueDetails);
+    }
+
+  
+
+    protected void drpIssuecustomer_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        drpIssueJournal.Items.Clear();
+        if (drpIssuecustomer.SelectedItem.Value != "0")
+        {
+            DataSet dsJour = oIssue.getJournalsByCustomer(drpIssuecustomer.SelectedItem.Value.Trim());
+            drpIssueJournal.DataSource = dsJour;
+            drpIssueJournal.DataTextField = dsJour.Tables[0].Columns["jourcode"].ToString();
+            drpIssueJournal.DataValueField = dsJour.Tables[0].Columns["journal_id"].ToString();
+            drpIssueJournal.DataBind();
+        }
+        drpIssueJournal.Items.Insert(0, new ListItem("-- select --", "0"));
+    }
+    protected void drpIssueJournal_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        //////drpIssueStage.Items.Clear();
+        //////if (drpIssueJournal.SelectedItem.Value != "0")
+        //////{
+        //////    DataSet dsStag = oIssue.getIssueStagesByJournal(drpIssueJournal.SelectedItem.Value.Trim());
+        //////    drpIssueStage.DataSource = dsStag.Tables[0];
+        //////    drpIssueStage.DataTextField = dsStag.Tables[0].Columns["job_stage_name"].ToString();
+        //////    drpIssueStage.DataValueField = dsStag.Tables[0].Columns["qualify_job_stage_id"].ToString();
+        //////    drpIssueStage.DataBind();
+        //////}
+        //////drpIssueStage.Items.Insert(0, new ListItem("-- select --", "0"));
+        //////if (hfI_ID.Value.Trim() == "" && drpIssueStage.Items.Count > 1) drpIssueStage.Items[1].Selected = true;
+    }
+    protected void drpIssueStage_SelectedIndexChanged(object sender, EventArgs e)
+    {
+   
+        if (drpIssueStage.SelectedItem.Value != "0")
+        {
+            //if (drpIssueStage.SelectedItem.Value != "0" && hfA_ID.Value.Trim() != "")
+            //{
+            //DataSet dst = oArt.getIssueStageByID(hfA_ID.Value.Trim(), drpIssueStage.SelectedItem.Value.Trim());
+            //if (dst.Tables[0].Rows.Count > 0){
+            //    DataRow newrow = dst.Tables[0].Rows[0];
+            //    txtIssueSdate.Text = newrow["received_date"].ToString();
+            //    txtIssueDdate.Text = newrow["due_date"].ToString();
+            //    txtIssueHDdate.Text = newrow["half_due_date"].ToString();
+            //    txtIssueCDdate.Text = newrow["cats_due_date"].ToString();
+            //    imgID_stdate.Visible = false;
+            //    imgID_dudate.Visible = false;
+            //    imgID_hdudate.Visible = false;
+            //    chkIssueDespatch.Enabled = true;
+            //}
+            //else{
+            txtIssueSdate.Text = "";
+            txtIssueDdate.Text = "";
+            txtIssueHDdate.Text = "";
+            txtIssueCrdPriceNo.Text = "";
+            imgID_stdate.Visible = true;
+            imgID_dudate.Visible = true;
+            imgID_hdudate.Visible = true;
+ 
+            //}
+        }
+        else
+        {
+            txtIssueSdate.Text = "";
+            txtIssueDdate.Text = "";
+            txtIssueHDdate.Text = "";
+            txtIssueCrdPriceNo.Text = "";
+            imgID_stdate.Visible = false;
+            imgID_dudate.Visible = false;
+            imgID_hdudate.Visible = false;
+      
+        }
+    }
+    
+ 
+
+
+    protected void cmd_Excel_Export_Click(object sender, ImageClickEventArgs e)
+    {
+        if (dtIssue != null && dtIssue.Rows.Count > 0)
+        {
+            StringBuilder sbData = new StringBuilder();
+            sbData.Append("<table border='1'>");
+            sbData.Append("<tr valign='top'><td colspan='10' align='center'><h4>Issue Summary</h4></td><tr>");
+            sbData.Append("<tr valign='top'><td bgcolor='silver'><b>Job Number</b></td><td bgcolor='silver'><b>Customer</b></td><td bgcolor='silver'><b>Issue Name</b></td><td bgcolor='silver'><b>Issue Title</b></td><td bgcolor='silver'><b>Stage</b></td><td bgcolor='silver'><b>Received Date</b></td><td bgcolor='silver'><b>Half Due Date</b></td><td bgcolor='silver'><b>Due Date</b></td><td bgcolor='silver'><b>Despatch Date</b></td><td bgcolor='silver'><b>Hold Details</b></td></tr>");
+            foreach (DataRow r in dtIssue.Rows)
+            {
+                sbData.Append("<tr valign='top'>");
+                sbData.Append("<td>" + r["parent_job_id"] + "</td>");
+                sbData.Append("<td>" + r["cust_name"] + "</td>");
+                sbData.Append("<td>" + r["journal_code"] + " " + r["name"] + "</td>");
+                sbData.Append("<td>" + r["title"] + "</td>");
+                sbData.Append("<td>" + r["job_stage_name"] + "</td>");
+                sbData.Append("<td>" + r["received_date"] + "</td>");
+                sbData.Append("<td>" + r["half_due_date"] + "</td>");
+                sbData.Append("<td>" + r["due_date"] + "</td>");
+                sbData.Append("<td>" + r["despatch_date"] + "</td>");
+                sbData.Append("<td>" + r["Hold_details"] + "</td>");
+                sbData.Append("</tr>");
+            }
+            sbData.Append("</table>");
+            Response.Clear();
+            Response.AddHeader("content-disposition", string.Format("attachment; filename={0}", "Issue_summary_" + DateTime.Now.ToString("dd_MM_yyyy") + ".xls"));
+            Response.ContentType = "application/ms-excel";
+            Response.Write(sbData.ToString());
+            Response.End();
+        }
+    }
+    protected void gvIssues_Sorting(object sender, GridViewSortEventArgs e)
+    {
+        DataView dv = new DataView();
+        string di = "";
+        try
+        {
+            SortDirection sortDirection = SortDirection.Ascending;
+            if (ViewState[e.SortExpression] != null)
+            {
+                SortDirection currDirection = (SortDirection)ViewState[e.SortExpression];
+                if (currDirection == SortDirection.Ascending) sortDirection = SortDirection.Descending;
+            }
+            ViewState[e.SortExpression] = sortDirection;
+            if (sortDirection.Equals(SortDirection.Descending)) di = " desc"; dv.Table = dtIssue;
+            dv.Sort = e.SortExpression + di;
+            sSortExpression = e.SortExpression;
+            gvIssues.DataSource = dv;
+            gvIssues.DataBind();
+        }
+        catch (Exception ec)
+        {
+            Alert(ec.Message);
+        }
+        finally
+        {
+            dv.Dispose();
+        }
+    }
+    protected void imgbtnEventExport_Click(object sender, ImageClickEventArgs e)
+    {
+        //StringBuilder sbData = new StringBuilder();
+        //sbData.Append("<table border='1'>");
+        //sbData.Append("<tr valign='top'><td colspan='8'><h4>" + lblEventsHeader.Text.Trim() + "</h4></td></tr>");
+        //sbData.Append("<tr valign='top'><td colspan='8'><b>Issue:</b></td></tr>");
+        //sbData.Append("<tr valign='top'><td bgcolor='silver'><b>Job</b></td><td bgcolor='silver'><b>Job Stage</b></td><td bgcolor='silver'><b>Task</b></td><td bgcolor='silver'><b>Start Time</b></td><td bgcolor='silver'><b>End Time</b></td><td bgcolor='silver'><b>Duration</b></td><td bgcolor='silver'><b>Employee</b></td><td bgcolor='silver'><b>Comments</b></td></tr>");
+        //foreach (GridViewRow r in gvEvents.Rows)
+        //{
+        //    sbData.Append("<tr valign='top'>");
+        //    sbData.Append("<td>" + ((DataBoundLiteralControl)r.Cells[0].Controls[0]).Text + "</td>");
+        //    sbData.Append("<td>" + ((DataBoundLiteralControl)r.Cells[1].Controls[0]).Text + "</td>");
+        //    sbData.Append("<td>" + ((DataBoundLiteralControl)r.Cells[2].Controls[0]).Text + "</td>");
+        //    sbData.Append("<td align='left'>" + ((DataBoundLiteralControl)r.Cells[3].Controls[0]).Text + "</td>");
+        //    sbData.Append("<td align='left'>" + ((DataBoundLiteralControl)r.Cells[4].Controls[0]).Text + "</td>");
+        //    sbData.Append("<td>" + ((DataBoundLiteralControl)r.Cells[5].Controls[0]).Text + "</td>");
+        //    sbData.Append("<td>" + ((DataBoundLiteralControl)r.Cells[6].Controls[0]).Text + "</td>");
+        //    sbData.Append("<td>" + ((DataBoundLiteralControl)r.Cells[7].Controls[0]).Text + "</td>");
+        //    sbData.Append("</tr>");
+        //}
+        //sbData.Append("</table>");
+        //Response.Clear();
+        //Response.AddHeader("content-disposition", string.Format("attachment; filename={0}", "Issue_Events_" + DateTime.Now.ToString("dd_MM_yyyy") + ".xls"));
+        //Response.ContentType = "application/ms-excel";
+        //Response.Write(sbData.ToString());
+        //Response.End();
+    }
+    protected void lnkIssueLogEvents_Click(object sender, EventArgs e)
+    {
+        if (hfI_ID.Value != "")
+        {
+            DataSet dsEvents = oIssue.getIssueEvents(hfI_ID.Value.Trim());
+            grvLogEvents.DataSource = dsEvents.Tables[0];
+            grvLogEvents.DataBind();
+        }
+        this.showPanel(tabLogEvents);
+    }
+
+
+    protected void lnkIssuePagination_Click(object sender, EventArgs e)
+    {
+        if (hfI_ID.Value != "")
+        {
+            popPaginationGrid();
+        }
+        this.showPanel(tabPaginate);
+    }
+
+    private void popPaginationGrid()
+    {
+        hfJobIDs.Value = "";
+        txtRowIndex.Text = "";
+        DataSet dsPagi = oIssue.getPaginateDetailsByID(hfI_ID.Value.ToString());
+        if (dsPagi.Tables[0].Rows.Count > 0)
+        {
+
+            lblIssue.Text = "Issue: " + dsPagi.Tables[0].Rows[0]["JOURCODE"].ToString() + " " + dsPagi.Tables[0].Rows[0]["ISSUENO"].ToString();
+            hfJourID.Value = dsPagi.Tables[0].Rows[0]["JOURNO"].ToString();
+            gvPagination.DataSource = dsPagi.Tables[1];
+            gvPagination.DataBind();
+        }
+        else
+        {
+            lblIssue.Text = "";
+            hfJourID.Value = "";
+            
+            Alert("Job number does not exists!");
+        }
+    }
+
+    protected void gvPagination_RowDataBound(object sender, GridViewRowEventArgs e)
+    {
+        if (e.Row.RowType == DataControlRowType.DataRow)
+        {
+            e.Row.Style.Add("cursor", "pointer");
+            e.Row.Attributes["onmouseover"] = "javascript:setMouseOverColor(this);";
+            e.Row.Attributes["onmouseout"] = "javascript:setMouseOutColor(this);";
+            e.Row.Attributes["onclick"] = "javascript:document.form1." + txtRowIndex.ClientID + ".value=" + (e.Row.RowIndex + 1);
+            //    ((DropDownList)e.Row.FindControl("drpgvStyleType")).Items.Insert(0, new ListItem(" --select-- ", "0"));
+            HiddenField hfdoctype = ((HiddenField)e.Row.FindControl("hfgvDocTypeID"));
+            switch (hfdoctype.Value.Trim())
+            {
+                case "1": //front matter
+                    e.Row.BackColor = System.Drawing.Color.LightGreen;
+                    break;
+                case "4": //back matter
+                    e.Row.BackColor = System.Drawing.Color.LightGreen;
+                    break;
+                case "5": //Cover
+                    e.Row.BackColor = System.Drawing.Color.Wheat;
+                    break;
+                case "6": //blank
+                    e.Row.BackColor = System.Drawing.Color.LightYellow;
+                    break;
+                case "3": //manuscript
+                    e.Row.BackColor = System.Drawing.Color.SkyBlue;
+                    break;
+                case "2": //prelims
+                    e.Row.BackColor = System.Drawing.Color.LightGreen;
+                    break;
+                default:
+                    break;
+            }
+            ////DropDownList dddoc = (DropDownList)e.Row.Cells[2].FindControl("dd_doctype");
+            ////dddoc.DataTextField = "document_name";
+            ////dddoc.DataValueField = "document_type_id";
+            ////dddoc.SelectedValue = DataBinder.Eval(e.Row.DataItem, "document_type_id").ToString();
+            ////dddoc.DataSource = getdoctype();
+            ////dddoc.DataBind();
+            ////DropDownList ddsub = (DropDownList)e.Row.Cells[3].FindControl("dd_subtype");
+            ////ddsub.DataSource = getdocitemtype(((DropDownList)e.Row.Cells[2].FindControl("dd_doctype")).SelectedValue.ToString());
+            ////ddsub.DataBind();
+            ////ddsub.SelectedValue = DataBinder.Eval(e.Row.DataItem, "document_item_type_id").ToString();
+
+            Delphi_Articles  oArt=new Delphi_Articles();
+            DropDownList dddoc = (DropDownList)e.Row.Cells[2].FindControl("dd_doctype");
+            DataSet dsDoctype = oArt.getDocTypes();
+            dddoc.DataSource = dsDoctype;
+            dddoc.DataTextField = dsDoctype.Tables[0].Columns[1].ToString();
+            dddoc.DataValueField = dsDoctype.Tables[0].Columns[0].ToString();
+            dddoc.DataBind();
+            dddoc.SelectedValue = DataBinder.Eval(e.Row.DataItem, "ADNO").ToString();
+
+            DropDownList ddsub = (DropDownList)e.Row.Cells[3].FindControl("dd_subtype");
+            DataSet dsSubDoctype = oArt.getSubDocType();
+            ddsub.DataSource = dsSubDoctype;
+            ddsub.DataTextField = dsSubDoctype.Tables[0].Columns[1].ToString();
+            ddsub.DataValueField = dsSubDoctype.Tables[0].Columns[0].ToString();
+            ddsub.DataBind();
+            ddsub.SelectedValue = DataBinder.Eval(e.Row.DataItem, "IPCTNO").ToString();
+
+            DropDownList ddNumsys = (DropDownList)e.Row.Cells[7].FindControl("drpgvStyleType");
+            DataSet dsNumsys = oArt.getNumSys();
+            ddNumsys.DataSource = dsNumsys;
+            ddNumsys.DataTextField = dsNumsys.Tables[0].Columns[1].ToString();
+            ddNumsys.DataValueField = dsNumsys.Tables[0].Columns[0].ToString();
+            ddNumsys.DataBind();
+            ddsub.SelectedValue = DataBinder.Eval(e.Row.DataItem, "NSNO").ToString();
+
+        }
+    }
+
+    protected void btnPaginate_Click(object sender, EventArgs e)
+    {
+
+    }
+    protected void btnSave_Click(object sender, EventArgs e)
+    {
+        ArrayList listPag = new ArrayList();
+        string[] aPagination = null;
+        string jobId=hfI_ID.Value.ToString();
+        string result;
+        foreach (GridViewRow row in gvPagination.Rows)
+        {
+            aPagination = new string[8];
+            aPagination[0] = ((HiddenField)row.FindControl("hfgvANOID")).Value.Trim();
+            aPagination[1] = ((TextBox)row.FindControl("txtgvFrom")).Text.Trim();
+            aPagination[2] = ((TextBox)row.FindControl("txtgvTo")).Text.Trim();
+            if (((DropDownList)row.FindControl("drpgvStyleType")).SelectedItem.Value.Trim() == "") aPagination[3] = "1";
+            else aPagination[3] = ((DropDownList)row.FindControl("drpgvStyleType")).SelectedItem.Value.Trim();
+            if (((TextBox)row.FindControl("txtgvOrderIndex")).Text.Trim() == "") aPagination[4] = "0";
+            else aPagination[4] = ((TextBox)row.FindControl("txtgvOrderIndex")).Text.Trim();
+            aPagination[5] = ((TextBox)row.FindControl("txt_gvtotal")).Text.Trim();
+            aPagination[6] = ((DropDownList)row.FindControl("dd_doctype")).SelectedValue.ToString();
+            aPagination[7] = ((DropDownList)row.FindControl("dd_subtype")).SelectedValue.ToString();
+            listPag.Add(aPagination);
+        }
+        result = oIssue.UpdatePaginationJobs(listPag, jobId);
+        //if (oIssue.UpdatePaginationJobs(listPag,jobId))
+        //{
+        //    this.popPaginationGrid();
+        //}
+        //else Alert("Save Failed!");
+    }
+}

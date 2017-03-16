@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ArticleandPages" targetNamespace="http://tempuri.org/ArticleandPages.xsd" xmlns:mstns="http://tempuri.org/ArticleandPages.xsd" xmlns="http://tempuri.org/ArticleandPages.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ArticleandPages" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="ArticleandPages" msprop:Generator_DataSetName="ArticleandPages">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ArticlesandPages" msprop:Generator_UserTableName="ArticlesandPages" msprop:Generator_RowDeletedName="ArticlesandPagesRowDeleted" msprop:Generator_RowChangedName="ArticlesandPagesRowChanged" msprop:Generator_RowClassName="ArticlesandPagesRow" msprop:Generator_RowChangingName="ArticlesandPagesRowChanging" msprop:Generator_RowEvArgName="ArticlesandPagesRowChangeEvent" msprop:Generator_RowEvHandlerName="ArticlesandPagesRowChangeEventHandler" msprop:Generator_TableClassName="ArticlesandPagesDataTable" msprop:Generator_TableVarName="tableArticlesandPages" msprop:Generator_RowDeletingName="ArticlesandPagesRowDeleting" msprop:Generator_TablePropName="ArticlesandPages">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ANO" msprop:Generator_UserColumnName="ANO" msprop:Generator_ColumnVarNameInTable="columnANO" msprop:Generator_ColumnPropNameInRow="ANO" msprop:Generator_ColumnPropNameInTable="ANOColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="JOURNO" msprop:Generator_UserColumnName="JOURNO" msprop:Generator_ColumnVarNameInTable="columnJOURNO" msprop:Generator_ColumnPropNameInRow="JOURNO" msprop:Generator_ColumnPropNameInTable="JOURNOColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="INO" msprop:Generator_UserColumnName="INO" msprop:Generator_ColumnVarNameInTable="columnINO" msprop:Generator_ColumnPropNameInRow="INO" msprop:Generator_ColumnPropNameInTable="INOColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="AMANUSCRIPTID" msprop:Generator_UserColumnName="AMANUSCRIPTID" msprop:Generator_ColumnVarNameInTable="columnAMANUSCRIPTID" msprop:Generator_ColumnPropNameInRow="AMANUSCRIPTID" msprop:Generator_ColumnPropNameInTable="AMANUSCRIPTIDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="AREALNOOFPAGES" msprop:Generator_UserColumnName="AREALNOOFPAGES" msprop:Generator_ColumnVarNameInTable="columnAREALNOOFPAGES" msprop:Generator_ColumnPropNameInRow="AREALNOOFPAGES" msprop:Generator_ColumnPropNameInTable="AREALNOOFPAGESColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="JOURCODE" msprop:Generator_UserColumnName="JOURCODE" msprop:Generator_ColumnVarNameInTable="columnJOURCODE" msprop:Generator_ColumnPropNameInRow="JOURCODE" msprop:Generator_ColumnPropNameInTable="JOURCODEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ISARTICLE_BASED" msprop:Generator_UserColumnName="ISARTICLE_BASED" msprop:Generator_ColumnPropNameInRow="ISARTICLE_BASED" msprop:Generator_ColumnVarNameInTable="columnISARTICLE_BASED" msprop:Generator_ColumnPropNameInTable="ISARTICLE_BASEDColumn" type="xs:short" minOccurs="0" />
+              <xs:element name="ADNO" msprop:Generator_UserColumnName="ADNO" msprop:Generator_ColumnVarNameInTable="columnADNO" msprop:Generator_ColumnPropNameInRow="ADNO" msprop:Generator_ColumnPropNameInTable="ADNOColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="IINVOICENO" msprop:Generator_UserColumnName="IINVOICENO" msprop:Generator_ColumnPropNameInRow="IINVOICENO" msprop:Generator_ColumnVarNameInTable="columnIINVOICENO" msprop:Generator_ColumnPropNameInTable="IINVOICENOColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="IINVOICEDATE" msprop:Generator_UserColumnName="IINVOICEDATE" msprop:Generator_ColumnPropNameInRow="IINVOICEDATE" msprop:Generator_ColumnVarNameInTable="columnIINVOICEDATE" msprop:Generator_ColumnPropNameInTable="IINVOICEDATEColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="INVNO" msprop:Generator_UserColumnName="INVNO" msprop:Generator_ColumnVarNameInTable="columnINVNO" msprop:Generator_ColumnPropNameInRow="INVNO" msprop:Generator_ColumnPropNameInTable="INVNOColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="AEXTRA_COPY_EDIT" msprop:Generator_UserColumnName="AEXTRA_COPY_EDIT" msprop:Generator_ColumnPropNameInRow="AEXTRA_COPY_EDIT" msprop:Generator_ColumnVarNameInTable="columnAEXTRA_COPY_EDIT" msprop:Generator_ColumnPropNameInTable="AEXTRA_COPY_EDITColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

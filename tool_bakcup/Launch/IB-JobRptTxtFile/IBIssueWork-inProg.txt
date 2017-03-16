@@ -1,0 +1,20 @@
+/*
+select jourcode as jobcode,jourcode || '' || iissueno  as jobtitle, custname, null as idate,null as ipages,  jcno_2009
+from issue_dp I 
+join journal_dp JL on JL.journo=I.journo
+join CUSTOMER_DP X ON JL.CUSTNO = X.CUSTNO
+join STYPE_DP ON I.stypeno = stype_dp.stypeno
+where icreationdate BETWEEN ':STARTDATE 00:00:00' AND ':ENDDATE 23:59:59' and iinvoiced = 'N'
+AND X.CUSTNO in (:CUSTNO)
+order by icreationdate
+SIVARAJ UPDATE THE BELOW QUERY WITH THE INVOICEDATE IN WHERE CLAUSE*/
+
+select jourcode as jobcode,jourcode || '' || iissueno  as jobtitle, custname, null as idate,null as ipages,  jcno_2009
+from issue_dp I 
+join journal_dp JL on JL.journo=I.journo
+join CUSTOMER_DP X ON JL.CUSTNO = X.CUSTNO
+join STYPE_DP ON I.stypeno = stype_dp.stypeno
+where icreationdate BETWEEN ':STARTDATE 00:00:00' AND ':ENDDATE 23:59:59' and 
+(iinvoiced = 'N' OR iinvoicedate > ':ENDDATE 23:59:59') 
+AND X.CUSTNO in (:CUSTNO)
+order by icreationdate

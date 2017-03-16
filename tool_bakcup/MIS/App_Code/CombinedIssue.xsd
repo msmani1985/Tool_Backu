@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CombinedIssue" targetNamespace="http://tempuri.org/CombinedIssue.xsd" xmlns:mstns="http://tempuri.org/CombinedIssue.xsd" xmlns="http://tempuri.org/CombinedIssue.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CombinedIssue" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="CombinedIssue" msprop:Generator_DataSetName="CombinedIssue">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="combinedtable" msprop:Generator_UserTableName="combinedtable" msprop:Generator_RowDeletedName="combinedtableRowDeleted" msprop:Generator_RowChangedName="combinedtableRowChanged" msprop:Generator_RowClassName="combinedtableRow" msprop:Generator_RowChangingName="combinedtableRowChanging" msprop:Generator_RowEvArgName="combinedtableRowChangeEvent" msprop:Generator_RowEvHandlerName="combinedtableRowChangeEventHandler" msprop:Generator_TableClassName="combinedtableDataTable" msprop:Generator_TableVarName="tablecombinedtable" msprop:Generator_RowDeletingName="combinedtableRowDeleting" msprop:Generator_TablePropName="combinedtable">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="INO1" msprop:Generator_UserColumnName="INO1" msprop:Generator_ColumnVarNameInTable="columnINO1" msprop:Generator_ColumnPropNameInRow="INO1" msprop:Generator_ColumnPropNameInTable="INO1Column" type="xs:int" minOccurs="0" />
+              <xs:element name="IISSUENO" msprop:Generator_UserColumnName="IISSUENO" msprop:Generator_ColumnVarNameInTable="columnIISSUENO" msprop:Generator_ColumnPropNameInRow="IISSUENO" msprop:Generator_ColumnPropNameInTable="IISSUENOColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="JOURNO" msprop:Generator_UserColumnName="JOURNO" msprop:Generator_ColumnVarNameInTable="columnJOURNO" msprop:Generator_ColumnPropNameInRow="JOURNO" msprop:Generator_ColumnPropNameInTable="JOURNOColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="JOURCODE" msprop:Generator_UserColumnName="JOURCODE" msprop:Generator_ColumnVarNameInTable="columnJOURCODE" msprop:Generator_ColumnPropNameInRow="JOURCODE" msprop:Generator_ColumnPropNameInTable="JOURCODEColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="IINVOICENO" msprop:Generator_UserColumnName="IINVOICENO" msprop:Generator_ColumnVarNameInTable="columnIINVOICENO" msprop:Generator_ColumnPropNameInRow="IINVOICENO" msprop:Generator_ColumnPropNameInTable="IINVOICENOColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="INVDATE" msprop:Generator_UserColumnName="INVDATE" msprop:Generator_ColumnVarNameInTable="columnINVDATE" msprop:Generator_ColumnPropNameInRow="INVDATE" msprop:Generator_ColumnPropNameInTable="INVDATEColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="JCNO2009" msprop:Generator_UserColumnName="JCNO2009" msprop:Generator_ColumnVarNameInTable="columnJCNO2009" msprop:Generator_ColumnPropNameInRow="JCNO2009" msprop:Generator_ColumnPropNameInTable="JCNO2009Column" type="xs:int" minOccurs="0" />
+              <xs:element name="JCNO2010" msprop:Generator_UserColumnName="JCNO2010" msprop:Generator_ColumnVarNameInTable="columnJCNO2010" msprop:Generator_ColumnPropNameInRow="JCNO2010" msprop:Generator_ColumnPropNameInTable="JCNO2010Column" type="xs:int" minOccurs="0" />
+              <xs:element name="RATE" msprop:Generator_UserColumnName="RATE" msprop:Generator_ColumnPropNameInRow="RATE" msprop:Generator_ColumnVarNameInTable="columnRATE" msprop:Generator_ColumnPropNameInTable="RATEColumn" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

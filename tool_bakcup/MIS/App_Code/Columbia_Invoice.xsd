@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Columbia_Invoice" targetNamespace="http://tempuri.org/Columbia_Invoice.xsd" xmlns:mstns="http://tempuri.org/Columbia_Invoice.xsd" xmlns="http://tempuri.org/Columbia_Invoice.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Columbia_Invoice" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Columbia_Invoice" msprop:Generator_DataSetName="Columbia_Invoice">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Columbia_Invoice" msprop:Generator_TableClassName="Columbia_InvoiceDataTable" msprop:Generator_TableVarName="tableColumbia_Invoice" msprop:Generator_TablePropName="_Columbia_Invoice" msprop:Generator_RowDeletingName="Columbia_InvoiceRowDeleting" msprop:Generator_RowChangingName="Columbia_InvoiceRowChanging" msprop:Generator_RowEvHandlerName="Columbia_InvoiceRowChangeEventHandler" msprop:Generator_RowDeletedName="Columbia_InvoiceRowDeleted" msprop:Generator_UserTableName="Columbia_Invoice" msprop:Generator_RowChangedName="Columbia_InvoiceRowChanged" msprop:Generator_RowEvArgName="Columbia_InvoiceRowChangeEvent" msprop:Generator_RowClassName="Columbia_InvoiceRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ANO" msprop:Generator_ColumnVarNameInTable="columnANO" msprop:Generator_ColumnPropNameInRow="ANO" msprop:Generator_ColumnPropNameInTable="ANOColumn" msprop:Generator_UserColumnName="ANO" type="xs:string" minOccurs="0" />
+              <xs:element name="ARTICLES" msprop:Generator_ColumnVarNameInTable="columnARTICLES" msprop:Generator_ColumnPropNameInRow="ARTICLES" msprop:Generator_ColumnPropNameInTable="ARTICLESColumn" msprop:Generator_UserColumnName="ARTICLES" type="xs:string" minOccurs="0" />
+              <xs:element name="PAGE" msprop:Generator_ColumnVarNameInTable="columnPAGE" msprop:Generator_ColumnPropNameInRow="PAGE" msprop:Generator_ColumnPropNameInTable="PAGEColumn" msprop:Generator_UserColumnName="PAGE" type="xs:string" minOccurs="0" />
+              <xs:element name="PREPROCESS" msprop:Generator_ColumnVarNameInTable="columnPREPROCESS" msprop:Generator_ColumnPropNameInRow="PREPROCESS" msprop:Generator_ColumnPropNameInTable="PREPROCESSColumn" msprop:Generator_UserColumnName="PREPROCESS" type="xs:string" minOccurs="0" />
+              <xs:element name="PRICECODE" msprop:Generator_ColumnVarNameInTable="columnPRICECODE" msprop:Generator_ColumnPropNameInRow="PRICECODE" msprop:Generator_ColumnPropNameInTable="PRICECODEColumn" msprop:Generator_UserColumnName="PRICECODE" type="xs:string" minOccurs="0" />
+              <xs:element name="USD" msprop:Generator_ColumnVarNameInTable="columnUSD" msprop:Generator_ColumnPropNameInRow="USD" msprop:Generator_ColumnPropNameInTable="USDColumn" msprop:Generator_UserColumnName="USD" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

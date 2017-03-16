@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	font-family:verdana, tahoma;
+}
+-->
+</style>
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+<link href="default.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+.style14 {color: #003399}
+-->
+</style>
+<style type="text/css">
+<!--
+.style84 {font-family: Verdana, Arial, Helvetica, sans-serif;text-transform:uppercase;text-align:left;}
+.style84 {font-size: 14px; color: black; font-family: Verdana, Arial, Helvetica, sans-serif; }
+.style34 {color: #000000; font-size: 12px; text-align:left;}
+.style4 {font-size: 13px}
+-->
+</style>
+<script type="text/JavaScript">
+<!--
+
+
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+//-->
+</script>
+</head>
+
+<body style="text-align:center;">
+ <table width="100%" border="0" cellspacing="0" cellpadding="0">
+   <tr>
+     <td align="center" valign="top" class="style6" scope="col"><div align="right" class="style14"></div></td>
+   </tr>
+   <tr>
+     <td height="821" align="left" valign="top" class="style8" scope="col"><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" bordercolor="#000000">
+       <tr>
+         <td width="100%" align="center" height="821" valign="top"><table align="center" width="50%" border="0" cellspacing="0" cellpadding="0">
+           <tr>
+             <td height="20" colspan="7" align="center" class="dptitle">List of Holidays- 2016</td>
+             </tr>
+           <tr>
+             <td>&nbsp;</td>
+             <td>&nbsp;</td>
+             <td>&nbsp;</td>
+             <td class="style84">&nbsp;</td>
+             <td class="style84">&nbsp;</td>
+             <td class="style84">&nbsp;</td>
+             <td class="style84">&nbsp;</td>
+           </tr>
+           <tr>
+             <td><span class="style4"></span></td>
+             <td><img src="events/images/NEWYEARDAY.JPG" width="80" height="80" /></td>
+             <td><span class="style4"></span></td>
+             <td class="style84">NEW YEAR</td>
+             <td class="style84">01-01-2016</td>
+             <td class="style84">THURSDAY</td>
+             <td class="style84">&nbsp;</td>
+           </tr>
+           <tr>
+             <td bgcolor="#F3F3F3"><span class="style4"></span></td>
+             <td bgcolor="#F3F3F3">&nbsp;</td>
+             <td bgcolor="#F3F3F3"><span class="style4"></span></td>
+             <td bgcolor="#F3F3F3" class="style34">&nbsp;</td>
+             <td bgcolor="#F3F3F3" class="style34">&nbsp;</td>
+             <td bgcolor="#F3F3F3" class="style34">&nbsp;</td>
+             <td bgcolor="#F3F3F3" class="style34">&nbsp;</td>
+           </tr>
+           <tr>
+             <td><span class="style4"></span></td>
+             <td><img src="events/images/PONGAL.JPG" width="80" height="80" /></td>
+             <td><span class="style4"></span></td>
+             <td class="style84">PONGAL</td>
+             <td class="style84">15-01-2016</td>
+             <td class="style84">THURSDAY</td>
+             <td class="style84">&nbsp;</td>
+           </tr>
+           <tr>
+             <td bgcolor="#F3F3F3"><span class="style4"></span></td>
+             <td bgcolor="#F3F3F3">&nbsp;</td>
+             <td bgcolor="#F3F3F3"><span class="style4"></span></td>
+             <td bgcolor="#F3F3F3" class="style84">&nbsp;</td>
+             <td bgcolor="#F3F3F3" class="style84">&nbsp;</td>
+             <td bgcolor="#F3F3F3" class="style84">&nbsp;</td>
+             <td bgcolor="#F3F3F3" class="style84">&nbsp;</td>
+           </tr>
+
+              <tr>
+             <td><span class="style4"></span></td>
+             <td><img src="events/images/REPUBLIC.JPG" width="80" height="80" /></td>
+             <td><span class="style4"></span></td>
+             <td class="style84">REPUBLIC DAY</td>
+             <td class="style84">26-01-2016</td>
+             <td class="style84">MONDAY</td>
+             <td class="style84">&nbsp;</td>
+           </tr>
+           <tr>
+             <td bgcolor="#F3F3F3"><span class="style4"></span></td>
+             <td bgcolor="#F3F3F3">&nbsp;</td>
+             <td bgcolor="#F3F3F3"><span class="style4"></span></td>
+             <td bgcolor="#F3F3F3" class="style84">&nbsp;</td>
+             <td bgcolor="#F3F3F3" class="style84">&nbsp;</td>
+             <td bgcolor="#F3F3F3" class="style84">&nbsp;</td>
+             <td bgcolor="#F3F3F3" class="style84">&nbsp;</td>
+           </tr>
+
+                   <tr>
+             <td><span class="style4"></span></td>
+             <td><img src="events/images/GOODFRIDAY.JPG" width="80" height="80" /></td>
+             <td><span class="style4"></span></td>
+             <td class="style84">GOOD FRIDAY</td>
+             <td class="style84">25-03-2016</td>
+             <td class="style84">FRIDAY</td>
+             <td class="style84">&nbsp;</td>
+           </tr>
+           <tr>
+             <td bgcolor="#F3F3F3"><span class="style4"></span></td>
+             <td bgcolor="#F3F3F3">&nbsp;</td>
+             <td bgcolor="#F3F3F3"><span class="style4"></span></td>
+             <td bgcolor="#F3F3F3" class="style84">&nbsp;</td>
+             <td bgcolor="#F3F3F3" class="style84">&nbsp;</td>
+             <td bgcolor="#F3F3F3" class="style84">&nbsp;</td>
+             <td bgcolor="#F3F3F3" class="style84">&nbsp;</td>
+           </tr>
+
+
+
+           <tr>
+             <td><span class="style4"></span></td>
+             <td><img src="events/images/tamilnewyear_poster.jpg" width="80" height="70" /></td>
+             <td><span class="style4"></span></td>
+             <td class="style84">TAMIL NEW YEAR&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </td>
+             <td class="style84">14-04-2016&nbsp;&nbsp;&nbsp; </td>
+             <td class="style84">TUESDAY</td>
+             <td class="style84">&nbsp;</td>
+           </tr>
+           <tr>
+             <td bgcolor="#F3F3F3"><span class="style4"></span></td>
+             <td bgcolor="#F3F3F3">&nbsp;</td>
+             <td bgcolor="#F3F3F3"><span class="style4"></span></td>
+             <td bgcolor="#F3F3F3" class="style84">&nbsp;</td>
+             <td bgcolor="#F3F3F3" class="style84">&nbsp;</td>
+             <td bgcolor="#F3F3F3" class="style84">&nbsp;</td>
+             <td bgcolor="#F3F3F3" class="style84">&nbsp;</td>
+           </tr>
+
+           <tr>
+             <td><span class="style4"></span></td>
+             <td><img src="events/images/ramzan.png" width="80" height="80" /></td>
+             <td><span class="style4"></span></td>
+             <td class="style84">Ramzan</td>
+             <td class="style84">07-07-2016</td>
+             <td class="style84">FRIDAY</td>
+             <td class="style84"></td>
+           </tr>
+           <tr>
+             <td bgcolor="#F3F3F3"><span class="style4"></span></td>
+             <td bgcolor="#F3F3F3">&nbsp;</td>
+             <td bgcolor="#F3F3F3"><span class="style4"></span></td>
+             <td bgcolor="#F3F3F3" class="style84">&nbsp;</td>
+             <td bgcolor="#F3F3F3" class="style84">&nbsp;</td>
+             <td bgcolor="#F3F3F3" class="style84">&nbsp;</td>
+             <td bgcolor="#F3F3F3" class="style84">&nbsp;</td>
+           </tr>
+          
+		   <tr>
+             <td><span class="style4"></span></td>
+             <td><img src="events/images/INDEPENDAY.JPG" width="80" height="80" /></td>
+             <td><span class="style4"></span></td>
+             <td class="style84">INDEPENDENCE DAY</td>
+             <td class="style84">15-08-2016&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+             <td class="style84">SATURDAY</td>
+             <td class="style84">&nbsp;</td>
+           </tr>
+           <tr>
+             <td bgcolor="#F3F3F3"><span class="style4"></span></td>
+             <td bgcolor="#F3F3F3">&nbsp;</td>
+             <td bgcolor="#F3F3F3"><span class="style4"></span></td>
+             <td bgcolor="#F3F3F3" class="style84">&nbsp;</td>
+             <td bgcolor="#F3F3F3" class="style84">&nbsp;</td>
+             <td bgcolor="#F3F3F3" class="style84">&nbsp;</td>
+             <td bgcolor="#F3F3F3" class="style84">&nbsp;</td>
+           </tr>
+           <tr>
+             <td><span class="style4"></span></td>
+             <td><img src="events/images/VINAYAGAR.bmp" width="70" height="80" /></td>
+             <td><span class="style4"></span></td>
+             <td class="style84">GANESH CHATHURTHI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+             <td class="style84">05-09-2016</td>
+             <td class="style84">THURSDAY</td>
+             <td class="style84">&nbsp;</td>
+           </tr>
+           <tr>
+             <td bgcolor="#F3F3F3"><span class="style4"></span></td>
+             <td bgcolor="#F3F3F3">&nbsp;</td>
+             <td bgcolor="#F3F3F3"><span class="style4"></span></td>
+             <td bgcolor="#F3F3F3" class="style84">&nbsp;</td>
+             <td bgcolor="#F3F3F3" class="style84">&nbsp;</td>
+             <td bgcolor="#F3F3F3" class="style84">&nbsp;</td>
+             <td bgcolor="#F3F3F3" class="style84">&nbsp;</td>
+           </tr>
+           <tr>
+             <td><span class="style4"></span></td>
+             <td><img src="events/images/bakrid.JPG" width="70" height="80" /></td>
+             <td><span class="style4"></span></td>
+             <td class="style84">Bakrid&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+             <td class="style84">13-09-2016</td>
+             <td class="style84">FRIDAY</td>
+             <td class="style84">&nbsp;</td>
+           </tr>
+           <tr>
+             <td bgcolor="#F3F3F3"><span class="style4"></span></td>
+             <td bgcolor="#F3F3F3">&nbsp;</td>
+             <td bgcolor="#F3F3F3"><span class="style4"></span></td>
+             <td bgcolor="#F3F3F3" class="style84">&nbsp;</td>
+             <td bgcolor="#F3F3F3" class="style84">&nbsp;</td>
+             <td bgcolor="#F3F3F3" class="style84">&nbsp;</td>
+             <td bgcolor="#F3F3F3" class="style84">&nbsp;</td>
+           </tr>
+           <tr>
+             <td><span class="style4"></span></td>
+             <td><img src="events/images/AYUDHAPOJA.jpg" width="80" height="80" /></td>
+             <td><span class="style4"></span></td>
+             <td class="style84">Ayutha Pooja&nbsp;&nbsp;</td>
+             <td class="style84">10-10-2016</td>
+             <td class="style84">TUESDAY</td>
+             <td class="style84">&nbsp;</td>
+           </tr>
+           <tr>
+             <td bgcolor="#F3F3F3"><span class="style4"></span></td>
+             <td bgcolor="#F3F3F3">&nbsp;</td>
+             <td bgcolor="#F3F3F3"><span class="style4"></span></td>
+             <td bgcolor="#F3F3F3" class="style84">&nbsp;</td>
+             <td bgcolor="#F3F3F3" class="style84">&nbsp;</td>
+             <td bgcolor="#F3F3F3" class="style84">&nbsp;</td>
+             <td bgcolor="#F3F3F3" class="style84">&nbsp;</td>
+           </tr>
+		   <tr>
+             <td><span class="style4"></span></td>
+             <td><img src="events/images/DIWALI.bmp" width="80" height="80" /></td>
+             <td><span class="style4"></span></td>
+             <td class="style84">Deepavali&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+             <td class="style84">29-10-2016</td>
+             <td class="style84">FRIDAY</td>
+             <td class="style84">&nbsp;</td>
+           </tr>
+           <tr>
+             <td bgcolor="#F3F3F3"><span class="style4"></span></td>
+             <td bgcolor="#F3F3F3">&nbsp;</td>
+             <td bgcolor="#F3F3F3"><span class="style4"></span></td>
+             <td bgcolor="#F3F3F3" class="style34">&nbsp;</td>
+             <td bgcolor="#F3F3F3" class="style34">&nbsp;</td>
+             <td bgcolor="#F3F3F3" class="style34">&nbsp;</td>
+             <td bgcolor="#F3F3F3" class="style34">&nbsp;</td>
+           </tr>
+         </table>
+          </td>
+       </tr>
+       
+     </table></td>
+   </tr>
+</table>
+<br/>
+</body>
+</html>

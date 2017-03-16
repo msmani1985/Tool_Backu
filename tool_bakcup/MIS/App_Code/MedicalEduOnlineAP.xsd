@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="MedicalEduOnlineAP" targetNamespace="http://tempuri.org/MedicalEduOnlineAP.xsd" xmlns:mstns="http://tempuri.org/MedicalEduOnlineAP.xsd" xmlns="http://tempuri.org/MedicalEduOnlineAP.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="MedicalEduOnlineAP" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="MedicalEduOnlineAP" msprop:Generator_DataSetName="MedicalEduOnlineAP">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="MedicalEduAP" msprop:Generator_UserTableName="MedicalEduAP" msprop:Generator_RowDeletedName="MedicalEduAPRowDeleted" msprop:Generator_TableClassName="MedicalEduAPDataTable" msprop:Generator_RowChangedName="MedicalEduAPRowChanged" msprop:Generator_RowClassName="MedicalEduAPRow" msprop:Generator_RowChangingName="MedicalEduAPRowChanging" msprop:Generator_RowEvArgName="MedicalEduAPRowChangeEvent" msprop:Generator_RowEvHandlerName="MedicalEduAPRowChangeEventHandler" msprop:Generator_TablePropName="MedicalEduAP" msprop:Generator_TableVarName="tableMedicalEduAP" msprop:Generator_RowDeletingName="MedicalEduAPRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="arealnoofpages" msprop:Generator_UserColumnName="arealnoofpages" msprop:Generator_ColumnPropNameInRow="arealnoofpages" msprop:Generator_ColumnVarNameInTable="columnarealnoofpages" msprop:Generator_ColumnPropNameInTable="arealnoofpagesColumn" type="xs:integer" />
+              <xs:element name="amanuscriptid" msprop:Generator_UserColumnName="amanuscriptid" msprop:Generator_ColumnPropNameInRow="amanuscriptid" msprop:Generator_ColumnVarNameInTable="columnamanuscriptid" msprop:Generator_ColumnPropNameInTable="amanuscriptidColumn" type="xs:string" />
+              <xs:element name="Column1" msprop:Generator_UserColumnName="Column1" msprop:Generator_ColumnPropNameInRow="Column1" msprop:Generator_ColumnVarNameInTable="columnColumn1" msprop:Generator_ColumnPropNameInTable="Column1Column" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,1188 @@
+using System;
+using System.Data;
+using System.Configuration;
+using System.Collections;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+using System.Data.SqlClient;
+using System.Data.OleDb;
+using System.IO;
+using System.Text;
+//using Excel = Microsoft.Office.Interop.Excel;
+using System.Web.UI.WebControls.Adapters;
+using System.Security.Permissions;
+using System.Xml;
+using System.Xml.Xsl;
+using System.Xml.XPath;
+using System.Xml.Serialization;
+using System.Text.RegularExpressions;
+
+public partial class QMS_StyleSheet1 : System.Web.UI.Page
+{
+    //DataTable dtExcelRecords = new DataTable();
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (!IsPostBack)
+        {
+            try
+            {
+                //btnSaveLineItems.Style["display"] = "block";
+              //  pnlSTYLESHEETNEW.Visible = false;
+                
+                //START
+
+                string connectionStringS1 = "server=192.9.200.157;database=dpmis;uid=sa;pwd=masterkey";
+                SqlConnection conS1 = new SqlConnection(connectionStringS1);
+                conS1.Open();
+                SqlCommand cmdS1 = new SqlCommand("spGetStylesheet_NEWQMS", conS1);
+                cmdS1.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter dAdapter = new SqlDataAdapter(cmdS1);
+                DataTable dtExcelRecords = new DataTable();
+                dAdapter.Fill(dtExcelRecords);
+                dtExcelRecords.AcceptChanges();
+                conS1.Close();
+
+
+                dtExcelRecords.AcceptChanges();
+                gvSAMProfileNew.DataSource = dtExcelRecords;
+                gvSAMProfileNew.DataBind();
+
+               
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+        }
+
+    }
+    public void sortBy_Click(object sender, EventArgs e)
+    {
+        ImageButton imgb = new ImageButton();
+        imgb = (ImageButton)sender;
+    }
+
+    protected void gvSAMProfileNew_RowCommand(object sender, GridViewCommandEventArgs e)
+    {
+
+        //if (e.CommandArgument != null && e.CommandArgument.ToString() != "" && e.CommandName == "imgWordSAMPROFILE")
+        //{
+        //    GridViewRow row = (GridViewRow)((ImageButton)e.CommandSource).Parent.Parent;
+        //    index = row.DataItemIndex;
+        //  //  UpdateApprover(System.Convert.ToInt16(e.CommandArgument), rindex, Convert.ToInt16(ddljobtype.SelectedValue), e.CommandName);
+        //}
+
+        if (e.CommandArgument.ToString() != "")
+        {
+            int Idx = int.Parse(e.CommandArgument.ToString());
+            GridViewRow rowe = gvSAMProfileNew.Rows[Idx];
+            if (e.CommandName == "Edit")
+            {
+                if (rowe.RowType == DataControlRowType.DataRow)
+                {
+                    //TextBox txt1 = new TextBox();
+                    //txt1.Text = rowe.Cells[5].Text.ToString();
+                    //rowe.Cells[5].Controls.Add(txt1);
+
+                    Session["JournalAcronym"] = rowe.Cells[5].Text.ToString();
+                    //TextBox txt2 = new TextBox();
+                    TextBox txt1 = (TextBox)rowe.FindControl("TextBox1");
+                    txt1.Visible = true;
+                    txt1.Width = 200;
+                    rowe.Cells[6].Controls.Add(txt1);
+                    txt1.Text = rowe.Cells[6].Text.ToString();
+
+                    TextBox txt2 = (TextBox)rowe.FindControl("TextBox2");
+                    txt2.Visible = true;
+                    txt2.Width = 200;
+                    rowe.Cells[7].Controls.Add(txt2);
+                    txt2.Text = rowe.Cells[7].Text.ToString();
+
+                    TextBox txt3 = (TextBox)rowe.FindControl("TextBox3");
+                    txt3.Visible = true;
+                    txt3.Width = 200;
+                    rowe.Cells[8].Controls.Add(txt3);
+                    txt3.Text = rowe.Cells[8].Text.ToString();
+
+                    TextBox txt4 = (TextBox)rowe.FindControl("TextBox4");
+                    txt4.Visible = true;
+                    txt4.Width = 200;
+                    rowe.Cells[9].Controls.Add(txt4);
+                    txt4.Text = rowe.Cells[9].Text.ToString();
+
+                    TextBox txt5 = (TextBox)rowe.FindControl("TextBox5");
+                    txt5.Visible = true;
+                    txt5.Width = 200;
+                    rowe.Cells[10].Controls.Add(txt5);
+                    txt5.Text = rowe.Cells[10].Text.ToString();
+
+
+                    TextBox txt6 = (TextBox)rowe.FindControl("TextBox6");
+                    txt6.Visible = true;
+                    txt6.Width = 200;
+                    rowe.Cells[11].Controls.Add(txt6);
+                    txt6.Text = rowe.Cells[11].Text.ToString();
+
+                    TextBox txt7 = (TextBox)rowe.FindControl("TextBox7");
+                    txt7.Visible = true;
+                    txt7.Width = 200;
+                    rowe.Cells[12].Controls.Add(txt7);
+                    txt7.Text = rowe.Cells[12].Text.ToString();
+
+                    //TextBox txt9 = new TextBox();
+                    //txt9.Text = rowe.Cells[13].Text.ToString();
+                    //rowe.Cells[13].Controls.Add(txt9);
+
+                    //TextBox txt10 = new TextBox();
+                    //txt10.Text = rowe.Cells[14].Text.ToString();
+                    //rowe.Cells[14].Controls.Add(txt10);
+
+                    //TextBox txt11 = new TextBox();
+                    //txt11.Text = rowe.Cells[15].Text.ToString();
+                    //rowe.Cells[15].Controls.Add(txt11);
+
+                    TextBox txt8 = (TextBox)rowe.FindControl("TextBox8");
+                    txt8.Visible = true;
+                    txt8.Width = 200;
+                    txt8.Text = rowe.Cells[16].Text.ToString();
+                    rowe.Cells[16].Controls.Add(txt8);
+
+                    TextBox txt9 = (TextBox)rowe.FindControl("TextBox9");
+                    txt9.Visible = true;
+                    txt9.Width = 200;
+                    rowe.Cells[17].Controls.Add(txt9);
+                    txt9.Text = rowe.Cells[17].Text.ToString();
+
+
+                    //TextBox txt14 = new TextBox();
+                    //txt14.Text = rowe.Cells[17].Text.ToString();
+                    //rowe.Cells[17].Controls.Add(txt14);
+
+                }
+            }
+            if (e.CommandName == "Update")
+            {
+
+                Session["JournalAcronym"] = gvSAMProfileNew.Rows[Idx].Cells[5].Text.ToString();
+                TextBox uTextBox1 = (TextBox)gvSAMProfileNew.Rows[Idx].Cells[6].FindControl("TextBox1");
+                TextBox uTextBox2 = (TextBox)gvSAMProfileNew.Rows[Idx].Cells[7].FindControl("TextBox2");
+                TextBox uTextBox3 = (TextBox)gvSAMProfileNew.Rows[Idx].Cells[8].FindControl("TextBox3");
+                TextBox uTextBox4 = (TextBox)gvSAMProfileNew.Rows[Idx].Cells[9].FindControl("TextBox4");
+                TextBox uTextBox5 = (TextBox)gvSAMProfileNew.Rows[Idx].Cells[10].FindControl("TextBox5");
+                TextBox uTextBox6 = (TextBox)gvSAMProfileNew.Rows[Idx].Cells[11].FindControl("TextBox6");
+                TextBox uTextBox7 = (TextBox)gvSAMProfileNew.Rows[Idx].Cells[12].FindControl("TextBox7");
+                TextBox uTextBox8 = (TextBox)gvSAMProfileNew.Rows[Idx].Cells[16].FindControl("TextBox8");
+                TextBox uTextBox9 = (TextBox)gvSAMProfileNew.Rows[Idx].Cells[17].FindControl("TextBox9");            //TextBox uTextBox11 = (TextBox)gvSAMProfileNew.Rows[Idx].Cells[7].FindControl("txt11");
+                //TextBox uTextBox12 = (TextBox)gvSAMProfileNew.Rows[Idx].Cells[7].FindControl("txt12");
+                //TextBox uTextBox13 = (TextBox)gvSAMProfileNew.Rows[Idx].Cells[7].FindControl("txt13");
+
+
+
+
+                //  int InsertedBy=101 ;
+                //  DateTime InsertedDate=System.DateTime.Now;
+                int ModifyBy = 201;
+                DateTime ModifyDate = System.DateTime.Now;
+                SqlConnection conS = null;
+                try
+                {
+                    string connectionStringS = "server=192.9.200.157;database=dpmis;uid=sa;pwd=masterkey";
+                    conS = new SqlConnection(connectionStringS);
+                    conS.Open();
+                    SqlCommand cmdS = new SqlCommand("spUPDATEstylesheet_NEWQMS", conS);
+                    cmdS.CommandType = CommandType.StoredProcedure;
+                    cmdS.Parameters.Add(new SqlParameter("@JournalAcronym", rowe.Cells[5].Text.ToString()));
+                    cmdS.Parameters.Add(new SqlParameter("@JournalTitle", uTextBox1.Text));
+                    cmdS.Parameters.Add(new SqlParameter("@ProductionEditor", uTextBox2.Text));
+                    cmdS.Parameters.Add(new SqlParameter("@TrimSize", uTextBox3.Text));
+                    cmdS.Parameters.Add(new SqlParameter("@IsCopyEdit", uTextBox4.Text));
+                    cmdS.Parameters.Add(new SqlParameter("@IsSensitive", uTextBox5.Text));
+                    cmdS.Parameters.Add(new SqlParameter("@IsSAM", uTextBox6.Text));
+                    cmdS.Parameters.Add(new SqlParameter("@FPMJournal", uTextBox7.Text));
+                    //cmdS.Parameters.Add(new SqlParameter("@SAMProfile", drs["SAM Profile"].ToString()));
+                    //cmdS.Parameters.Add(new SqlParameter("@StyleSheet", drs["Style Sheet"].ToString()));
+                    //cmdS.Parameters.Add(new SqlParameter("@MarkupSample", drs["Markup Sample"].ToString()));
+                    //cmdS.Parameters.Add(new SqlParameter("@Checklist", drs["Checklist"].ToString()));
+                    cmdS.Parameters.Add(new SqlParameter("@Revisedstylesheetreceiveddate", uTextBox8.Text));
+                    cmdS.Parameters.Add(new SqlParameter("@Templateupdatedate", uTextBox9.Text));
+                    //cmdS.Parameters.Add(new SqlParameter("@CurrentTrimsize", drs["Current Trim size"].ToString()));
+                    cmdS.Parameters.Add(new SqlParameter("@ModifyBy", ModifyBy));
+                    cmdS.Parameters.Add(new SqlParameter("@ModifyDate", ModifyDate));
+                    //cmdS.Parameters.Add(new SqlParameter("@InsertedBy",InsertedBy));
+                    //cmdS.Parameters.Add(new SqlParameter("@InsertedDate",InsertedDate)); 
+                    //cmdS.Parameters.Add(new SqlParameter("@SpreadsheetTrimSize2014",drs["2014 Spread sheet Trim Size"].ToString()));
+                    cmdS.ExecuteNonQuery();
+                    conS.Close();
+                    lblRESULT.Text = "Record is successfully updated.";
+                    string connectionStringS1 = "server=192.9.200.157;database=dpmis;uid=sa;pwd=masterkey";
+                    SqlConnection conS1 = new SqlConnection(connectionStringS1);
+                    conS1.Open();
+                    SqlCommand cmdS1 = new SqlCommand("spGetStylesheet_NEWQMS", conS1);
+                    cmdS1.CommandType = CommandType.StoredProcedure;
+                    SqlDataAdapter dAdapter = new SqlDataAdapter(cmdS1);
+                    DataTable dtExcelRecords = new DataTable();
+                    dAdapter.Fill(dtExcelRecords);
+                    dtExcelRecords.AcceptChanges();
+                    conS1.Close();
+                    dtExcelRecords.AcceptChanges();
+                    gvSAMProfileNew.DataSource = dtExcelRecords;
+                    gvSAMProfileNew.DataBind();
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+                finally
+                {
+
+                }
+
+            }
+            if (e.CommandName == "New")
+            {
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "showdiv", "Getdivdata()", true);
+
+                // Page.ClientScript.RegisterStartupScript(this.GetType(), "showdiv", "ShowAlert('divNEWRECORD'))", true);
+
+                //  pnlSTYLESHEETNEW.Visible = true;
+
+
+            }
+            if (e.CommandName == "imgWordSAMPROFILE")
+            {
+
+            }
+
+        }
+
+    }
+
+    protected void ImageButton1_Click(object sender, EventArgs e)
+    {
+ 
+    }
+    protected void gvSAMProfileNew_RowCreated(object sender, GridViewRowEventArgs e)
+    {
+
+    }
+    //    protected void gvSAMProfileNew_RowDataBound(object sender, GridViewRowEventArgs e)
+    protected void gvSAMProfileNew_RowDataBound(object sender,  GridViewRowEventArgs e)
+    {
+
+        try
+        {
+            //gvSAMProfileNew.Rows[Idx].Cells[5].Text.ToString()
+
+            string strJRNL = string.Empty;
+
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                //int rowINDEX=Convert.ToInt32(gvSAMProfileNew.DataKeys[e.Row.RowIndex].Value.)
+                int rowINDEX = e.Row.RowIndex;
+                strJRNL = e.Row.Cells[3].Text.ToString();
+
+                string strQMSPATH = @"////dpserver7//CopyEditing//JOURNALS//SAM Profilesheets_latest//" + strJRNL;
+
+                if(Directory.Exists(strQMSPATH))
+                {
+
+                DirectoryInfo strDIR = new DirectoryInfo(strQMSPATH);
+                FileInfo[] aryFILE = strDIR.GetFiles();
+                if (aryFILE.Length > 1)
+                {
+                    foreach (FileInfo strFILE in aryFILE)
+                    {
+                        if (Path.GetFileNameWithoutExtension(strFILE.Name) == strJRNL)
+                        {
+                            string strFILEEXT = Path.GetExtension(strFILE.Name.ToString()).ToLower();
+
+                            if (strFILEEXT == ".doc")
+                            {
+
+                                string strREQFILE = strFILE.Name;
+                                string strINPUTFILE = strQMSPATH+"//"+ strREQFILE;
+                                if (File.Exists(strINPUTFILE))
+                                {
+                                    ImageButton imgWORD = new ImageButton();
+
+
+                                    //Image imgWORD = (Image)e.Row.FindControl("imgWord");
+                                    imgWORD.ImageUrl = "~/QMS_IMG/word.png";
+                                    e.Row.Cells[11].Controls.Add(imgWORD);
+                                    // gvSAMProfileNew.Rows[e.Row.RowIndex].Cells[8].Controls.Add(imgWORD);
+
+                                    break;
+
+
+                                }
+                            }
+                            //if (strFILEEXT == ".xls")
+                            //{
+
+                            //    string strREQFILE = strFILE.Name;
+                            //    string strINPUTFILE = Path.Combine(strQMSPATH, strREQFILE);
+                            //    if (File.Exists(strINPUTFILE))
+                            //    {
+                            //        ImageButton imgWORD = new ImageButton();
+
+
+                            //        //Image imgWORD = (Image)e.Row.FindControl("imgWord");
+                            //        imgWORD.ImageUrl = "~/QMS_IMG/excel.png";
+                            //        e.Row.Cells[11].Controls.Add(imgWORD);
+                            //        // gvSAMProfileNew.Rows[e.Row.RowIndex].Cells[8].Controls.Add(imgWORD);
+
+                            //        break;
+
+
+                            //    }
+                            //}
+                            //if (strFILEEXT == ".pdf")
+                            //{
+
+                            //    string strREQFILE = strFILE.Name;
+                            //    string strINPUTFILE = Path.Combine(strQMSPATH, strREQFILE);
+                            //    if (File.Exists(strINPUTFILE))
+                            //    {
+                            //        ImageButton imgWORD = new ImageButton();
+
+
+                            //        //Image imgWORD = (Image)e.Row.FindControl("imgWord");
+                            //        imgWORD.ImageUrl = "~/QMS_IMG/pdf.png";
+                            //        e.Row.Cells[11].Controls.Add(imgWORD);
+                            //        // gvSAMProfileNew.Rows[e.Row.RowIndex].Cells[8].Controls.Add(imgWORD);
+
+                            //        break;
+
+
+                            //    }
+                            //}
+                        }
+
+                    }
+                }
+
+                }
+                //\\dpserver7\CopyEditing\JOURNALS\STYLESHEETS & CHECKLISTS
+                string strQMSPATH2 = @"////dpserver7//CopyEditing//JOURNALS//STYLESHEETS & CHECKLISTS//" + strJRNL;
+
+                if (Directory.Exists(strQMSPATH2))
+                {
+
+                    DirectoryInfo strDIR = new DirectoryInfo(strQMSPATH2);
+                    FileInfo[] aryFILE = strDIR.GetFiles();
+                    if (aryFILE.Length > 1)
+                    {
+                        foreach (FileInfo strFILE in aryFILE)
+                        {
+                            //if (Path.GetFileNameWithoutExtension(strFILE.Name) == strJRNL)
+                            //{
+                                string strFILEEXT = Path.GetExtension(strFILE.Name.ToString()).ToLower();
+
+                                if (strFILEEXT == ".doc")
+                                {
+                                    //CAFS style sheet.doc
+
+                                    string strFILENAMETYPE = strQMSPATH2+ "//"+strJRNL + " style sheet.doc";
+                                    if (File.Exists(strFILENAMETYPE))
+                                    {
+                                        string strREQFILE = strFILE.Name;
+
+                                        string strINPUTFILE = Path.Combine(strQMSPATH2, strREQFILE);
+                                        //if (File.Exists(strINPUTFILE))
+                                        //{
+                                            ImageButton imgWORD = new ImageButton();
+                                            imgWORD.Click += new ImageClickEventHandler(ImageButton1_Click);
+
+
+                                            //Image imgWORD = (Image)e.Row.FindControl("imgWord");
+                                            imgWORD.ImageUrl = "~/QMS_IMG/WordStyleSheet.png";
+                                            e.Row.Cells[12].Controls.Add(imgWORD);
+                                            // gvSAMProfileNew.Rows[e.Row.RowIndex].Cells[8].Controls.Add(imgWORD);
+
+                                            break;
+
+
+                                        //}
+                                    }
+                                }
+                                //if (strFILEEXT == ".xls")
+                                //{
+
+                                //    string strREQFILE = strFILE.Name;
+                                //    string strINPUTFILE = Path.Combine(strQMSPATH, strREQFILE);
+                                //    if (File.Exists(strINPUTFILE))
+                                //    {
+                                //        ImageButton imgWORD = new ImageButton();
+
+
+                                //        //Image imgWORD = (Image)e.Row.FindControl("imgWord");
+                                //        imgWORD.ImageUrl = "~/QMS_IMG/excel.png";
+                                //        e.Row.Cells[12].Controls.Add(imgWORD);
+                                //        // gvSAMProfileNew.Rows[e.Row.RowIndex].Cells[8].Controls.Add(imgWORD);
+
+                                //        break;
+
+
+                                //    }
+                                //}
+                                //if (strFILEEXT == ".pdf")
+                                //{
+
+                                //    string strREQFILE = strFILE.Name;
+                                //    string strINPUTFILE = Path.Combine(strQMSPATH, strREQFILE);
+                                //    if (File.Exists(strINPUTFILE))
+                                //    {
+                                //        ImageButton imgWORD = new ImageButton();
+
+
+                                //        //Image imgWORD = (Image)e.Row.FindControl("imgWord");
+                                //        imgWORD.ImageUrl = "~/QMS_IMG/pdf.png";
+                                //        e.Row.Cells[12].Controls.Add(imgWORD);
+                                //        // gvSAMProfileNew.Rows[e.Row.RowIndex].Cells[8].Controls.Add(imgWORD);
+
+                                //        break;
+
+
+                                //    }
+                                //}
+                            //}
+
+                        }
+                    }
+
+                }
+                //\\dpserver6\QET\TFJATS
+                string strQMSPATH3 = @"////dpserver6//QET//TFJATS//" + strJRNL;
+
+                if (Directory.Exists(strQMSPATH3))
+                {
+
+                    DirectoryInfo strDIR = new DirectoryInfo(strQMSPATH3);
+                    FileInfo[] aryFILE = strDIR.GetFiles();
+                    if (aryFILE.Length > 1)
+                    {
+                        foreach (FileInfo strFILE in aryFILE)
+                        {
+                            //if (Path.GetFileNameWithoutExtension(strFILE.Name) == strJRNL)
+                            //{
+                                string strFILEEXT = Path.GetExtension(strFILE.Name.ToString()).ToLower();
+
+                                //if (strFILEEXT == ".doc")
+                                //{
+
+                                //    string strREQFILE = strFILE.Name;
+                                //    string strINPUTFILE = Path.Combine(strQMSPATH, strREQFILE);
+                                //    if (File.Exists(strINPUTFILE))
+                                //    {
+                                //        ImageButton imgWORD = new ImageButton();
+
+
+                                //        //Image imgWORD = (Image)e.Row.FindControl("imgWord");
+                                //        imgWORD.ImageUrl = "~/QMS_IMG/word.png";
+                                //        e.Row.Cells[13].Controls.Add(imgWORD);
+                                //        // gvSAMProfileNew.Rows[e.Row.RowIndex].Cells[8].Controls.Add(imgWORD);
+
+                                //        break;
+
+
+                                //    }
+                                //}
+                                //if (strFILEEXT == ".xls")
+                                //{
+
+                                //    string strREQFILE = strFILE.Name;
+                                //    string strINPUTFILE = Path.Combine(strQMSPATH, strREQFILE);
+                                //    if (File.Exists(strINPUTFILE))
+                                //    {
+                                //        ImageButton imgWORD = new ImageButton();
+
+
+                                //        //Image imgWORD = (Image)e.Row.FindControl("imgWord");
+                                //        imgWORD.ImageUrl = "~/QMS_IMG/excel.png";
+                                //        e.Row.Cells[13].Controls.Add(imgWORD);
+                                //        // gvSAMProfileNew.Rows[e.Row.RowIndex].Cells[8].Controls.Add(imgWORD);
+
+                                //        break;
+
+
+                                //    }
+                                //}
+                                if (strFILEEXT == ".pdf")
+                                {
+                                    //Markup sample of 
+
+                                    string strFILENAMETYPE = strQMSPATH3+"//"+"Markup sample of "+ strJRNL + ".pdf";
+                                    if (File.Exists(strFILENAMETYPE))
+                                    {
+                                        string strREQFILE = strFILE.Name;
+                                        string strINPUTFILE = Path.Combine(strQMSPATH3, strREQFILE);
+                                        //if (File.Exists(strINPUTFILE))
+                                        //{
+                                            ImageButton imgWORD = new ImageButton();
+
+
+                                            //Image imgWORD = (Image)e.Row.FindControl("imgWord");
+                                            imgWORD.ImageUrl = "~/QMS_IMG/pdf.png";
+                                            e.Row.Cells[13].Controls.Add(imgWORD);
+                                            // gvSAMProfileNew.Rows[e.Row.RowIndex].Cells[8].Controls.Add(imgWORD);
+
+                                            break;
+
+
+                                        //}
+                                    }
+                                }
+                            //}
+
+                        }
+                    }
+
+                }
+
+
+            }
+
+            if (e.Row.RowType == DataControlRowType.Footer)
+            {
+                TextBox txt = new TextBox();
+                // set properties of text box
+                e.Row.Cells[5].Controls.Add(txt);
+            }
+
+
+
+
+        }
+        catch (Exception ex)
+        {
+            throw new Exception(ex.Message);
+        }
+    }
+    protected void gvSAMProfileNew_RowEditing(object sender, GridViewEditEventArgs e)
+    {
+        //gvDetails.EditIndex = -1;
+        gvSAMProfileNew.EditIndex = e.NewEditIndex;
+
+        string connectionStringS1 = "server=192.9.200.157;database=dpmis;uid=sa;pwd=masterkey";
+        SqlConnection conS1 = new SqlConnection(connectionStringS1);
+        conS1.Open();
+        SqlCommand cmdS1 = new SqlCommand("spGetStylesheet_NEWQMS", conS1);
+        cmdS1.CommandType = CommandType.StoredProcedure;
+        SqlDataAdapter dAdapter = new SqlDataAdapter(cmdS1);
+        DataTable dtExcelRecords = new DataTable();
+        dAdapter.Fill(dtExcelRecords);
+        dtExcelRecords.AcceptChanges();
+        conS1.Close();
+
+
+        dtExcelRecords.AcceptChanges();
+        gvSAMProfileNew.DataSource = dtExcelRecords;
+        gvSAMProfileNew.DataBind();
+
+    }
+    protected void lnkEdit_Click(object sender, EventArgs e)
+    {
+       
+    }
+    protected void lnkUpdate_Click(object sender, EventArgs e)
+    {
+
+    }
+    protected void btnSAVE_Click(object sender, EventArgs e)
+    {
+        SqlConnection conS = null;
+        try
+        {
+            string connectionString = "";
+            string fileLocation = Server.MapPath("~/QMSStylesheet/" + "TF Journal Info.xls");
+
+            connectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + fileLocation + ";Extended Properties=\"Excel 8.0;HDR=NO\"";
+            OleDbConnection con = new OleDbConnection(connectionString);
+            OleDbCommand cmd = new OleDbCommand();
+            cmd.CommandType = System.Data.CommandType.Text;
+            cmd.Connection = con;
+            OleDbDataAdapter dAdapter = new OleDbDataAdapter(cmd);
+            DataTable dtExcelRecords = new DataTable();
+            con.Open();
+            DataTable dtExcelSheetName = con.GetOleDbSchemaTable(OleDbSchemaGuid.Tables, null);
+            string getExcelSheetName = dtExcelSheetName.Rows[0]["Table_Name"].ToString();
+            cmd.CommandText = "SELECT * FROM [" + getExcelSheetName + "]";
+            dAdapter.SelectCommand = cmd;
+            dAdapter.Fill(dtExcelRecords);
+   
+            dtExcelRecords.AcceptChanges();
+            con.Close();
+
+
+            
+            dtExcelRecords.Rows[0].Delete();
+
+            dtExcelRecords.Rows[dtExcelRecords.Rows.Count - 1].Delete();
+            dtExcelRecords.Rows[dtExcelRecords.Rows.Count - 2].Delete();
+            dtExcelRecords.Rows[dtExcelRecords.Rows.Count - 3].Delete();
+
+            dtExcelRecords.AcceptChanges();
+
+            for (int j = 0; j < 16; j++)
+            {
+                for (int i = 0; i <= dtExcelRecords.Rows.Count - 1; i++)
+                {
+                    //if (i == 1)
+                    //{
+                    if (j < 16)
+                    {
+                        if ((dtExcelRecords.Rows[i][j].ToString().Trim() != "Journal Acronym") && (dtExcelRecords.Rows[i][j].ToString().Trim() != "Journal Title") && (dtExcelRecords.Rows[i][j].ToString().Trim() != "Production Editor") && (dtExcelRecords.Rows[i][j].ToString().Trim() != "Trim Size") && (dtExcelRecords.Rows[i][j].ToString().Trim() != "Is CopyEdit") && (dtExcelRecords.Rows[i][j].ToString().Trim() != "Is Sensitive") && (dtExcelRecords.Rows[i][j].ToString().Trim() != "Is SAM") && (dtExcelRecords.Rows[i][j].ToString().Trim() != "FPM Journal") && (dtExcelRecords.Rows[i][j].ToString().Trim() != "SAM Profile") && (dtExcelRecords.Rows[i][j].ToString().Trim() != "Style Sheet") && (dtExcelRecords.Rows[i][j].ToString().Trim() != "Markup Sample") && (dtExcelRecords.Rows[i][j].ToString().Trim() != "Checklist") && (dtExcelRecords.Rows[i][j].ToString().Trim() != "Revised stylesheet received date") && (dtExcelRecords.Rows[i][j].ToString().Trim() != "Template update date") && (dtExcelRecords.Rows[i][j].ToString().Trim() != "2014 Spread sheet Trim Size") && (dtExcelRecords.Rows[i][j].ToString().Trim() != "Current Trim size"))
+                        {
+
+                            //Current Trim size
+
+                            dtExcelRecords.Columns.RemoveAt(j);
+                            //  j++;
+                            // i = -1;
+                            // break;
+
+                        }
+                        i = -1;
+                        if (j <= dtExcelRecords.Columns.Count - 1)
+                        {
+                            j++;
+                        }
+                    }
+                    else
+                    {
+                        break;
+                    }
+                    //}
+                }
+            }
+            dtExcelRecords.AcceptChanges();
+
+            for (int k = 0; k <= 15; k++)
+            {
+                if (dtExcelRecords.Columns[k].ColumnName.Length >= 2)
+                {
+                    //if (k == 7)
+                    //{
+                    //    dtExcelRecords.Columns[k].ColumnName = "Date feedback logged";
+                    //    dtExcelRecords.AcceptChanges();
+
+                    //}
+                    if (dtExcelRecords.Rows[0][k].ToString() != "")
+                    {
+                        dtExcelRecords.Columns[k].ColumnName = dtExcelRecords.Rows[0][k].ToString();
+                        dtExcelRecords.AcceptChanges();
+                    }
+                }
+            }
+            dtExcelRecords.AcceptChanges();
+
+            for (int k = 0; k <= dtExcelRecords.Columns.Count - 1; k++)
+            {
+                if (k > 15)
+                {
+                    dtExcelRecords.Columns.RemoveAt(k);
+                    dtExcelRecords.AcceptChanges();
+                }
+            }
+            dtExcelRecords.AcceptChanges();
+
+            int desiredSize = 16;
+
+            while (dtExcelRecords.Columns.Count > desiredSize)
+            {
+                dtExcelRecords.Columns.RemoveAt(desiredSize);
+            }
+
+
+            dtExcelRecords.AcceptChanges();
+
+            dtExcelRecords.Rows[0].Delete();
+            dtExcelRecords.AcceptChanges();
+
+
+
+
+
+int InsertedBy=101 ;
+DateTime InsertedDate=System.DateTime.Now;
+int ModifyBy=201;
+          DateTime  ModifyDate=System.DateTime.Now;
+            foreach(DataRow drs in dtExcelRecords.Rows)
+            {
+                try
+                {
+            string connectionStringS = "server=192.9.200.157;database=dpmis;uid=sa;pwd=masterkey";
+            conS = new SqlConnection(connectionStringS);
+            conS.Open();
+            SqlCommand cmdS = new SqlCommand("spINSERTstylesheet_NEWQMS", conS);
+            cmdS.CommandType = CommandType.StoredProcedure;
+            cmdS.Parameters.Add(new SqlParameter("@JournalAcronym",drs["Journal Acronym"].ToString()));
+            cmdS.Parameters.Add(new SqlParameter("@JournalTitle", drs["Journal Title"].ToString()));
+            cmdS.Parameters.Add(new SqlParameter("@ProductionEditor", drs["Production Editor"].ToString()));
+            cmdS.Parameters.Add(new SqlParameter("@TrimSize", drs["Trim Size"].ToString()));
+            cmdS.Parameters.Add(new SqlParameter("@IsCopyEdit", drs["Is CopyEdit"].ToString()));
+            cmdS.Parameters.Add(new SqlParameter("@IsSensitive", drs["Is Sensitive"].ToString()));
+            cmdS.Parameters.Add(new SqlParameter("@IsSAM", drs["Is SAM"].ToString()));
+            cmdS.Parameters.Add(new SqlParameter("@FPMJournal", drs["FPM Journal"].ToString()));
+            cmdS.Parameters.Add(new SqlParameter("@SAMProfile", drs["SAM Profile"].ToString()));
+            cmdS.Parameters.Add(new SqlParameter("@StyleSheet", drs["Style Sheet"].ToString()));
+            cmdS.Parameters.Add(new SqlParameter("@MarkupSample", drs["Markup Sample"].ToString()));
+            cmdS.Parameters.Add(new SqlParameter("@Checklist", drs["Checklist"].ToString()));
+            cmdS.Parameters.Add(new SqlParameter("@Revisedstylesheetreceiveddate", drs["Revised stylesheet received date"].ToString()));
+            cmdS.Parameters.Add(new SqlParameter("@Templateupdatedate", drs["Template update date"].ToString()));
+            cmdS.Parameters.Add(new SqlParameter("@CurrentTrimsize", drs["Current Trim size"].ToString()));
+            cmdS.Parameters.Add(new SqlParameter("@ModifyBy",ModifyBy));
+            cmdS.Parameters.Add(new SqlParameter("@ModifyDate",ModifyDate));
+            cmdS.Parameters.Add(new SqlParameter("@InsertedBy",InsertedBy));
+            cmdS.Parameters.Add(new SqlParameter("@InsertedDate",InsertedDate)); 
+            cmdS.Parameters.Add(new SqlParameter("@SpreadsheetTrimSize2014",drs["2014 Spread sheet Trim Size"].ToString()));
+            cmdS.ExecuteNonQuery();
+
+                }
+                catch(Exception ex)
+                {
+                    throw new Exception(ex.Message);
+
+                }
+                finally
+                {
+                    con.Close();
+
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            throw new Exception(ex.Message);
+        }
+        finally
+        {
+
+        }
+
+    }
+    protected void gvSAMProfileNew_RowUpdated(object sender, GridViewUpdatedEventArgs e)
+    {
+
+    }
+    protected void gvSAMProfileNew_RowUpdating(object sender, GridViewUpdateEventArgs e)
+    {
+
+    }
+  
+    protected void btnNEW_Click(object sender, EventArgs e)
+    {
+         //Session["JournalAcronym"] = gvSAMProfileNew.Rows[Idx].Cells[5].Text.ToString();
+
+        int rowINDEX = gvSAMProfileNew.Rows.Count;
+        //start 14_02_2014
+        TextBox txtUsrname = (TextBox)gvSAMProfileNew.FooterRow.FindControl("TextBox1x");
+        txtUsrname.Visible = true;
+        TextBox txtCity = (TextBox)gvSAMProfileNew.FooterRow.FindControl("TextBox2x");
+        txtCity.Visible = true;
+        TextBox txtDesgnation = (TextBox)gvSAMProfileNew.FooterRow.FindControl("TextBox3x");
+        txtDesgnation.Visible = true;
+        //Conn.Open();
+        //SqlCommand cmd =
+        //new SqlCommand(
+        //"insert into Qms_Style(UserName,City,Designation) values('" + txtUsrname.Text + "','" +
+        //txtCity.Text + "','" + txtDesgnation.Text + "')", Conn);
+        //int result = cmd.ExecuteNonQuery();
+        //Conn.Close();
+        //if (result == 1)
+        //{
+        //    load();
+        //    //lblresult.ForeColor = Color.Green;
+        //    lblresult.Text = txtUsrname.Text + " Details inserted successfully";
+        //}
+        //else
+        //{
+        //    //lblresult.ForeColor = Color.Red;
+        //    lblresult.Text = txtUsrname.Text + " Details not inserted";
+        //}
+        //end 14_02_2014
+
+        //    TextBox eTextBox1 = (TextBox)gvSAMProfileNew.Rows[rowINDEX+1].Cells[5].FindControl("TextBox10");
+            //TextBox eTextBox1 = (TextBox)gvSAMProfileNew.FindControl("TextBox10");
+            //eTextBox1.Visible = true;
+            //eTextBox1.Width = 200;
+            //// rowe.Cells[16].Controls.Add(txt8);
+            //gvSAMProfileNew.Rows[rowINDEX+1].Cells[5].Controls.Add(eTextBox1);
+            
+            ////TextBox eTextBox2 = (TextBox)gvSAMProfileNew.Rows[rowINDEX+1].Cells[6].FindControl("TextBox1");
+            ////eTextBox2.Visible = true;
+            ////eTextBox2.Width = 200;
+            ////gvSAMProfileNew.FooterRow.Cells[6].Controls.Add(eTextBox2);
+
+            ////TextBox eTextBox3 = (TextBox)gvSAMProfileNew.Rows[rowINDEX+1].Cells[7].FindControl("TextBox2");
+            ////eTextBox3.Visible = true;
+            ////eTextBox3.Width = 200;
+            ////gvSAMProfileNew.FooterRow.Cells[7].Controls.Add(eTextBox3);
+
+            ////TextBox eTextBox4 = (TextBox)gvSAMProfileNew.Rows[rowINDEX+1].Cells[8].FindControl("TextBox3");
+            ////eTextBox4.Visible = true;
+            ////eTextBox4.Width = 200;
+            ////gvSAMProfileNew.FooterRow.Cells[8].Controls.Add(eTextBox4);
+            
+            ////TextBox eTextBox5 = (TextBox)gvSAMProfileNew.Rows[rowINDEX+1].Cells[9].FindControl("TextBox4");
+            ////eTextBox5.Visible = true;
+            ////eTextBox5.Width = 200;
+            ////gvSAMProfileNew.FooterRow.Cells[9].Controls.Add(eTextBox5);
+
+            ////TextBox eTextBox6 = (TextBox)gvSAMProfileNew.Rows[rowINDEX+1].Cells[10].FindControl("TextBox5");
+            ////eTextBox6.Visible = true;
+            ////eTextBox6.Width = 200;
+            ////gvSAMProfileNew.FooterRow.Cells[10].Controls.Add(eTextBox6);
+
+            ////TextBox eTextBox7 = (TextBox)gvSAMProfileNew.Rows[rowINDEX+1].Cells[11].FindControl("TextBox6");
+            ////eTextBox7.Visible = true;
+            ////eTextBox7.Width = 200;
+            ////gvSAMProfileNew.FooterRow.Cells[12].Controls.Add(eTextBox7);
+
+            
+            ////TextBox eTextBox8 = (TextBox)gvSAMProfileNew.Rows[rowINDEX+1].Cells[12].FindControl("TextBox7");
+            ////eTextBox8.Visible = true;
+            ////eTextBox8.Width = 200;
+            ////gvSAMProfileNew.FooterRow.Cells[12].Controls.Add(eTextBox8);
+
+            //TextBox eTextBox9 = (TextBox)gvSAMProfileNew.FooterRow.Cells[16].FindControl("TextBox9");
+            //eTextBox9.Visible = true;
+            //eTextBox9.Width = 200;
+            
+            //TextBox eTextBox10 = (TextBox)gvSAMProfileNew.FooterRow.Cells[17].FindControl("TextBox10");
+            //eTextBox10.Visible = true;
+            //eTextBox10.Width = 200;
+            
+            //TextBox eTextBox11 = (TextBox)gvSAMProfileNew.FooterRow.Cells[17].FindControl("TextBox11");
+            //eTextBox11.Visible = true;
+            //eTextBox11.Width = 200;
+            
+        //TextBox eTextBox1=(TextBox)gvSAMProfileNew.FooterRow.Cells[]
+
+    }
+    protected void imgWordSAMPROFILE_Click(object sender, EventArgs e)
+    {
+ 
+    }
+
+    protected void imgWordStyleSheet_Click(object sender, EventArgs e)
+    {
+
+    }
+   
+    protected void ïmgPdf_Click(object sender, EventArgs e)
+    {
+
+    }
+
+
+    protected void gvSAMProfileNew_SelectedIndexChanged(object sender, EventArgs e)
+    {
+
+        //int index =Convert.ToInt32( gvSAMProfileNew.SelectedRow.Cells[11].Text);
+
+        //int index2 = Convert.ToInt32( gvSAMProfileNew.SelectedRow.Cells[12].Text);
+
+        //int index3 =Convert.ToInt32( gvSAMProfileNew.SelectedRow.Cells[13].Text);
+
+        if (Convert.ToInt32(gvSAMProfileNew.SelectedRow.Cells[11].Text) == 11)
+        {
+
+        }
+        if (Convert.ToInt32(gvSAMProfileNew.SelectedRow.Cells[12].Text) == 12)
+        {
+
+        }
+        if (Convert.ToInt32(gvSAMProfileNew.SelectedRow.Cells[13].Text) == 13)
+        {
+
+        }
+
+        ////try
+        ////{
+        ////    //gvSAMProfileNew.Rows[Idx].Cells[5].Text.ToString()
+
+        ////    string strJRNL = string.Empty;
+
+        ////    if (e.Row.RowType == DataControlRowType.DataRow)
+        ////    {
+        ////        //int rowINDEX=Convert.ToInt32(gvSAMProfileNew.DataKeys[e.Row.RowIndex].Value.)
+        ////        int rowINDEX = e.Row.RowIndex;
+        ////        strJRNL = e.Row.Cells[3].Text.ToString();
+
+        ////        string strQMSPATH = @"////dpserver7//CopyEditing//JOURNALS//SAM Profilesheets_latest//" + strJRNL;
+
+        ////        if (Directory.Exists(strQMSPATH))
+        ////        {
+
+        ////            DirectoryInfo strDIR = new DirectoryInfo(strQMSPATH);
+        ////            FileInfo[] aryFILE = strDIR.GetFiles();
+        ////            if (aryFILE.Length > 1)
+        ////            {
+        ////                foreach (FileInfo strFILE in aryFILE)
+        ////                {
+        ////                    if (Path.GetFileNameWithoutExtension(strFILE.Name) == strJRNL)
+        ////                    {
+        ////                        string strFILEEXT = Path.GetExtension(strFILE.Name.ToString()).ToLower();
+
+        ////                        if (strFILEEXT == ".doc")
+        ////                        {
+
+        ////                            string strREQFILE = strFILE.Name;
+        ////                            string strINPUTFILE = strQMSPATH + "//" + strREQFILE;
+        ////                            if (File.Exists(strINPUTFILE))
+        ////                            {
+        ////                                ImageButton imgWORD = new ImageButton();
+
+
+        ////                                //Image imgWORD = (Image)e.Row.FindControl("imgWord");
+        ////                                imgWORD.ImageUrl = "~/QMS_IMG/word.png";
+        ////                                e.Row.Cells[11].Controls.Add(imgWORD);
+        ////                                // gvSAMProfileNew.Rows[e.Row.RowIndex].Cells[8].Controls.Add(imgWORD);
+
+        ////                                break;
+
+
+        ////                            }
+        ////                        }
+        ////                        //if (strFILEEXT == ".xls")
+        ////                        //{
+
+        ////                        //    string strREQFILE = strFILE.Name;
+        ////                        //    string strINPUTFILE = Path.Combine(strQMSPATH, strREQFILE);
+        ////                        //    if (File.Exists(strINPUTFILE))
+        ////                        //    {
+        ////                        //        ImageButton imgWORD = new ImageButton();
+
+
+        ////                        //        //Image imgWORD = (Image)e.Row.FindControl("imgWord");
+        ////                        //        imgWORD.ImageUrl = "~/QMS_IMG/excel.png";
+        ////                        //        e.Row.Cells[11].Controls.Add(imgWORD);
+        ////                        //        // gvSAMProfileNew.Rows[e.Row.RowIndex].Cells[8].Controls.Add(imgWORD);
+
+        ////                        //        break;
+
+
+        ////                        //    }
+        ////                        //}
+        ////                        //if (strFILEEXT == ".pdf")
+        ////                        //{
+
+        ////                        //    string strREQFILE = strFILE.Name;
+        ////                        //    string strINPUTFILE = Path.Combine(strQMSPATH, strREQFILE);
+        ////                        //    if (File.Exists(strINPUTFILE))
+        ////                        //    {
+        ////                        //        ImageButton imgWORD = new ImageButton();
+
+
+        ////                        //        //Image imgWORD = (Image)e.Row.FindControl("imgWord");
+        ////                        //        imgWORD.ImageUrl = "~/QMS_IMG/pdf.png";
+        ////                        //        e.Row.Cells[11].Controls.Add(imgWORD);
+        ////                        //        // gvSAMProfileNew.Rows[e.Row.RowIndex].Cells[8].Controls.Add(imgWORD);
+
+        ////                        //        break;
+
+
+        ////                        //    }
+        ////                        //}
+        ////                    }
+
+        ////                }
+        ////            }
+
+        ////        }
+        ////        //\\dpserver7\CopyEditing\JOURNALS\STYLESHEETS & CHECKLISTS
+        ////        string strQMSPATH2 = @"////dpserver7//CopyEditing//JOURNALS//STYLESHEETS & CHECKLISTS//" + strJRNL;
+
+        ////        if (Directory.Exists(strQMSPATH2))
+        ////        {
+
+        ////            DirectoryInfo strDIR = new DirectoryInfo(strQMSPATH2);
+        ////            FileInfo[] aryFILE = strDIR.GetFiles();
+        ////            if (aryFILE.Length > 1)
+        ////            {
+        ////                foreach (FileInfo strFILE in aryFILE)
+        ////                {
+        ////                    //if (Path.GetFileNameWithoutExtension(strFILE.Name) == strJRNL)
+        ////                    //{
+        ////                    string strFILEEXT = Path.GetExtension(strFILE.Name.ToString()).ToLower();
+
+        ////                    if (strFILEEXT == ".doc")
+        ////                    {
+        ////                        //CAFS style sheet.doc
+
+        ////                        string strFILENAMETYPE = strQMSPATH2 + "//" + strJRNL + " style sheet.doc";
+        ////                        if (File.Exists(strFILENAMETYPE))
+        ////                        {
+        ////                            string strREQFILE = strFILE.Name;
+
+        ////                            string strINPUTFILE = Path.Combine(strQMSPATH2, strREQFILE);
+        ////                            //if (File.Exists(strINPUTFILE))
+        ////                            //{
+        ////                            ImageButton imgWORD = new ImageButton();
+
+
+        ////                            //Image imgWORD = (Image)e.Row.FindControl("imgWord");
+        ////                            imgWORD.ImageUrl = "~/QMS_IMG/WordStyleSheet.png";
+        ////                            e.Row.Cells[12].Controls.Add(imgWORD);
+        ////                            // gvSAMProfileNew.Rows[e.Row.RowIndex].Cells[8].Controls.Add(imgWORD);
+
+        ////                            break;
+
+
+        ////                            //}
+        ////                        }
+        ////                    }
+        ////                    //if (strFILEEXT == ".xls")
+        ////                    //{
+
+        ////                    //    string strREQFILE = strFILE.Name;
+        ////                    //    string strINPUTFILE = Path.Combine(strQMSPATH, strREQFILE);
+        ////                    //    if (File.Exists(strINPUTFILE))
+        ////                    //    {
+        ////                    //        ImageButton imgWORD = new ImageButton();
+
+
+        ////                    //        //Image imgWORD = (Image)e.Row.FindControl("imgWord");
+        ////                    //        imgWORD.ImageUrl = "~/QMS_IMG/excel.png";
+        ////                    //        e.Row.Cells[12].Controls.Add(imgWORD);
+        ////                    //        // gvSAMProfileNew.Rows[e.Row.RowIndex].Cells[8].Controls.Add(imgWORD);
+
+        ////                    //        break;
+
+
+        ////                    //    }
+        ////                    //}
+        ////                    //if (strFILEEXT == ".pdf")
+        ////                    //{
+
+        ////                    //    string strREQFILE = strFILE.Name;
+        ////                    //    string strINPUTFILE = Path.Combine(strQMSPATH, strREQFILE);
+        ////                    //    if (File.Exists(strINPUTFILE))
+        ////                    //    {
+        ////                    //        ImageButton imgWORD = new ImageButton();
+
+
+        ////                    //        //Image imgWORD = (Image)e.Row.FindControl("imgWord");
+        ////                    //        imgWORD.ImageUrl = "~/QMS_IMG/pdf.png";
+        ////                    //        e.Row.Cells[12].Controls.Add(imgWORD);
+        ////                    //        // gvSAMProfileNew.Rows[e.Row.RowIndex].Cells[8].Controls.Add(imgWORD);
+
+        ////                    //        break;
+
+
+        ////                    //    }
+        ////                    //}
+        ////                    //}
+
+        ////                }
+        ////            }
+
+        ////        }
+        ////        //\\dpserver6\QET\TFJATS
+        ////        string strQMSPATH3 = @"////dpserver6//QET//TFJATS//" + strJRNL;
+
+        ////        if (Directory.Exists(strQMSPATH3))
+        ////        {
+
+        ////            DirectoryInfo strDIR = new DirectoryInfo(strQMSPATH3);
+        ////            FileInfo[] aryFILE = strDIR.GetFiles();
+        ////            if (aryFILE.Length > 1)
+        ////            {
+        ////                foreach (FileInfo strFILE in aryFILE)
+        ////                {
+        ////                    //if (Path.GetFileNameWithoutExtension(strFILE.Name) == strJRNL)
+        ////                    //{
+        ////                    string strFILEEXT = Path.GetExtension(strFILE.Name.ToString()).ToLower();
+
+        ////                    //if (strFILEEXT == ".doc")
+        ////                    //{
+
+        ////                    //    string strREQFILE = strFILE.Name;
+        ////                    //    string strINPUTFILE = Path.Combine(strQMSPATH, strREQFILE);
+        ////                    //    if (File.Exists(strINPUTFILE))
+        ////                    //    {
+        ////                    //        ImageButton imgWORD = new ImageButton();
+
+
+        ////                    //        //Image imgWORD = (Image)e.Row.FindControl("imgWord");
+        ////                    //        imgWORD.ImageUrl = "~/QMS_IMG/word.png";
+        ////                    //        e.Row.Cells[13].Controls.Add(imgWORD);
+        ////                    //        // gvSAMProfileNew.Rows[e.Row.RowIndex].Cells[8].Controls.Add(imgWORD);
+
+        ////                    //        break;
+
+
+        ////                    //    }
+        ////                    //}
+        ////                    //if (strFILEEXT == ".xls")
+        ////                    //{
+
+        ////                    //    string strREQFILE = strFILE.Name;
+        ////                    //    string strINPUTFILE = Path.Combine(strQMSPATH, strREQFILE);
+        ////                    //    if (File.Exists(strINPUTFILE))
+        ////                    //    {
+        ////                    //        ImageButton imgWORD = new ImageButton();
+
+
+        ////                    //        //Image imgWORD = (Image)e.Row.FindControl("imgWord");
+        ////                    //        imgWORD.ImageUrl = "~/QMS_IMG/excel.png";
+        ////                    //        e.Row.Cells[13].Controls.Add(imgWORD);
+        ////                    //        // gvSAMProfileNew.Rows[e.Row.RowIndex].Cells[8].Controls.Add(imgWORD);
+
+        ////                    //        break;
+
+
+        ////                    //    }
+        ////                    //}
+        ////                    if (strFILEEXT == ".pdf")
+        ////                    {
+        ////                        //Markup sample of 
+
+        ////                        string strFILENAMETYPE = strQMSPATH3 + "//" + "Markup sample of " + strJRNL + ".pdf";
+        ////                        if (File.Exists(strFILENAMETYPE))
+        ////                        {
+        ////                            string strREQFILE = strFILE.Name;
+        ////                            string strINPUTFILE = Path.Combine(strQMSPATH3, strREQFILE);
+        ////                            //if (File.Exists(strINPUTFILE))
+        ////                            //{
+        ////                            ImageButton imgWORD = new ImageButton();
+
+
+        ////                            //Image imgWORD = (Image)e.Row.FindControl("imgWord");
+        ////                            imgWORD.ImageUrl = "~/QMS_IMG/pdf.png";
+        ////                            e.Row.Cells[13].Controls.Add(imgWORD);
+        ////                            // gvSAMProfileNew.Rows[e.Row.RowIndex].Cells[8].Controls.Add(imgWORD);
+
+        ////                            break;
+
+
+        ////                            //}
+        ////                        }
+        ////                    }
+        ////                    //}
+
+        ////                }
+        ////            }
+
+        ////        }
+
+
+        ////    }
+        ////}
+        ////catch (Exception ex)
+        ////{
+        ////    throw new Exception(ex.Message);
+        ////}
+
+
+
+    }
+}

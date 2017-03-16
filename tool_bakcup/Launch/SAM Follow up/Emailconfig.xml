@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<followup>
+	<customer custname="TandF" custno="2556">
+		<to>soundar@datapage.org</to>
+		<to1>subbulakshmi@datapage.org</to1>
+		<cc>sivaraj@datapage.org;subbulakshmi@datapage.org</cc>
+		<body>
+Author Email: [AUTHOREMAIL]
+
+Production Editor Email: [PEEMAIL]
+
+Dear [AUTHORNAME],
+
+I wish to introduce myself as Chitra, the production assistant for [JOURNALTITLE]
+
+Article ID: [ARTICLEID]
+
+Article Title: [AUTHORTITLE]
+
+Unfortunately we have not received your corrections for this article so we are unable to proceed with the revised proofs.
+
+We would be grateful if you could send your corrections tomorrow, or let us know if this will not be possible for any reason.
+
+Thank you very much for your help,
+
+Best Wishes
+Chitra
+
+Chitra Swaminathan
+Production Assistant - Journals
+Datapage Tel: +44 207 0997498
+Web: www.datapage.ie
+
+
+		</body>
+	</customer>
+</followup>
+	
+

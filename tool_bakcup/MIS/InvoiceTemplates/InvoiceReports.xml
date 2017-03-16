@@ -1,0 +1,412 @@
+<invoice>
+	<customer custno="2556" custname="Taylor and Francis" filename="TFReport.rpt" >
+		<!--<jourcode filename="TFReport.rpt" jourcode="CAIC"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="CETH"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="GASC"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="GPAS"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RAEE"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RGPH"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RMLI"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RMNW"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="CFAI"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="CMUE"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="CSES"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="CTHE"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="GTPT"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="NGRK"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RBEB"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="REAE"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="REVR"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RHPR"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RILL"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RINN"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RMJM"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RMMC"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RMMD"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RMMM"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RMPS"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="SACT"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="TGCL"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="THAM"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="TJPT"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="TPOG"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="CAFS"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="CAGE"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="CAIA"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="CAJI"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="CAJL"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="CAVP"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="CBHS"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="CBIE"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="CBJG"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="CBST"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="CCCP"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="CCLA"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="CCWF"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="CDIS"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="CESW"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="CETL"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="CGDE"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="CIEJ"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="CIRS"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="CJCA"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="CJCP"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="CJIS"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="CJMS"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="CJSC"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="CJYS"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="CMEH"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="CNID"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="CPCS"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="CPOS"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="CRDE"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="CSCE"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="CSID"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="CSLM"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="CSOS"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="EDBL"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="FEUS"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="GHEM"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="GPCL"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="MALS"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="NVPP"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RABD"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RACL"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RAER"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RAHR"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RAHS"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RAJC"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RAPS"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RARS"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RART"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RASI"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RASW"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RCCC"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RCCM"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RCED"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RCLL"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RCMM"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RCMT"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RCNS"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RCOA"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RCPR"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RCQU"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RCRC"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RCRR"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RCSA"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RCSM"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RCSO"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RCSR"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RCUS"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="REMF"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RENC"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RERS"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RESM"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RESO"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RESW"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="REUS"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RGER"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RIBR"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RIES"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RIGY"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RIIJ"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RILR"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RIOB"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RIRS"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RISB"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RJAC"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RJAS"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RJAU"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RJCE"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RJCG"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RJEA"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RJII"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RJLS"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RJOP"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RJOS"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RJTS"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RKJD"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RLLL"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RLMS"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RLWR"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RMAS"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RMUZ"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RNPR"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RPOP"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RPRC"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RPST"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RQJS"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RQRR"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RREV"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RRME"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RRMX"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RROC"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RSAJ"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RSCR"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RSEA"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RSHK"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RSIH"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RTAP"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RTPQ"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RTRS"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RUSI"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RWAS"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RWCR"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RWHI"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RWOW"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="SABO"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="SAGA"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="SAGB"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="SAGC"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="SAIF"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="SBOR"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="SEHR"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="SFOR"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="SGEO"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="SJDR"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="SMAR"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="SMIL"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="SOSL"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="SPSY"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="STHE"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="SWOO"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="TASC"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="TEJS"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="TIJP"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="TJDE"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="TJPI"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="TJSA"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="TMAM"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="TMNC"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="TPHP"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="TPSR"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="TWST"></jourcode>
+		<jourcode filename="TFReport.rpt" jourcode="RCJM"></jourcode>-->
+	</customer>
+	<customer custno="10073" custname="Taylor and Francis Scandinavia" filename="InformaReport.rpt" >
+		<!--<jourcode filename="InformaReport.rpt" jourcode="BORE"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="EJMR"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="EJS"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="SONC"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="SOTO"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="SHPR"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="SJCS"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="SJH"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="SINF"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="SJRS"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="SPRI"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="SLOG"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="SPSC"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="SMIC"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="SOCC"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="SPHY"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="MCYT"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="SSNU"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="MCCM"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="MPCP"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="SURO"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="SCAR"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="SGAS"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="SPLA"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="SWBP"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="SHCA"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="SHIN"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="SARC"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="SHUR"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="SHRH"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="SHNP"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="SHPS"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="SHDE"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="SHPE"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="TPRS"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="MHPB"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="SHON"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="MJCI"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="SHNE"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="NSIE"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="SJOD"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="SOBS"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="SPAE"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="SLET"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="SODE"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="SREH"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="SAUM"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="SHRE"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="SQHW"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="GAGS"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="TAAC"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="TJSU"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="GPSH"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="CIRP"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="TMIF"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="SPOB"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="CPLA"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="RSCO"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="SKON"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="SGEN"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="SPSO"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="SRAD"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="SANN"></jourcode>-->
+	</customer>
+	<customer custno="10072" custname="Informa Healthcare" filename="InformaReport.rpt">
+		<!--<jourcode filename="InformaReport.rpt" jourcode="CIJF"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="GBAB"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="GCAC"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="GFRR"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="GNEG"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="IANP"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="IAPY"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="LABB"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="TAHB"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="TBIH"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="TBMK"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="TCIC"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="TIJA"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="TMBC"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="TMMY"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="TNAN"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="UJNV"></jourcode>
+		<jourcode filename="InformaReport.rpt" jourcode="UMIC"></jourcode>-->
+	</customer>
+	<customer custno="10081" custname="Co-Action Publishing" filename="CoAxReport2.rpt" >
+		<jourcode filename="CoAxReport2.rpt" jourcode="EGP"></jourcode>
+		<jourcode filename="CoAxReport2.rpt" jourcode="FNR"></jourcode>
+	</customer>
+	<customer custno="10105" custname="San Lucas Medical Limited" filename="CoAxReport.rpt" >
+	</customer>
+	<customer custno="10283" custname="Universitetsforlage" filename="Universitetsforlage.rpt" >
+	</customer>
+	<customer custno="10099" custname="International Journal of Ageing and Later Life" filename="CoAxReport.rpt" >
+	</customer>
+	<customer custno="10057" custname="Verlag Dr. Otto Schmidt" filename="VerlogReport.rpt" >
+		<jourcode filename="VerlogReport.rpt" jourcode="BGHR"></jourcode>
+	</customer>
+	<customer custno="2070" custname="Royal Irish Academy" filename="RoyalIrishInReport.rpt" >
+		<jourcode filename="RoyalIrishInReport.rpt" jourcode="BAE"></jourcode>
+	</customer>
+	<customer custno="10040" custname="Psychology Press Ltd" filename="PsychologyReport.rpt" >
+		<jourcode filename="PsychologyReport.rpt" jourcode="PSNS"></jourcode>
+	</customer>
+	<customer custno="10092" custname="Medical Education Online" filename="MedicalEduReport.rpt" >
+		<jourcode filename="MedicalEduReport.rpt" jourcode="RES"></jourcode>
+	</customer>
+	<customer custno="2052" custname="LUND - Ecology Building" filename="PsychologyReport.rpt" >
+		<jourcode filename="PsychologyReport.rpt" jourcode="ECO"></jourcode>
+		<jourcode filename="PsychologyReport.rpt" jourcode="OIK"></jourcode>
+	</customer>
+	<customer custno="10089" custname="Agricultural Institute of Canada" filename="AgriculturalReport.rpt" >
+		<jourcode filename="AgriculturalReport.rpt" jourcode="CJSS"></jourcode>
+		<!--<jourcode filename="AgriculturalReport.rpt" jourcode="RCJM"></jourcode>-->
+  </customer>
+	<customer custno="10101" custname="Barnboken" filename="Barnboken.rpt">
+	</customer>	
+	<customer custno="10119" custname="Canadian Science Publishing " filename="NRCResearch.rpt" >
+	</customer>
+	<customer custno="10117" custname="Medical Student Research Journal" filename="MedicalStudentResearch.rpt" >
+	</customer>
+	<customer custno="10132" custname="Consejo Superior de Investigaciones Cientificas" filename="CSIC_Report.rpt" >
+	</customer>
+	<customer custno="10138" custname="Vocabulary Learning and Instruction" filename="MedicalStudentResearch.rpt" >
+	</customer>
+	<customer custno="10131" custname="Optimal Clinical" filename="OptimalClinical.rpt" >
+	</customer>
+	<customer custno="10174" custname="Journal of Mobile Technology in Medicine" filename="JMTM.rpt" >
+	</customer>
+	<customer custno="10169" custname="Igitur publishing" filename="Igitur publishing.rpt" >
+	</customer>
+  <customer custno="10189" custname="UTSePRESS" filename="UTsPress.rpt" >
+  </customer>
+  <customer custno="10187" custname="ScienceOpen" filename="ScienceOpen.rpt" >
+  </customer>
+  <customer custno="10190" custname="AOSIS" filename="AOSIS.rpt" >
+  </customer>
+   <customer custno="10191" custname="Charlesworth" filename="CW.rpt" >
+  </customer>
+   <customer custno="10241" custname="Chinese Publisher" filename="CP.rpt" >
+  </customer>
+  <customer custno="10280" custname="Association for Consultancy and Engineering" filename="ACE.rpt" >
+  </customer>
+  <customer custno="10194" custname="Netherlands Institute for Sound and Vision" filename="NISV.rpt" >
+  </customer>
+   <customer custno="10196" custname="Royal College of Psychiatrists" filename="RoyalCollege.rpt" >
+  </customer>
+    <customer custno="10229" custname="Nature" filename="Nature.rpt" >
+  </customer>
+  <customer custno="10227" custname="Medjaden" filename="Medjaden.rpt" >
+  </customer>
+   <customer custno="10201" custname="Allen Press" filename="AllenPress.rpt" >
+  </customer>
+<customer custno="10248" custname="Pan American Journal of Public Health " filename="PAJPH.rpt" >
+  </customer>
+  <customer custno="10205" custname="American Society for Bone and Mineral Research" filename="ASBMR.rpt" >
+  </customer>
+  <customer custno="10192" custname="Cappelen Damm" filename="CappelenDamm.rpt" >
+  </customer>
+   <customer custno="10216" custname="Decker" filename="Decker.rpt" >
+  </customer>
+    <customer custno="10213" custname="Clinics" filename="BJMBR.rpt" >
+  </customer>
+   <customer custno="10236" custname="Chronic Diseases and Injuries in Canada" filename="CDIC.rpt" >
+  </customer>
+  <customer custno="10233" custname="Scientific Electronic Library Online" filename="SELO.rpt" >
+  </customer>
+  <customer custno="10226" custname="MediaSphere Medical" filename="MSM.rpt" >
+  </customer>
+   <customer custno="10235" custname="UK Books" filename="UKBOOKS.rpt" >
+  </customer>
+ <customer custno="10287" custname="OLR" filename="OLR.rpt" >
+  </customer>
+   <customer custno="10285" custname="codon" filename="codon.rpt" >
+  </customer>
+  <customer custno="10230" custname="Nature Asia" filename="NatureAsia.rpt" >
+  </customer>
+  <customer custno="10208" custname="Canadian Mineralogist" filename="CM.rpt" >
+  </customer>
+  <customer custno="10223" custname="Journal of Biomedical Research" filename="JBR.rpt" >
+  </customer>
+    <customer custno="10228" custname="National Association of School Psychologists" filename="NASP.rpt" >
+  </customer>
+<customer custno="10215" custname="Columbia University" filename="Columbia.rpt" >
+  </customer>
+  <customer custno="10222" custname="Institute of Farm Management" filename="IFM.rpt" >
+  </customer>
+  <customer custno="10224" custname="Johns Hopkins University" filename="IFM.rpt" >
+  </customer>
+  <customer custno="10221" custname="Institution of Civil Engineers" filename="ICE.rpt" >
+  </customer>
+<customer custno="10218" custname="GERM" filename="GERM.rpt" >
+  </customer>
+    <customer custno="10203" custname="Addiction Mental Health" filename="AMH.rpt" >
+  </customer>
+  <customer custno="10211" custname="BMJ" filename="BMJ.rpt" >
+  </customer>
+  <customer custno="10237" custname="GPS" filename="GPS.rpt" >
+  </customer>
+ 
+ <customer custno="10210" custname="ANS" filename="ANS.rpt" >
+  </customer>
+  <customer custno="10219" custname="SGM" filename="SGM.rpt" >
+  </customer>
+  <customer custno="10214" custname="Company of Biologists" filename="COB.rpt" >
+  </customer>
+  <customer custno="10238" custname="BJMBR" filename="BJMBR1.rpt" >
+  </customer>
+   <customer custno="10231" custname="Purdue University Press" filename="IFM.rpt" >
+  </customer>
+   <customer custno="10223" custname="Journal of Biomedical Research" filename="JBR.rpt" >
+  </customer>
+   <customer custno="10254" custname="MaryAnn liebertpub" filename="MaryAnn.rpt" >
+  </customer>
+    <customer custno="10209" custname="ChengTsui" filename="ChengTsui.rpt" >
+  </customer>
+    <customer custno="10264" custname="University of Michigan Library" filename="UML.rpt" >
+  </customer>
+  <customer custno="10274" custname="Maney" filename="Maney.rpt" >
+  </customer>
+    <customer custno="10206" custname="British Standard Institution" filename="BSI.rpt" >
+  </customer>
+  <customer custno="10262" custname="Design Innovations " filename="DI.rpt" >
+  </customer>
+  <customer custno="10202" custname="American Journals of Health Promotion" filename="AJHP.rpt" >
+  </customer>
+</invoice>

@@ -1,0 +1,67 @@
+select customer_dp.custname,X.bnumber,BTITLE,X.bnoofpages,stype_dp.stypename,bfirststartdate as india_recd,
+bfirstduedate,bfirstdispatch ,BINVOICEDATE,null as CATSDueDate,X.bdespatched,financialsite_dp.FINSITENO,
+X.binvoiced,bno,X.custno  from book_dp X
+join customer_dp on X.custno=customer_dp.custno
+join stype_dp on stype_dp.stypeno = 10071
+join financialsite_dp on X.finsiteno=financialsite_dp.finsiteno
+where
+	bfirststartdate is not null 
+	and (bfirststartdate BETWEEN ':STARTDATE 00:00:00' AND ':ENDDATE 23:59:59')   AND X.CUSTNO in (:CUSTNO)
+
+union
+select customer_dp.custname,X.bnumber,BTITLE,X.bnoofpages,stype_dp.stypename,bsecondstartdate as india_recd,
+bsecondduedate,bseconddispatch ,BINVOICEDATE,null as CATSDueDate,
+X.bdespatched,financialsite_dp.FINSITENO,X.binvoiced,bno,X.custno  from book_dp X
+join customer_dp on X.custno=customer_dp.custno
+join stype_dp on stype_dp.stypeno = 10072
+join financialsite_dp on X.finsiteno=financialsite_dp.finsiteno
+where
+	bsecondstartdate is not null
+	and (bsecondstartdate BETWEEN ':STARTDATE 00:00:00' AND ':ENDDATE 23:59:59')   AND X.CUSTNO in (:CUSTNO)
+
+union
+select customer_dp.custname,X.bnumber,BTITLE,X.bnoofpages,stype_dp.stypename,bthirdstartdate as india_recd,
+bthirdduedate,bthirddispatch ,BINVOICEDATE,null as CATSDueDate,
+X.bdespatched,financialsite_dp.FINSITENO,X.binvoiced,bno,X.custno from book_dp X
+join customer_dp on X.custno=customer_dp.custno
+join stype_dp on stype_dp.stypeno = 10073
+join financialsite_dp on X.finsiteno=financialsite_dp.finsiteno
+where
+	bthirdstartdate is not null 
+	and (bthirdstartdate BETWEEN ':STARTDATE 00:00:00' AND ':ENDDATE 23:59:59')  AND X.CUSTNO in (:CUSTNO)
+
+union
+select customer_dp.custname,X.bnumber,BTITLE,X.bnoofpages,stype_dp.stypename,bfourthstartdate as india_recd,
+bfourthduedate,bfourthdispatch ,BINVOICEDATE,null as CATSDueDate,
+X.bdespatched,financialsite_dp.FINSITENO,X.binvoiced,bno,X.custno from book_dp X
+join customer_dp on X.custno=customer_dp.custno
+join stype_dp on stype_dp.stypeno = 10075
+join financialsite_dp on X.finsiteno=financialsite_dp.finsiteno
+where
+	bfourthstartdate is not null 
+	and (bfourthstartdate BETWEEN ':STARTDATE 00:00:00' AND ':ENDDATE 23:59:59') AND X.CUSTNO in (:CUSTNO)
+
+union
+select customer_dp.custname,X.bnumber,BTITLE,X.bnoofpages,stype_dp.stypename,btemplatestartdate as india_recd,
+btemplateduedate,btemplatedispatch ,BINVOICEDATE,null as CATSDueDate,
+X.bdespatched,financialsite_dp.FINSITENO,X.binvoiced,bno,X.custno from book_dp X
+join customer_dp on X.custno=customer_dp.custno
+join stype_dp on stype_dp.stypeno = 10074
+join financialsite_dp on X.finsiteno=financialsite_dp.finsiteno
+where
+	btemplatestartdate is not null 
+	and (btemplatestartdate BETWEEN ':STARTDATE 00:00:00' AND ':ENDDATE 23:59:59')  AND X.CUSTNO in (:CUSTNO)
+
+union
+select customer_dp.custname,X.bnumber,BTITLE,X.bnoofpages,stype_dp.stypename,bfinalstartdate as india_recd,
+bfinalduedate,bfinaldispatch,BINVOICEDATE,null as CATSDueDate,
+X.bdespatched,financialsite_dp.FINSITENO,X.binvoiced,bno,X.custno 
+from book_dp X
+join customer_dp on X.custno=customer_dp.custno
+join stype_dp on stype_dp.stypeno = 10079
+join financialsite_dp on X.finsiteno=financialsite_dp.finsiteno
+where
+	bfinalstartdate is not null 
+	and (bfinalstartdate BETWEEN ':STARTDATE 00:00:00' AND ':ENDDATE 23:59:59')  AND X.CUSTNO in (:CUSTNO)
+	
+ORDER BY 6

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<followup>
+  <customer custname="TandF" custno="2556">
+    <from></from>
+    <to></to>
+    <to1>subbulakshmi@datapage.org</to1>
+    <cc></cc>
+    <bcc></bcc>
+    <body>
+      Dear [AUTHORNAME],<br/><br/>
+
+      Ref: [ARTICLECODE] – "[AUTHORTITLE]".<br/><br/>
+
+      Thank you for submitting the corrections.<br/><br/>
+
+      Our production team has raised the below pending/outstanding queries while incorporating the corrections:<br/><br/>
+
+      [AUTHORCORRECTON]<br/><br/>
+
+      Could you please look into this and let me know your response at your earliest convenience? I have attached the proof of your article for your reference. Please note that the PDF is not an updated one. We will generate an updated PDF as soon as the queries had been resolved.<br/><br/>
+
+      Thank you so much for your co-operation and understanding!<br/><br/>
+
+      Best wishes,<br/>
+      [FPMJOURNAME] <br/><br/>
+
+      On behalf of the [JournalCode] production team<br/>
+      Taylor and Francis<br/>
+      4 Park Square<br/>
+      Milton Park<br/>
+      Abingdon<br/>
+      Oxfordshire<br/>
+      OX14 4RN<br/>
+      UNITED KINGDOM<br/>
+      Email: [JournalMailID]<br/>
+      Fax: +44 (0)20 7017 6336<br/>
+
+
+    </body>
+  </customer>
+</followup>
